@@ -7,16 +7,18 @@ public class WaveSimulator {
     public static final double dy =1;
 
     private double[][] hu;
+    private double[][] hv;
     private double[][] h;
     private double[][] objects; //not used so far
 
-    public WaveSimulator(double[][] h,double[][] hu) throws Exception {
+    public WaveSimulator(double[][] h,double[][] hu,double[][] hv) throws Exception {
         if(!(h.length == hu.length && h[0].length == hu[0].length))
         {
             throw new Exception("h and hu Domain sizes don't match");
         }
         this.h = h;
         this.hu = hu;
+        this.hv = hv;
         /*add space for boundary cells;
         for(int i = 0; i < this.h.length;i++)//translate to domain with boundary;
         {
@@ -41,31 +43,31 @@ public class WaveSimulator {
         double maxWaveSpeed = 0;
         double h_update_above[][] = new double[h.length][h[0].length];
         double h_update_below[][] = new double[h.length][h[0].length];
-        double hu_update_above[][] = new double[h.length][h[0].length];
-        double hu_update_below[][] = new double[h.length][h[0].length];
+        double hv_update_above[][] = new double[h.length][h[0].length];
+        double hv_update_below[][] = new double[h.length][h[0].length];
         double h_update_left[][] = new double[h.length][h[0].length];
         double h_update_right[][] = new double[h.length][h[0].length];
         double hu_update_left[][] = new double[h.length][h[0].length];
         double hu_update_right[][] = new double[h.length][h[0].length];
         //vertical
-        for(int i = 1; i < h.length; i++)
+        for(int i = 1; i < h.length-1; i++)
         {
-            for(int j = 0; j< h[0].length;j++) //müsste nicht für erste und letzte spalte berechnet werden da boundary cells
+            for(int j = 1; j< h[0].length;j++) //müsste nicht für erste und letzte spalte berechnet werden da boundary cells
             {
-                double update[] =solve_single(h[i-1][j],h[i][j],hu[i-1][j],hu[i][j]);
+                double update[] =solve_single(h[i][j-1],h[i][j],hv[i][j-1],hv[i][j]);
                 h_update_above[i][j] = update[0];
-                hu_update_above[i][j] = update[1];
+                hv_update_above[i][j] = update[1];
                 h_update_below[i][j] = update[2];
-                hu_update_below[i][j] = update[3];
+                hv_update_below[i][j] = update[3];
                 maxWaveSpeed = Math.max(maxWaveSpeed,Math.max(Math.abs(update[4]),Math.abs(update[5])));
             }
         }
         //horizontal
         for(int i = 1; i < h.length; i++)
         {
-            for(int j = 0; j< h[0].length;j++)
+            for(int j = 1; j< h[0].length-1;j++)
             {
-                double update[] =solve_single(h[i][j-1],h[i][j],hu[i][j-1],hu[i][j]);
+                double update[] =solve_single(h[i-1][j],h[i][j],hu[i-1][j],hu[i][j]);
                 h_update_left[i][j] = update[0];
                 hu_update_left[i][j] = update[1];
                 h_update_right[i][j] = update[2];
@@ -73,11 +75,33 @@ public class WaveSimulator {
                 maxWaveSpeed = Math.max(maxWaveSpeed,Math.max(Math.abs(update[4]),Math.abs(update[5])));
             }
         }
-        if(maxWaveSpeed < 0.00001)
+        double dt = 0;
+        if(maxWaveSpeed > 0.00001)
         {
-
+            dt = Math.min(dx/maxWaveSpeed,dy/maxWaveSpeed)*0.4;
         }
-        //todo
+        else
+        {
+            dt = Double.MAX_VALUE;
+        }
+        //update cells
+        for(int i = 1; i < h.length-1; i++)
+        {
+            for(int j = 1 ; j <h[0].length-1;j++)
+            {
+                h[i][j] -= dt/dx * (h_update_right[i-1][j] + h_update_left[i][j]) + dt/dy * (h_update_above[i][j-1]+ h_update_below[i][j]);
+                hu[i][j] -= dt/dx *(hu_update_right[i-1][j] + hu_update_left[i][j]);
+                hv[i][j] -= dt/dy * (hv_update_above[i][j-1] + hv_update_below[i][j]);
+                if(h[i][j]< 0)
+                {
+                    h[i][j] = hu[i][j]= hv[i][j] = 0;
+                }
+                else if(h[i][j]<0.1)
+                {
+                    hu[i][j] = hv[i][j] = 0;
+                }
+            }
+        }
     }
     public static double[] solve_single(double h_left, double h_right, double hu_left, double hu_right)
     {

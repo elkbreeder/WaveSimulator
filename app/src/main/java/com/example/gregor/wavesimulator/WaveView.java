@@ -19,7 +19,6 @@ public class WaveView extends View {
         height = getHeight();
         paint = new Paint();
     }
-
     @Override
     public boolean onTouchEvent (MotionEvent event)
     {

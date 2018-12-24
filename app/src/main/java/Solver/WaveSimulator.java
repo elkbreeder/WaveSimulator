@@ -129,8 +129,12 @@ public class WaveSimulator {
     }
     public static double[] solve_single(double h_left, double h_right, double hu_left, double hu_right)
     {
+        if(h_left != h_right){
+            double d  = 0;
+        }
         //no bathymetry so far
         double h_roe =  0.5 * (h_left + h_right);
+
         double u_left = hu_left/h_left;
         double u_right = hu_right/h_right;
         double u_roe = (u_left * Math.sqrt(h_left) + u_right * Math.sqrt(h_right))/(Math.sqrt(h_left)+Math.sqrt(h_right));
@@ -146,23 +150,23 @@ public class WaveSimulator {
         double hu_update_left = 0;
         double hu_update_right = 0;
         //Calculate left
-        if(lambda_1 <-zero_tolerance)
+        if(lambda_1 <0)
         {
             h_update_left += alpha_1;
             hu_update_left += alpha_1*lambda_1;
         }
-        if(lambda_2 <-zero_tolerance)
+        if(lambda_2 <0)
         {
             h_update_left += alpha_2;
             hu_update_left += alpha_2*lambda_2;
         }
         //Calculate right
-        if(lambda_1 > zero_tolerance)
+        if(lambda_1 >0)
         {
             h_update_right += alpha_1;
             hu_update_right += alpha_1*lambda_1;
         }
-        if(lambda_2 > zero_tolerance)
+        if(lambda_2 > 0)
         {
             h_update_right += alpha_2;
             hu_update_right += alpha_2*lambda_2;

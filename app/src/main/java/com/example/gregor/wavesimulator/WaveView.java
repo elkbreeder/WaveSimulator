@@ -41,9 +41,11 @@ public class WaveView extends View {
     {
         for(int i = 0; i < 100; i++)
         {
-            for(int j = 0; j <100; j++);
+            for(int j = 0; j <100; j++)
             {
-
+                int current = (int)sim.get(i,j)*10;
+                paint.setColor(Color.rgb(current,0,0));
+                canvas.drawRect(i*10,j*10,(i+1)*10,(j+1)*10,paint);
             }
         }
     }

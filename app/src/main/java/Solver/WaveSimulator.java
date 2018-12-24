@@ -11,6 +11,26 @@ public class WaveSimulator {
     private double[][] h;
     private double[][] objects; //not used so far
 
+    //create example
+    public WaveSimulator()
+    {
+        h = new double[100][100];
+        hu= new double[100][100];
+        hv= new double[100][100];
+        for(int i = 0; i < 100; i++)
+        {
+            for(int j = 0; j< 100; j++)
+            {
+                this.hu[i][j] = this.hv[i][j] = 0;
+                if(i >= 40 && i< 60 && j >= 40 && j < 60)
+                {
+                    this.h[i][j] = 15;
+                    continue;
+                }
+                this.h[i][j] = 5;
+            }
+        }
+    }
     public WaveSimulator(double[][] h,double[][] hu,double[][] hv) throws Exception {
         if(!(h.length == hu.length && h[0].length == hu[0].length))
         {
@@ -37,6 +57,10 @@ public class WaveSimulator {
             }
         }*/
 
+    }
+    public double get(int x, int y)
+    {
+        return h[x][y];
     }
     public void calculate_step()
     {
@@ -75,7 +99,7 @@ public class WaveSimulator {
                 maxWaveSpeed = Math.max(maxWaveSpeed,Math.max(Math.abs(update[4]),Math.abs(update[5])));
             }
         }
-        double dt = 0;
+        double dt;
         if(maxWaveSpeed > 0.00001)
         {
             dt = Math.min(dx/maxWaveSpeed,dy/maxWaveSpeed)*0.4;

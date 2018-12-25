@@ -30,8 +30,8 @@
 #ifndef SWEWAVEPROPAGATIONBLOCK_HH_
 #define SWEWAVEPROPAGATIONBLOCK_HH_
 
-#include "blocks/SWE_Block.hh"
-#include "tools/help.hh"
+#include "SWE_Block.hh"
+#include "../tools/help.hh"
 
 #include <string>
 
@@ -39,15 +39,7 @@
 //  0: Hybrid
 //  1: f-Wave
 //  2: Approximate Augmented Riemann solver
-#if WAVE_PROPAGATION_SOLVER==0
-#include "solvers/Hybrid.hpp"
-#elif WAVE_PROPAGATION_SOLVER==1
-#include "solvers/FWave.hpp"
-#elif WAVE_PROPAGATION_SOLVER==2
-#include "solvers/AugRie.hpp"
-#else
-#warning SWE_WavePropagationBlock should only be used with Riemann solvers 0, 1, and 2 (FWave, AugRie or Hybrid)
-#endif
+#include "../Fwave.hpp"
 
 /**
  * SWE_WavePropagationBlock is an implementation of the SWE_Block abstract class.
@@ -61,16 +53,8 @@ class SWE_WavePropagationBlock: public SWE_Block {
 
 private:
     //specify the wave propagation solver
-#if WAVE_PROPAGATION_SOLVER==0
-    //! Hybrid solver (f-wave + augmented)
-    solver::Hybrid<float> wavePropagationSolver;
-#elif WAVE_PROPAGATION_SOLVER==1
     //! F-wave Riemann solver
     solver::FWave<float> wavePropagationSolver;
-#elif WAVE_PROPAGATION_SOLVER==2
-    //! Approximate Augmented Riemann solver
-    solver::AugRie<float> wavePropagationSolver;
-#endif
 
     //! net-updates for the heights of the cells on the left sides of the vertical edges.
     Float2D hNetUpdatesLeft;

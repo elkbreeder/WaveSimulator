@@ -8,6 +8,8 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.MotionEvent;
 
+
+
 import Solver.WaveSimulator;
 
 public class WaveView extends View {

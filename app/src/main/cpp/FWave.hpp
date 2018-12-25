@@ -56,7 +56,7 @@
 #include <cassert>
 #include <cmath>
 #include <algorithm>
-#include "WavePropagation.hpp"
+#include "blocks/WavePropagation.hpp"
 
 namespace solver {
   template <typename T> class FWave;

@@ -43,9 +43,6 @@ public class SimulationRunner {
             });
             simulation_thread.start();
         }
-        else
-        {
-            started = false;
-        }
     }
+    public boolean isStarted() { return started;}
 }

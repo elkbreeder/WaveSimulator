@@ -48,7 +48,15 @@ public class WaveViewTouchListener implements View.OnTouchListener,GestureDetect
 
     @Override
     public void onLongPress(MotionEvent motionEvent) {
-        context.getSimulationRunner().start();
+        if(context.getSimulationRunner().isStarted())
+        {
+            context.getSimulationRunner().stop();
+        }
+        else
+        {
+            context.getSimulationRunner().start();
+        }
+
     }
 
     @Override

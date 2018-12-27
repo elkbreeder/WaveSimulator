@@ -87,6 +87,7 @@ private:
     //update the cells
     void updateUnknowns(float dt);
     void updateUnknownsRow(float dt, int i);
+    int test();
 
     /**
      * Destructor of a SWE_WavePropagationBlock.

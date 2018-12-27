@@ -1,11 +1,14 @@
 package Solver;
 
+import android.util.Log;
+
+import java.util.logging.Logger;
+
 public class CPPSimulator {
     private long SWE_Pointer;
     public CPPSimulator(){
         System.loadLibrary("SWELib");
         SWE_Pointer = init(); //creates a new SWE_Block Object
-
     }
     public float getHeight(int x, int y)
     {
@@ -18,6 +21,7 @@ public class CPPSimulator {
     public void simulatetimestep()
     {
         simulatetimestep(SWE_Pointer);
+
     }
     protected void finalize()
     {

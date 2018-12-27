@@ -9,25 +9,27 @@ import android.view.View;
 import android.view.MotionEvent;
 
 
+import Solver.CPPSimulator;
 import Solver.WaveSimulator;
 
 public class WaveView extends View {
     private boolean touched = false;
     private int width;
     private int height;
-    private WaveSimulator sim;
+    private CPPSimulator sim;
     Paint paint;
     public WaveView(Context context,AttributeSet attrs) {
         super(context,attrs);
         width = getWidth();
         height = getHeight();
         paint = new Paint();
-        sim = new WaveSimulator();
+        sim = new CPPSimulator();
+
     }
     @Override
     public boolean onTouchEvent (MotionEvent event)
     {
-        sim.calculate_step();
+        sim.simulatetimestep();
         invalidate();//used to trigger redraw
         return true;
     }
@@ -40,11 +42,11 @@ public class WaveView extends View {
     @Override
     public void onDraw(Canvas canvas)
     {
-        for(int i = 0; i < 100; i++)
+       for(int i = 0; i < 100; i++)
         {
             for(int j = 0; j <100; j++)
             {
-                int current = (int)sim.get(i,j)*10;
+                int current = (int)sim.getHeight(i,j)*10;
                 paint.setColor(Color.rgb(current,0,0));
                 canvas.drawRect(i*10,j*10,(i+1)*10,(j+1)*10,paint);
             }

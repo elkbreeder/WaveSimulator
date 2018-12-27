@@ -1,7 +1,6 @@
 package Solver;
 
 import com.example.gregor.wavesimulator.MainActivity;
-import com.example.gregor.wavesimulator.WaveView;
 //Class which handles the Threading of a Simulation
 public class SimulationRunner {
     private Thread simulation_thread;
@@ -17,6 +16,10 @@ public class SimulationRunner {
     {
         currentActivity = a;
     }
+    public void stop()
+    {
+        started = false;
+    }
     public void start()
     {
         if (!started) {
@@ -24,7 +27,7 @@ public class SimulationRunner {
             simulation_thread = new Thread(new Runnable() {
                 public void run() {
                    while(started) {
-                        WaveView.sim.simulatetimestep();
+                       CPPSimulator.sim.simulatetimestep();
                         currentActivity.runOnUiThread(new Runnable() {
                             public void run() {
                                 currentActivity.getWaveView().invalidate();

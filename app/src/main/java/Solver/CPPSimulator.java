@@ -5,6 +5,7 @@ import android.util.Log;
 import java.util.logging.Logger;
 
 public class CPPSimulator {
+    public static CPPSimulator sim; //have to be static to allow screen rotation
     private long SWE_Pointer;
     public CPPSimulator(){
         System.loadLibrary("SWELib");

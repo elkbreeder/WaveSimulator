@@ -37,6 +37,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/outflow_switch" />
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button"
+            tools:text="reset" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

@@ -5,11 +5,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Switch;
 
+import Solver.SimulationRunner;
+
 public class MainActivity extends AppCompatActivity {
     private WaveView waveView;
     private Switch boundarySwitch;
-    private Thread simulation_thread;
-    private int simulation_steps;
+    private static SimulationRunner simulationRunner;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,39 +31,24 @@ public class MainActivity extends AppCompatActivity {
                 onTouchEventViewer(v);
             }
         });//Defines the onClick  Listener for the WaveView
-    }
-    public void onTouchEventViewer(View v)
-    {
-        if(simulation_steps == 0) {
-            simulation_steps = 50;
-            simulation_thread = new Thread(new Runnable() {
-                public void run() {
-                    for (int i = 0; i <simulation_steps; i++) {
-                        waveView.simulate_step();
-                        runOnUiThread(new Runnable() {
-                            public void run() {
-                                waveView.invalidate();
-                            }
-
-                        });
-                        try {
-                            Thread.sleep(100);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }
-            });
-            simulation_thread.start();
+        if(simulationRunner == null) {
+            simulationRunner = new SimulationRunner(this);
         }
         else
         {
-            simulation_steps = 0;
-
+            simulationRunner.changeActivity(this);
         }
     }
-    public void onTouchEventSwitch (View v)
-    {
 
+    public void onTouchEventViewer(View v) {
+        simulationRunner.start();//starts/restarts the simulation
+    }
+
+    public void onTouchEventSwitch(View v) {
+
+    }
+    public WaveView getWaveView()
+    {
+        return waveView;
     }
 }

@@ -15,7 +15,7 @@ public class WaveView extends View {
     private static final int cell_count = 100; //Todo: implement cell_count everywhere (eg in native code)
     private static int width;
     private static int height;
-    private static CPPSimulator sim; //have to be static to allow screen rotation
+    public static CPPSimulator sim; //have to be static to allow screen rotation
     private Paint paint;
     public WaveView(Context context,AttributeSet attrs) {
         super(context,attrs);
@@ -33,10 +33,6 @@ public class WaveView extends View {
         invalidate();//used to trigger redraw
         return true;
     }*/
-    public void simulate_step()
-    {
-        sim.simulatetimestep();
-    }
     @Override
     protected void onSizeChanged (int w, int h, int old_w, int old_h)
     {

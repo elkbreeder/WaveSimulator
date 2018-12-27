@@ -11,13 +11,14 @@ cmake_minimum_required(VERSION 3.4.1)
 # automatically packages shared libraries with your APK.
 
 add_library( # Specifies the name of the library.
-             native-lib
+             SWELib
 
              # Sets the library as a shared library.
              SHARED
 
              # Provides a relative path to your source file(s).
              app/src/main/cpp/FWave.hpp
+             app/src/main/cpp/Wrapper.cpp
              app/src/main/cpp/blocks/SWE_Block.cpp
              app/src/main/cpp/blocks/SWE_WavePropagationBlock.cpp
              app/src/main/cpp/blocks/WavePropagation.cpp)

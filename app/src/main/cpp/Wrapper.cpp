@@ -2,6 +2,7 @@
 #include "scenarios/SWE_simple_scenarios.hh"
 #include "blocks/SWE_WavePropagationBlock.hh"
 #include <android/log.h>
+#include "tools/help.hh"
 JNIEXPORT jlong JNICALL Java_Solver_CPPSimulator_init(JNIEnv *, jclass)
 {
     SWE_RadialDamBreakScenario l_scenario;
@@ -19,8 +20,9 @@ JNIEXPORT jlong JNICALL Java_Solver_CPPSimulator_init(JNIEnv *, jclass)
 JNIEXPORT jfloat JNICALL Java_Solver_CPPSimulator_getHeight(JNIEnv *, jclass, jint x, jint y, jlong ptr)
 {
     SWE_WavePropagationBlock *block = (SWE_WavePropagationBlock *)ptr;
-
-    return *(block->getWaterHeight()[x+1,y+1]);
+    const Float2D &h = block->getWaterHeight();
+    const float* fret = &h[x+1][y+1];
+    return *fret;
 }
 JNIEXPORT jfloat JNICALL Java_Solver_CPPSimulator_getBathymetry(JNIEnv *, jclass, jint x, jint y, jlong ptr)
 {

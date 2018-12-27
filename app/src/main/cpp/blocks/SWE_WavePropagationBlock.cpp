@@ -90,10 +90,6 @@ SWE_WavePropagationBlock::SWE_WavePropagationBlock (int l_nx, int l_ny, float l_
 	hvNetUpdatesAbove (nx, ny + 1)
 {
 }
-int SWE_WavePropagationBlock::test()
-{
-	return 42;
-}
 /**
  * Compute net updates for the block.
  * The member variable #maxTimestep will be updated with the 

@@ -124,7 +124,10 @@ void SWE_Block::initScenario( float _offsetX, float _offsetY,
   synchAfterWrite();
 
 }
-
+void SWE_Block::setWaterHeightXY(int x,int y,int h_set)
+{
+  h[x][y]= h_set;
+}
 /**
  * set water height h in all interior grid cells (i.e. except ghost layer) 
  * to values specified by parameter function _h
@@ -138,7 +141,6 @@ void SWE_Block::setWaterHeight(float (*_h)(float, float)) {
 
   synchWaterHeightAfterWrite();
 }
-
 /**
  * set discharge in all interior grid cells (i.e. except ghost layer) 
  * to values specified by parameter functions

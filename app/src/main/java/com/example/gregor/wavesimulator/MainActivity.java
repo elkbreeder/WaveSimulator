@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private WaveView waveView;
     private Switch boundarySwitch;
     private Button reset;
+    private WaveViewTouchListener waveViewTouchListener;
     private static SimulationRunner simulationRunner;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +27,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });//Defines the onClick  Listener for the switch
         waveView = findViewById(R.id.waveView);
-        waveView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onClickEventViewer(v);
-            }
-        });//Defines the onClick  Listener for the WaveView
+        waveViewTouchListener = new WaveViewTouchListener(this);
+        waveView.setOnTouchListener(waveViewTouchListener);
+
+
         reset = findViewById(R.id.reset);
         reset.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,11 +45,10 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onClickEventReset(View v) {
         simulationRunner.stop();
-        CPPSimulator.sim = new CPPSimulator();//reloads the Simulation;
+        CPPSimulator.reset();//reloads the Simulation;
+        waveView.invalidate();
     }
-    public void onClickEventViewer(View v) {
-        simulationRunner.start();//starts/stops the simulation
-    }
+
 
     public void onTouchEventSwitch(View v) {
 
@@ -59,4 +57,5 @@ public class MainActivity extends AppCompatActivity {
     {
         return waveView;
     }
+    public SimulationRunner getSimulationRunner() { return simulationRunner;}
 }

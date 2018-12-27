@@ -1,7 +1,7 @@
 #include "Solver_CPPSimulator.h"
 #include "scenarios/SWE_simple_scenarios.hh"
 #include "blocks/SWE_WavePropagationBlock.hh"
-#include <android/log.h>
+#include <cmath>
 #include "tools/help.hh"
 JNIEXPORT jlong JNICALL Java_Solver_CPPSimulator_init(JNIEnv *, jclass)
 {
@@ -16,7 +16,20 @@ JNIEXPORT jlong JNICALL Java_Solver_CPPSimulator_init(JNIEnv *, jclass)
     block->initScenario(l_originX, l_originY, l_scenario);
     return (long)(block);
 }
-
+JNIEXPORT void JNICALL Java_Solver_CPPSimulator_setWave(JNIEnv *, jclass, jint x, jint y, jint r, jfloat h_wave, jlong ptr)
+{
+    SWE_WavePropagationBlock *block = (SWE_WavePropagationBlock *)ptr;
+    for(int i = 0;i< 100;i++)
+    {
+        for(int j = 0;j < 100; j++)
+        {
+            if(std::sqrt(((float)i-(float)x)*((float)i-(float)x) + ((float)j-(float)y)*((float)j-(float)y)) < (float)r)
+            {
+                block->setWaterHeightXY(i+1,j+1,h_wave);
+            }
+        }
+    }
+}
 JNIEXPORT jfloat JNICALL Java_Solver_CPPSimulator_getHeight(JNIEnv *, jclass, jint x, jint y, jlong ptr)
 {
     SWE_WavePropagationBlock *block = (SWE_WavePropagationBlock *)ptr;

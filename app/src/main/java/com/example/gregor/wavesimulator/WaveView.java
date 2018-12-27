@@ -12,7 +12,7 @@ import android.view.MotionEvent;
 import Solver.CPPSimulator;
 
 public class WaveView extends View {
-    private static final int cell_count = 100; //Todo: implement cell_count everywhere (eg in native code)
+
     private static int width;
     private static int height;
 
@@ -42,16 +42,16 @@ public class WaveView extends View {
     @Override
     public void onDraw(Canvas canvas)
     {
-        int size_x = width/ cell_count;
-        int offset_x = (width - size_x * cell_count)/2;
-        int size_y = height/ cell_count;
-        int offset_y = (height - size_y * cell_count)/2;
-       for(int i = 0; i < cell_count; i++)
+        int size_x = width/ CPPSimulator.cell_count;
+        int offset_x = (width - size_x * CPPSimulator.cell_count)/2;
+        int size_y = height/ CPPSimulator.cell_count;
+        int offset_y = (height - size_y * CPPSimulator.cell_count)/2;
+       for(int i = 0; i < CPPSimulator.cell_count; i++)
         {
-            for(int j = 0; j <cell_count; j++)
+            for(int j = 0; j <CPPSimulator.cell_count; j++)
             {
-                int current = (int)CPPSimulator.sim.getHeight(i,j)*10; //mal 10 weil wir 100 zellen haben, die domain des szenarios jedoch 1000 ist
-                paint.setColor(Color.rgb(current,0,0));
+                int current = (int)CPPSimulator.sim.getHeight(i,j)*10; //10 is to increase colour intesity
+                paint.setColor(Color.rgb(0,0,current));
 
                 canvas.drawRect(offset_x + i*size_x,offset_y +j*size_y,offset_x +(i+1)*size_x,offset_y +(j+1)*size_y,paint);
             }

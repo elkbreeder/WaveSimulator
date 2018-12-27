@@ -7,6 +7,8 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
+#undef Solver_CPPSimulator_cell_count
+#define Solver_CPPSimulator_cell_count 100L
 /*
  * Class:     Solver_CPPSimulator
  * Method:    init
@@ -14,6 +16,14 @@ extern "C" {
  */
 JNIEXPORT jlong JNICALL Java_Solver_CPPSimulator_init
   (JNIEnv *, jclass);
+
+/*
+ * Class:     Solver_CPPSimulator
+ * Method:    setWave
+ * Signature: (IIIFJ)V
+ */
+JNIEXPORT void JNICALL Java_Solver_CPPSimulator_setWave
+  (JNIEnv *, jclass, jint, jint, jint, jfloat, jlong);
 
 /*
  * Class:     Solver_CPPSimulator

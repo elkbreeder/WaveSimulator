@@ -1,40 +1,46 @@
 package Solver;
 
 import com.example.gregor.wavesimulator.MainActivity;
+
 //Class which handles the Threading of a Simulation
 public class SimulationRunner {
     private Thread simulation_thread;
     private boolean started;
     private MainActivity currentActivity;
-    public SimulationRunner(MainActivity currentActivity)
-    {
+
+    public SimulationRunner(MainActivity currentActivity) {
         this.currentActivity = currentActivity;
         started = false;
 
     }
-    public void changeActivity(MainActivity a)
-    {
+
+    public void changeActivity(MainActivity a) {
         currentActivity = a;
     }
-    public void stop()
-    {
+
+    public void stop() {
         started = false;
     }
-    public void start()
-    {
+
+    public void start() {
         if (!started) {
             started = true;
             simulation_thread = new Thread(new Runnable() {
                 public void run() {
-                   while(started) {
-                       CPPSimulator.sim.simulatetimestep();
+                    long start_time;
+                    long duration;
+                    long sleeptime = 20;
+                    while (started) {
+                        start_time = java.lang.System.currentTimeMillis();
+                        CPPSimulator.sim.simulatetimestep();
                         currentActivity.runOnUiThread(new Runnable() {
                             public void run() {
                                 currentActivity.getWaveView().invalidate();
                             }
                         });
+                        duration = java.lang.System.currentTimeMillis() - start_time;
                         try {
-                            Thread.sleep(100);
+                            Thread.sleep((sleeptime-duration>0)?sleeptime-duration:0);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
@@ -44,5 +50,8 @@ public class SimulationRunner {
             simulation_thread.start();
         }
     }
-    public boolean isStarted() { return started;}
+
+    public boolean isStarted() {
+        return started;
+    }
 }

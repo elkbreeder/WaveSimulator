@@ -1,6 +1,10 @@
 package Solver;
 
 
+import android.util.Log;
+
+import java.time.Duration;
+import java.time.Instant;
 
 //all CPPSimulator Objects uses the Same Native Object!
 public class CPPSimulator {
@@ -35,6 +39,7 @@ public class CPPSimulator {
     }
     public void simulatetimestep()
     {
+
         simulatetimestep(SWE_Pointer);
 
     }

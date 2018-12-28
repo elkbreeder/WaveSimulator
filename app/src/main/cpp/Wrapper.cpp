@@ -1,5 +1,6 @@
 #include "Solver_CPPSimulator.h"
 #include "scenarios/SWE_simple_scenarios.hh"
+#include "scenarios/SWE_Scenario.hh"
 #include "blocks/SWE_WavePropagationBlock.hh"
 #include <cmath>
 #include "tools/help.hh"
@@ -30,6 +31,22 @@ JNIEXPORT void JNICALL Java_Solver_CPPSimulator_setWave(JNIEnv *, jclass, jint x
         }
     }
 }
+JNIEXPORT void JNICALL Java_Solver_CPPSimulator_setBoundaryType(JNIEnv *, jclass, jboolean isWall, jlong ptr){
+    SWE_WavePropagationBlock *block = (SWE_WavePropagationBlock *)ptr;
+    BoundaryType current =(isWall)? WALL:OUTFLOW;
+    block->setBoundaryType(BND_LEFT, current);
+    block->setBoundaryType(BND_RIGHT, current);
+    block->setBoundaryType(BND_BOTTOM, current);
+    block->setBoundaryType(BND_TOP, current);
+}
+JNIEXPORT void JNICALL Java_Solver_CPPSimulator_placeCircle(JNIEnv *, jclass, jint, jint, jint, jlong)
+{
+
+}
+JNIEXPORT void JNICALL Java_Solver_CPPSimulator_placeRect(JNIEnv *, jclass, jint, jint, jint, jint, jlong)
+{
+
+}
 JNIEXPORT jfloat JNICALL Java_Solver_CPPSimulator_getHeight(JNIEnv *, jclass, jint x, jint y, jlong ptr)
 {
     SWE_WavePropagationBlock *block = (SWE_WavePropagationBlock *)ptr;
@@ -53,3 +70,4 @@ JNIEXPORT void JNICALL Java_Solver_CPPSimulator_delete(JNIEnv *, jclass, jlong p
 {
     delete (SWE_WavePropagationBlock *)(ptr);
 }
+

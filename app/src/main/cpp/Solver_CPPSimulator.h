@@ -57,6 +57,30 @@ JNIEXPORT jfloat JNICALL Java_Solver_CPPSimulator_getBathymetry
 JNIEXPORT void JNICALL Java_Solver_CPPSimulator_simulatetimestep
   (JNIEnv *, jclass, jlong);
 
+/*
+ * Class:     Solver_CPPSimulator
+ * Method:    setBoundaryType
+ * Signature: (ZJ)V
+ */
+JNIEXPORT void JNICALL Java_Solver_CPPSimulator_setBoundaryType
+  (JNIEnv *, jclass, jboolean, jlong);
+
+/*
+ * Class:     Solver_CPPSimulator
+ * Method:    placeCircle
+ * Signature: (IIIJ)V
+ */
+JNIEXPORT void JNICALL Java_Solver_CPPSimulator_placeCircle
+  (JNIEnv *, jclass, jint, jint, jint, jlong);
+
+/*
+ * Class:     Solver_CPPSimulator
+ * Method:    placeRect
+ * Signature: (IIIIJ)V
+ */
+JNIEXPORT void JNICALL Java_Solver_CPPSimulator_placeRect
+  (JNIEnv *, jclass, jint, jint, jint, jint, jlong);
+
 #ifdef __cplusplus
 }
 #endif

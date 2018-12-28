@@ -25,6 +25,10 @@ public class CPPSimulator {
         setWave(x,y,r,h,SWE_Pointer);
         //SWE_Pointer = setWave(x,y,r,h,SWE_Pointer);
     }
+    public void setBoundaryType(boolean isWall)
+    {
+        setBoundaryType(isWall,SWE_Pointer);
+    }
     public static void reset()
     {
         SWE_Pointer = init();//creates a new SWE_Block Object
@@ -53,4 +57,7 @@ public class CPPSimulator {
     private static native float getHeight(int x, int y, long ptr);
     private static native float getBathymetry(int x, int y, long ptr);
     private static native void simulatetimestep(long ptr);
+    private static native void setBoundaryType(boolean isWall,long ptr);
+    private static native void placeCircle(int x, int y, int r, long ptr);
+    private static native void placeRect(int left, int right, int top, int bottom, long ptr);
 }

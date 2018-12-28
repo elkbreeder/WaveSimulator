@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.Switch;
 
 import Solver.CPPSimulator;
@@ -20,10 +21,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         boundarySwitch = findViewById(R.id.switch1);
-        boundarySwitch.setOnClickListener(new View.OnClickListener() {
+        boundarySwitch.setOnCheckedChangeListener(new Switch.OnCheckedChangeListener() {
             @Override
-            public void onClick(View v) {
-                onTouchEventSwitch(v);
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                onCheckedSwitch(buttonView,isChecked);
             }
         });//Defines the onClick  Listener for the switch
         waveView = findViewById(R.id.waveView);
@@ -50,8 +51,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void onTouchEventSwitch(View v) {
-
+    public void onCheckedSwitch(CompoundButton buttonView, boolean isChecked) {
+        CPPSimulator.sim.setBoundaryType(isChecked);
     }
     public WaveView getWaveView()
     {

@@ -66,10 +66,17 @@ public class WaveView extends View {
         {
             for(int j = 0; j <CPPSimulator.cell_count; j++)
             {
-                int current = (int)CPPSimulator.sim.getHeight(i,j)*10; //10 is to increase colour intesity
-                paint.setColor(Color.rgb(255-current,255-current,255-current));
-
-                canvas.drawRect(drawingRects[i][j],paint);
+                int current = (int)CPPSimulator.sim.getHeight(i,j)*25; //10 is to increase colour intesity
+                current = (current>255)?255:current;
+                if((int)CPPSimulator.sim.getBathymetry(i,j)!= 0)
+                {
+                    paint.setColor(Color.rgb(102,51,0));
+                    canvas.drawRect(drawingRects[i][j],paint);
+                }
+                else{
+                    paint.setColor(Color.rgb(0,255-current,255));
+                    canvas.drawRect(drawingRects[i][j],paint);
+                }
             }
         }
     }

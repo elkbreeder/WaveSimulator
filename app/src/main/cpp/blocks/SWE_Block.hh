@@ -128,7 +128,8 @@ class SWE_Block {
     void setBathymetry(float (*_b)(float, float));
     /// set a aditional wave with radius r and height h at x,y
 
-    void setWaterHeightXY(int x,int y,int h_set);
+    void setWaterHeightXY(int x,int y,float h_set);
+    void setBathymetryXY(int x,int y,float h_set);
     
     // read access to arrays of unknowns
     /// provides read access to the water height array 

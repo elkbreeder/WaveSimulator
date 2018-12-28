@@ -18,12 +18,18 @@ public class CPPSimulator {
         if(SWE_Pointer == 0) {
             reset();
         }
+        //sim.placeCircle(20,20,10);
         //setWave(20,20,5,25);
     }
-    public static void setWave(int x, int y, int r, float h)
+    public synchronized void setWave(int x, int y, int r, float h)
     {
         setWave(x,y,r,h,SWE_Pointer);
+
         //SWE_Pointer = setWave(x,y,r,h,SWE_Pointer);
+    }
+    public synchronized void placeCircle(int x, int y, int r)
+    {
+        placeCircle(x,y,r,SWE_Pointer);
     }
     public void setBoundaryType(boolean isWall)
     {
@@ -41,7 +47,7 @@ public class CPPSimulator {
     {
         return getBathymetry(x,y,SWE_Pointer);
     }
-    public void simulatetimestep()
+    public synchronized void simulatetimestep()
     {
 
         simulatetimestep(SWE_Pointer);

@@ -20,13 +20,26 @@ JNIEXPORT jlong JNICALL Java_Solver_CPPSimulator_init(JNIEnv *, jclass)
 JNIEXPORT void JNICALL Java_Solver_CPPSimulator_setWave(JNIEnv *, jclass, jint x, jint y, jint r, jfloat h_wave, jlong ptr)
 {
     SWE_WavePropagationBlock *block = (SWE_WavePropagationBlock *)ptr;
+    const Float2D &b = block->getBathymetry();
     for(int i = 0;i< 100;i++)
     {
         for(int j = 0;j < 100; j++)
         {
             if(std::sqrt(((float)i-(float)x)*((float)i-(float)x) + ((float)j-(float)y)*((float)j-(float)y)) < (float)r)
             {
-                block->setWaterHeightXY(i+1,j+1,h_wave);
+                if(&b[x+1][y+1]== 0) {
+                    return;
+                }
+            }
+        }
+    }
+    for(int i = 0;i< 100;i++)
+    {
+        for(int j = 0;j < 100; j++)
+        {
+            if(std::sqrt(((float)i-(float)x)*((float)i-(float)x) + ((float)j-(float)y)*((float)j-(float)y)) < (float)r)
+            {
+               block->setWaterHeightXY(i+1,j+1,h_wave);
             }
         }
     }
@@ -39,8 +52,20 @@ JNIEXPORT void JNICALL Java_Solver_CPPSimulator_setBoundaryType(JNIEnv *, jclass
     block->setBoundaryType(BND_BOTTOM, current);
     block->setBoundaryType(BND_TOP, current);
 }
-JNIEXPORT void JNICALL Java_Solver_CPPSimulator_placeCircle(JNIEnv *, jclass, jint, jint, jint, jlong)
+JNIEXPORT void JNICALL Java_Solver_CPPSimulator_placeCircle(JNIEnv *, jclass, jint x, jint y, jint r, jlong ptr)
 {
+    SWE_WavePropagationBlock *block = (SWE_WavePropagationBlock *)ptr;
+    for(int i = 0;i< 100;i++)
+    {
+        for(int j = 0;j < 100; j++)
+        {
+            if(std::sqrt(((float)i-(float)x)*((float)i-(float)x) + ((float)j-(float)y)*((float)j-(float)y)) < (float)r)
+            {
+                block->setBathymetryXY(i+1,j+1,1000);
+                block->setWaterHeightXY(i+1,j+1,0);
+            }
+        }
+    }
 
 }
 JNIEXPORT void JNICALL Java_Solver_CPPSimulator_placeRect(JNIEnv *, jclass, jint, jint, jint, jint, jlong)
@@ -57,6 +82,9 @@ JNIEXPORT jfloat JNICALL Java_Solver_CPPSimulator_getHeight(JNIEnv *, jclass, ji
 JNIEXPORT jfloat JNICALL Java_Solver_CPPSimulator_getBathymetry(JNIEnv *, jclass, jint x, jint y, jlong ptr)
 {
     SWE_WavePropagationBlock *block = (SWE_WavePropagationBlock *)ptr;
+    const Float2D &b = block->getBathymetry();
+    const float* fret = &b[x+1][y+1];
+    return *fret;
 }
 JNIEXPORT void JNICALL Java_Solver_CPPSimulator_simulatetimestep(JNIEnv *, jclass, jlong ptr)
 {

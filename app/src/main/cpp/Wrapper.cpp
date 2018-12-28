@@ -27,19 +27,10 @@ JNIEXPORT void JNICALL Java_Solver_CPPSimulator_setWave(JNIEnv *, jclass, jint x
         {
             if(std::sqrt(((float)i-(float)x)*((float)i-(float)x) + ((float)j-(float)y)*((float)j-(float)y)) < (float)r)
             {
-                if(&b[x+1][y+1]== 0) {
-                    return;
+                if(b[i+1][j+1]==0) {
+                    block->setWaterHeightXY(i+1,j+1,h_wave);
                 }
-            }
-        }
-    }
-    for(int i = 0;i< 100;i++)
-    {
-        for(int j = 0;j < 100; j++)
-        {
-            if(std::sqrt(((float)i-(float)x)*((float)i-(float)x) + ((float)j-(float)y)*((float)j-(float)y)) < (float)r)
-            {
-               block->setWaterHeightXY(i+1,j+1,h_wave);
+
             }
         }
     }

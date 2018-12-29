@@ -6,6 +6,7 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import Solver.CPPSimulator;
+import Solver.Helper;
 
 public class WaveViewTouchListener implements View.OnTouchListener,GestureDetector.OnGestureListener,GestureDetector.OnDoubleTapListener {
     private GestureDetector gestureDetector;
@@ -26,7 +27,9 @@ public class WaveViewTouchListener implements View.OnTouchListener,GestureDetect
         WaveView waveView = context.findViewById(R.id.waveView);
         float cellsizex = waveView.getWidth()/CPPSimulator.cell_count;
         float cellsizey = waveView.getHeight()/CPPSimulator.cell_count;
-        CPPSimulator.sim.setWave((int)(motionEvent.getX()/cellsizex),(int)(motionEvent.getY()/cellsizey),10,10);//if you increase the waveheights you also have to adapt the drawing
+        float waveheight = context.getWaveHeightValue();
+
+        CPPSimulator.sim.setWave((int)(motionEvent.getX()/cellsizex),(int)(motionEvent.getY()/cellsizey),10, waveheight);//if you increase the waveheights you also have to adapt the drawing
         context.getSimulationRunner().start();
         return true;
     }

@@ -1,13 +1,20 @@
 package com.example.gregor.wavesimulator;
 
+import android.annotation.SuppressLint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.SeekBar;
 import android.widget.Switch;
+import android.widget.TextView;
+
+import java.text.DecimalFormat;
 
 import Solver.CPPSimulator;
+import Solver.Helper;
 import Solver.SimulationRunner;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
     private Switch boundarySwitch;
     private Button reset;
     private Button resetWave;
+    private SeekBar waveHeightSeekBar;
+    private TextView waveHeightLabel;
     private WaveViewTouchListener waveViewTouchListener;
     private static SimulationRunner simulationRunner;
     @Override
@@ -60,9 +69,41 @@ public class MainActivity extends AppCompatActivity {
         });//Defines the onClick  Listener for the WaveView
         resetWave.setText("Reset Waves");
 
+        waveHeightLabel = findViewById(R.id.WaveStrengthLabel);
+
+        waveHeightSeekBar = findViewById(R.id.WaveStrengthseekBar);
+        waveHeightSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                WaveHeightSeekBarChanged(i);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+        waveHeightSeekBar.setProgress(100);
+
+
+
         if(simulationRunner == null) simulationRunner = new SimulationRunner(this);
         else simulationRunner.changeActivity(this);
 
+    }
+    @SuppressLint("SetTextI18n")
+    public void WaveHeightSeekBarChanged(int progress)
+    {      DecimalFormat df = new DecimalFormat("0.0");
+        waveHeightLabel.setText("Wave height: " + ((getWaveHeightValue()==10)?"9.9":df.format(getWaveHeightValue())));
+    }
+    public float getWaveHeightValue()
+    {
+        return Helper.linear_map(0,5,100,10,waveHeightSeekBar.getProgress());
     }
     public void onClickEventReset(View v) {
         simulationRunner.stop();

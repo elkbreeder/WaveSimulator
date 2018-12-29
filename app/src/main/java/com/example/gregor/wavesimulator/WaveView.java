@@ -5,9 +5,12 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
+import android.support.v4.graphics.ColorUtils;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import Solver.CPPSimulator;
+import Solver.Helper;
 
 public class WaveView extends View {
     private static Rect[][] drawing_rects;
@@ -19,12 +22,12 @@ public class WaveView extends View {
 
         if (CPPSimulator.sim == null) {
             CPPSimulator.sim = new CPPSimulator();
-        }
+        }//if there is no Simulator running, instantiate a new one
         drawing_rects = new Rect[CPPSimulator.cell_count][CPPSimulator.cell_count];
         int size_x = getWidth() / CPPSimulator.cell_count;
         int offset_x = (getWidth() - size_x * CPPSimulator.cell_count) / 2;
         int size_y = getHeight() / CPPSimulator.cell_count;
-        int offset_y = (getHeight() - size_y * CPPSimulator.cell_count) / 2;
+        int offset_y = (getHeight() - size_y * CPPSimulator.cell_count) / 2; //calculate the position and size of the drawingrects
         for (int i = 0; i < CPPSimulator.cell_count; i++) {
             for (int j = 0; j < CPPSimulator.cell_count; j++) {
                 drawing_rects[i][j] = new Rect(offset_x + i * size_x, offset_y + j * size_y, offset_x + (i + 1) * size_x, offset_y + (j + 1) * size_y);
@@ -48,32 +51,46 @@ public class WaveView extends View {
 
     @Override
     public void onDraw(Canvas canvas) {
-        /* Start of edge detection implementation
-        double[][] input = new double[CPPSimulator.cell_count + 2][CPPSimulator.cell_count + 2];
+        int c1 = 0;
+        int c2 = 0;
+        int c3 = 0;
+        //Todo: Implement proper visualization*/
         for (int i = 0; i < CPPSimulator.cell_count; i++) {
             for (int j = 0; j < CPPSimulator.cell_count; j++) {
-                input[i + 1][j + 1] = CPPSimulator.sim.getHeight(i, j);
-            }
-        }
-        double[][] edgedetect_lr = {{1, 1, 1}, {0, 0, 0}, {-1, -1, -1}};
-        double[][] edgedetect_tb = {{1, 0, -1}, {1, 0, -1}, {1, 0, -1}};
-        double[][] output_lr = ValleyDetection.convolution2D(input, CPPSimulator.cell_count + 2, CPPSimulator.cell_count + 2, edgedetect_lr, 3, 3);
-        double[][] output_tb = ValleyDetection.convolution2D(input, CPPSimulator.cell_count + 2, CPPSimulator.cell_count + 2, edgedetect_tb, 3, 3);
-        Todo: Implement proper detection of wave valleys and mountains*/
-        for (int i = 0; i < CPPSimulator.cell_count; i++) {
-            for (int j = 0; j < CPPSimulator.cell_count; j++) {
-                int current = (int) CPPSimulator.sim.getHeight(i, j) * 25;
-                //int current_der = (int) (Math.max(output_lr[i][j], output_tb[i][j]));
-                current = (current > 255) ? 255 : current;
-                if ((int) CPPSimulator.sim.getBathymetry(i, j) != 0) {
+                if ((int) CPPSimulator.sim.getBathymetry(i, j) != 0) { //Check if there is an obstacle
                     paint.setColor(Color.rgb(102, 51, 0));
                     canvas.drawRect(drawing_rects[i][j], paint);
-                } else {
-                    paint.setColor(Color.rgb(0, 255 - current, 255));
+                } else { //if not draw the water
+                    float current_height = CPPSimulator.sim.getHeight(i, j);
+                    float[] hsl = {240,1,0};
+                    if(current_height< 4)//10%
+                    {
+                        hsl[2] = Helper.linear_map((float)4,(float)0.1,0,0,current_height);
+                    }
+                    else if(current_height>=4 && current_height < 4.5){ // 10%
+                        c1++;
+                        hsl[2] = Helper.linear_map((float) 4.5,(float)0.2,(float)4,(float) 0.1,current_height);
+                    }
+                    else if(current_height>=4.5 && current_height < 5.5){ // 55%
+                        c2++;
+                        hsl[2] = Helper.linear_map((float) 5.5,(float)0.75,(float)4.5,(float) 0.2,current_height);
+                    }
+                    else if (current_height>=5.5 && current_height < 6.5){ // 15%
+                        c3++;
+                        hsl[2] = Helper.linear_map((float) 6.5,(float)0.9,(float)5.5,(float) 0.75,current_height);
+                    }
+                    else{ //10%
+                        hsl[2] = (float)0.9;//Helper.linear_map(15,(float)1,(float)6.5,(float)0.9,current_height);
+                    }
+                    paint.setColor(ColorUtils.HSLToColor(hsl));
                     canvas.drawRect(drawing_rects[i][j], paint);
+
+
+
                 }
             }
         }
+        Log.i("Distribution", c1+ ","+c2+ ","+ c3);
     }
 
 }

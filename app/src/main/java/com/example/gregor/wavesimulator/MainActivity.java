@@ -3,13 +3,16 @@ package com.example.gregor.wavesimulator;
 import android.annotation.SuppressLint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.SeekBar;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.support.v7.widget.Toolbar;
 
 import java.text.DecimalFormat;
 
@@ -28,13 +31,18 @@ public class MainActivity extends AppCompatActivity {
 
      */
     private WaveView waveView;
+    private Toolbar actionBar;
     private Switch boundarySwitch;
-    private Button reset;
-    private Button resetWave;
     private SeekBar waveHeightSeekBar;
     private TextView waveHeightLabel;
     private WaveViewTouchListener waveViewTouchListener;
     private static SimulationRunner simulationRunner;
+
+/*    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>*/
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,23 +59,6 @@ public class MainActivity extends AppCompatActivity {
         waveView.setOnTouchListener(waveViewTouchListener);
 
 
-        reset = findViewById(R.id.reset);
-        reset.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onClickEventReset(v);
-            }
-        });//Defines the onClick  Listener for the Reset Button
-        reset.setText("Reset");
-
-        resetWave = findViewById(R.id.resetWave);
-        resetWave.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onClickEventResetWave(v);
-            }
-        });//Defines the onClick  Listener for the WaveView
-        resetWave.setText("Reset Waves");
 
         waveHeightLabel = findViewById(R.id.WaveStrengthLabel);
 
@@ -91,11 +82,41 @@ public class MainActivity extends AppCompatActivity {
         waveHeightSeekBar.setProgress(100);
 
 
+       // actionBar = findViewById(R.id.toolbar);
+       // setSupportActionBar(actionBar);
+
 
         if(simulationRunner == null) simulationRunner = new SimulationRunner(this);
         else simulationRunner.changeActivity(this);
 
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.toolbar_menu,menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_settings_reset:
+                simulationRunner.stop();
+                CPPSimulator.reset();//reloads the Simulation;
+                CPPSimulator.sim.setBoundaryType(boundarySwitch.isChecked());
+                waveView.invalidate();
+                break;
+            // action with ID action_settings was selected
+            case R.id.action_settings_reset_wave:
+                CPPSimulator.resetWaves();
+                simulationRunner.stop();
+                waveView.invalidate();
+                break;
+            default:
+                break;
+        }
+        return true;
+    }
+
     @SuppressLint("SetTextI18n")
     public void WaveHeightSeekBarChanged(int progress)
     {      DecimalFormat df = new DecimalFormat("0.0");
@@ -105,18 +126,6 @@ public class MainActivity extends AppCompatActivity {
     {
         return Helper.linear_map(0,5,100,10,waveHeightSeekBar.getProgress());
     }
-    public void onClickEventReset(View v) {
-        simulationRunner.stop();
-        CPPSimulator.reset();//reloads the Simulation;
-        CPPSimulator.sim.setBoundaryType(boundarySwitch.isChecked());
-        waveView.invalidate();
-    }
-    public void onClickEventResetWave(View v) {
-        CPPSimulator.resetWaves();
-        simulationRunner.stop();
-        waveView.invalidate();
-    }
-
     public void onCheckedSwitch(CompoundButton buttonView, boolean isChecked) {
         CPPSimulator.sim.setBoundaryType(isChecked);
     }

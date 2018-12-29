@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_settings_reset_wave"
+        android:title="@string/resetwavebutton"
+        app:showAsAction="never">
+    </item>
+    <item
+        android:id="@+id/action_settings_reset"
+        android:title="@string/resetbutton"
+        app:showAsAction="never">
+    </item>
+</menu>

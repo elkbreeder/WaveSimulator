@@ -6,19 +6,33 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import Solver.CPPSimulator;
-import Solver.Helper;
 
 public class WaveViewTouchListener implements View.OnTouchListener,GestureDetector.OnGestureListener,GestureDetector.OnDoubleTapListener {
+    public boolean drawingmode;
     private GestureDetector gestureDetector;
     private MainActivity context;
     WaveViewTouchListener(MainActivity context)
     {
         gestureDetector = new GestureDetector(context,this);
         this.context = context;
+        drawingmode =false;
     }
     @Override
     public boolean onTouch(View view, MotionEvent motionEvent) {
-        gestureDetector.onTouchEvent(motionEvent);
+        if(drawingmode)
+        {
+            if( motionEvent.getAction() == MotionEvent.ACTION_MOVE)
+            {
+                WaveView waveView = context.findViewById(R.id.waveView);
+                float cellsizex = waveView.getWidth()/CPPSimulator.cell_count;
+                float cellsizey = waveView.getHeight()/CPPSimulator.cell_count;
+                CPPSimulator.sim.placeCircle((int)(motionEvent.getX()/cellsizex),(int)(motionEvent.getY()/cellsizey),4);
+                waveView.invalidate();
+            }
+        }
+        else {
+            gestureDetector.onTouchEvent(motionEvent);
+        }
         return true;
     }
     //Gesture Detector
@@ -45,11 +59,13 @@ public class WaveViewTouchListener implements View.OnTouchListener,GestureDetect
     }
     @Override
     public boolean onDown(MotionEvent motionEvent) {
+
         return false;
     }
 
     @Override
     public void onShowPress(MotionEvent motionEvent) {
+        Log.i("Gest","on Down");
     }
 
     @Override
@@ -81,6 +97,7 @@ public class WaveViewTouchListener implements View.OnTouchListener,GestureDetect
 
     @Override
     public boolean onFling(MotionEvent motionEvent, MotionEvent motionEvent1, float v, float v1) {
+        Log.i("Gest","on Fling");
         return false;
     }
 }

@@ -23,13 +23,13 @@ import Solver.SimulationRunner;
 public class MainActivity extends AppCompatActivity {
     /*
     TodoList
-    Todo: Implement Mode where the user is able to draw obstacles on the screen (high priority)
+    Todo: Make drawing better(high priority)
     Todo: Implement removal of obstacles (high priority)
-    Todo: Refactor Layout
     Todo: add a 1d Simulationmode
     Todo: Add a Tutorial
 
      */
+    private Menu menu;
     private WaveView waveView;
     private Toolbar actionBar;
     private Switch boundarySwitch;
@@ -92,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        this.menu = menu;
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.toolbar_menu,menu);
         return true;
@@ -110,6 +111,18 @@ public class MainActivity extends AppCompatActivity {
                 CPPSimulator.resetWaves();
                 simulationRunner.stop();
                 waveView.invalidate();
+                break;
+            case R.id.action_brush:
+                if(waveViewTouchListener.drawingmode)
+                {
+                    menu.getItem(0).setIcon(R.drawable.ic_brush_stroke_24dp);
+                    waveViewTouchListener.drawingmode = false;
+                }
+                else
+                {
+                    menu.getItem(0).setIcon(R.drawable.ic_brush_black_24dp);
+                    waveViewTouchListener.drawingmode = true;
+                }
                 break;
             default:
                 break;

@@ -2,6 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
+        android:id="@+id/action_brush"
+        android:icon="@drawable/ic_brush_stroke_24dp"
+        app:showAsAction="always">
+    </item>
+    <item
         android:id="@+id/action_settings_reset_wave"
         android:title="@string/resetwavebutton"
         app:showAsAction="never">

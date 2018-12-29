@@ -45,7 +45,8 @@
                 android:id="@+id/switch1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/outflow_switch" />
+                android:text="@string/outflow_switch"
+                android:textSize="18sp" />
 
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/WaveStrengthContainer"
@@ -67,9 +68,11 @@
                 <TextView
                     android:id="@+id/WaveStrengthLabel"
                     android:layout_width="wrap_content"
-                    android:layout_height="19dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/button"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:text="Wave Strength" />

@@ -11,6 +11,16 @@ import Solver.CPPSimulator;
 import Solver.SimulationRunner;
 
 public class MainActivity extends AppCompatActivity {
+    /*
+    TodoList
+    Todo: Detect minimum and maximum of the waves in the domain (should work like edge detection) and use it to get better drawing results (high priority)
+    Todo: Implement Mode where the user is able to draw obstacles on the screen (high priority)
+    Todo: Implement removal of obstacles (high priority)
+    Todo: Refactor Layout
+    Todo: add a 1d Simulationmode
+    Todo: Add a Tutorial
+
+     */
     private WaveView waveView;
     private Switch boundarySwitch;
     private Button reset;

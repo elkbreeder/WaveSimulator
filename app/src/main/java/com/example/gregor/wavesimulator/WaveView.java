@@ -8,7 +8,6 @@ import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.View;
 import Solver.CPPSimulator;
-import Solver.ValleyDetection;
 
 public class WaveView extends View {
     private static Rect[][] drawing_rects;

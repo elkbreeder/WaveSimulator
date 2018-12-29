@@ -132,6 +132,14 @@ void SWE_Block::setBathymetryXY(int x,int y, float b_set)
 {
   b[x][y]= b_set;
 }
+void SWE_Block::setHuXY(int x,int y,float h_set)
+{
+  hu[x][y] =h_set;
+}
+void SWE_Block::setHvXY(int x,int y,float h_set)
+{
+  hv[x][y] =h_set;
+}
 /**
  * set water height h in all interior grid cells (i.e. except ghost layer) 
  * to values specified by parameter function _h

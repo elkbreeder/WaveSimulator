@@ -21,9 +21,11 @@ JNIEXPORT void JNICALL Java_Solver_CPPSimulator_setWave(JNIEnv *, jclass, jint x
 {
     SWE_WavePropagationBlock *block = (SWE_WavePropagationBlock *)ptr;
     const Float2D &b = block->getBathymetry();
-    for(int i = 0;i< 100;i++)
+    int l_nX = block->getNx();
+    int l_nY = block->getNy();
+    for(int i = 0;i<  l_nX;i++)
     {
-        for(int j = 0;j < 100; j++)
+        for(int j = 0;j <  l_nY ; j++)
         {
             if(std::sqrt(((float)i-(float)x)*((float)i-(float)x) + ((float)j-(float)y)*((float)j-(float)y)) < (float)r)
             {
@@ -46,9 +48,11 @@ JNIEXPORT void JNICALL Java_Solver_CPPSimulator_setBoundaryType(JNIEnv *, jclass
 JNIEXPORT void JNICALL Java_Solver_CPPSimulator_placeCircle(JNIEnv *, jclass, jint x, jint y, jint r, jlong ptr)
 {
     SWE_WavePropagationBlock *block = (SWE_WavePropagationBlock *)ptr;
-    for(int i = 0;i< 100;i++)
+    int l_nX = block->getNx();
+    int l_nY = block->getNy();
+    for(int i = 0;i< l_nX;i++)
     {
-        for(int j = 0;j < 100; j++)
+        for(int j = 0;j < l_nY; j++)
         {
             if(std::sqrt(((float)i-(float)x)*((float)i-(float)x) + ((float)j-(float)y)*((float)j-(float)y)) < (float)r)
             {
@@ -89,4 +93,28 @@ JNIEXPORT void JNICALL Java_Solver_CPPSimulator_delete(JNIEnv *, jclass, jlong p
 {
     delete (SWE_WavePropagationBlock *)(ptr);
 }
+JNIEXPORT void JNICALL Java_Solver_CPPSimulator_resetWaveHeights(JNIEnv *, jclass,jfloat height, jlong ptr) {
+    SWE_WavePropagationBlock *block = (SWE_WavePropagationBlock *) ptr;
+    const Float2D &b = block->getBathymetry();
+    int l_nX = block->getNx();
+    int l_nY = block->getNy();
+
+    for (int i = 0; i < l_nX; i++)
+    {
+        for (int j = 0; j < l_nY; j++)
+        {
+            if(b[i+1][j+1]==0) {
+                block->setWaterHeightXY(i+1,j+1,height);
+                block->setHuXY(i+1,j+1,0);
+                block->setHvXY(i+1,j+1,0);
+            }
+
+        }
+    }
+}
+JNIEXPORT void JNICALL Java_Solver_CPPSimulator_delete__IIJ(JNIEnv *, jclass, jint, jint, jlong ptr){
+    SWE_WavePropagationBlock *block = (SWE_WavePropagationBlock *)ptr;
+
+}
+
 

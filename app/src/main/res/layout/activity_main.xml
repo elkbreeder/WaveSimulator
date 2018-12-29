@@ -19,31 +19,77 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/ToolBox"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/waveView">
 
-        <Switch
-            android:id="@+id/switch1"
+        <LinearLayout
+            android:id="@+id/ToolBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/outflow_switch" />
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/waveView">
 
-        <Button
-            android:id="@+id/reset"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/button"
-            tools:text="reset" />
-    </LinearLayout>
+            <Switch
+                android:id="@+id/switch1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/outflow_switch" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/WaveStrengthContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <SeekBar
+                    android:id="@+id/WaveStrengthseekBar"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/WaveStrengthLabel"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/WaveStrengthLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="19dp"
+                    android:layout_weight="1"
+                    android:text="@string/button"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Wave Strength" />
+            </android.support.constraint.ConstraintLayout>
+
+            <Button
+                android:id="@+id/reset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button"
+                tools:text="reset all" />
+
+            <Button
+                android:id="@+id/resetWave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button"
+                tools:text="Reset Waves" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

@@ -8,10 +8,13 @@ import java.time.Instant;
 
 //all CPPSimulator Objects uses the Same Native Object!
 public class CPPSimulator {
+    public static final  float waterlevel = 5;
     public static final int cell_count = 100; /*Todo: implement cell_count everywhere (eg in native code)
+
     known dependencies:
     Wrapper.cpp  Java_Solver_CPPSimulator_setWave    */
     public static CPPSimulator sim; //have to be static to allow screen rotation
+
     private static long SWE_Pointer = 0;
     public CPPSimulator(){
         System.loadLibrary("SWELib");
@@ -38,6 +41,7 @@ public class CPPSimulator {
     public static void reset()
     {
         SWE_Pointer = init();//creates a new SWE_Block Object
+        resetWaves();
     }
     public float getHeight(int x, int y)
     {
@@ -53,6 +57,10 @@ public class CPPSimulator {
         simulatetimestep(SWE_Pointer);
 
     }
+    public synchronized static void resetWaves()
+    {
+        resetWaveHeights(waterlevel,SWE_Pointer);
+    }
     protected void finalize()
     {
         delete(SWE_Pointer);//free up Memory
@@ -66,4 +74,6 @@ public class CPPSimulator {
     private static native void setBoundaryType(boolean isWall,long ptr);
     private static native void placeCircle(int x, int y, int r, long ptr);
     private static native void placeRect(int left, int right, int top, int bottom, long ptr);
+    private static native void resetWaveHeights(float h, long ptr);
+    private static native void delete(int x, int y,long ptr);
 }

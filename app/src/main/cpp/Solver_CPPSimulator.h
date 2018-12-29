@@ -30,7 +30,7 @@ JNIEXPORT void JNICALL Java_Solver_CPPSimulator_setWave
  * Method:    delete
  * Signature: (J)V
  */
-JNIEXPORT void JNICALL Java_Solver_CPPSimulator_delete
+JNIEXPORT void JNICALL Java_Solver_CPPSimulator_delete__J
   (JNIEnv *, jclass, jlong);
 
 /*
@@ -80,6 +80,22 @@ JNIEXPORT void JNICALL Java_Solver_CPPSimulator_placeCircle
  */
 JNIEXPORT void JNICALL Java_Solver_CPPSimulator_placeRect
   (JNIEnv *, jclass, jint, jint, jint, jint, jlong);
+
+/*
+ * Class:     Solver_CPPSimulator
+ * Method:    resetWaveHeights
+ * Signature: (FJ)V
+ */
+JNIEXPORT void JNICALL Java_Solver_CPPSimulator_resetWaveHeights
+  (JNIEnv *, jclass, jfloat, jlong);
+
+/*
+ * Class:     Solver_CPPSimulator
+ * Method:    delete
+ * Signature: (IIJ)V
+ */
+JNIEXPORT void JNICALL Java_Solver_CPPSimulator_delete__IIJ
+  (JNIEnv *, jclass, jint, jint, jlong);
 
 #ifdef __cplusplus
 }

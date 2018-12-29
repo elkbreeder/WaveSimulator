@@ -130,6 +130,8 @@ class SWE_Block {
 
     void setWaterHeightXY(int x,int y,float h_set);
     void setBathymetryXY(int x,int y,float h_set);
+    void setHuXY(int x,int y,float h_set);
+    void setHvXY(int x,int y,float h_set);
     
     // read access to arrays of unknowns
     /// provides read access to the water height array 

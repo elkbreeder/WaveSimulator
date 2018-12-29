@@ -51,9 +51,6 @@ public class WaveView extends View {
 
     @Override
     public void onDraw(Canvas canvas) {
-        int c1 = 0;
-        int c2 = 0;
-        int c3 = 0;
         //Todo: Implement proper visualization*/
         for (int i = 0; i < CPPSimulator.cell_count; i++) {
             for (int j = 0; j < CPPSimulator.cell_count; j++) {
@@ -68,15 +65,12 @@ public class WaveView extends View {
                         hsl[2] = Helper.linear_map((float)4,(float)0.1,0,0,current_height);
                     }
                     else if(current_height>=4 && current_height < 4.5){ // 10%
-                        c1++;
                         hsl[2] = Helper.linear_map((float) 4.5,(float)0.2,(float)4,(float) 0.1,current_height);
                     }
                     else if(current_height>=4.5 && current_height < 5.5){ // 55%
-                        c2++;
                         hsl[2] = Helper.linear_map((float) 5.5,(float)0.75,(float)4.5,(float) 0.2,current_height);
                     }
                     else if (current_height>=5.5 && current_height < 6.5){ // 15%
-                        c3++;
                         hsl[2] = Helper.linear_map((float) 6.5,(float)0.9,(float)5.5,(float) 0.75,current_height);
                     }
                     else{ //10%
@@ -90,7 +84,6 @@ public class WaveView extends View {
                 }
             }
         }
-        Log.i("Distribution", c1+ ","+c2+ ","+ c3);
     }
 
 }

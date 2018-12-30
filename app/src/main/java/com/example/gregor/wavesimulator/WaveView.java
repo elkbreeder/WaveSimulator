@@ -55,11 +55,11 @@ public class WaveView extends View {
         for (int i = 0; i < CPPSimulator.cell_count; i++) {
             for (int j = 0; j < CPPSimulator.cell_count; j++) {
                 if ((int) CPPSimulator.sim.getBathymetry(i, j) != 0) { //Check if there is an obstacle
-                    paint.setColor(Color.rgb(102, 51, 0));
+                    paint.setColor(Color.rgb(0, 151, 0));
                     canvas.drawRect(drawing_rects[i][j], paint);
                 } else { //if not draw the water
                     float current_height = CPPSimulator.sim.getHeight(i, j);
-                    float[] hsl = {240,1,0};
+                    float[] hsl = {220,1,0};
                     if(current_height< 4)//10%
                     {
                         hsl[2] = Helper.linear_map((float)4,(float)0.1,0,0,current_height);

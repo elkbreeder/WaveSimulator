@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">WaveSimulator</string>
+    <string name="app_name">Wave Simulator</string>
     <string name="button">Button@String</string>
     <string name="resetbutton">Reset</string>
     <string name="resetwavebutton">Reset Wave</string>

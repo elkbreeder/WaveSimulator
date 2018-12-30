@@ -1,6 +1,7 @@
 package com.example.gregor.wavesimulator;
 
 import android.annotation.SuppressLint;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -97,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
         switch (item.getItemId()) {
             case R.id.action_settings_reset:
                 simulationRunner.stop();
@@ -115,12 +117,14 @@ public class MainActivity extends AppCompatActivity {
                 {
                     menu.getItem(1).setIcon(R.drawable.ic_brush_stroke_24dp);
                     waveViewTouchListener.drawingmode = WaveViewTouchListener.MODE_SIMULATE;
+                    Snackbar.make(findViewById(R.id.masterView), R.string.mode_draw_disabled ,Snackbar.LENGTH_SHORT).show();
                 }
                 else
                 {
                     menu.getItem(1).setIcon(R.drawable.ic_brush_black_24dp);
                     menu.getItem(0).setIcon(R.drawable.ic_remove_circle_outline_24dp);
                     waveViewTouchListener.drawingmode =  WaveViewTouchListener.MODE_DRAW;
+                    Snackbar.make(findViewById(R.id.masterView), R.string.mode_draw ,Snackbar.LENGTH_SHORT).show();
                 }
                 break;
             case R.id.action_eraser:
@@ -128,12 +132,14 @@ public class MainActivity extends AppCompatActivity {
                 {
                     menu.getItem(0).setIcon(R.drawable.ic_remove_circle_outline_24dp);
                     waveViewTouchListener.drawingmode = WaveViewTouchListener.MODE_SIMULATE;
+                    Snackbar.make(findViewById(R.id.masterView), R.string.mode_erase_disabled ,Snackbar.LENGTH_SHORT).show();
                 }
                 else
                 {
                     menu.getItem(1).setIcon(R.drawable.ic_brush_stroke_24dp);
                     menu.getItem(0).setIcon(R.drawable.ic_remove_circle_24dp);
                     waveViewTouchListener.drawingmode = WaveViewTouchListener.MODE_EREASE;
+                    Snackbar.make(findViewById(R.id.masterView), R.string.mode_erase ,Snackbar.LENGTH_SHORT).show();
                 }
                 break;
             default:

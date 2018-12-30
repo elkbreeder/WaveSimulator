@@ -5,4 +5,8 @@
     <string name="resetwavebutton">Reset Wave</string>
     <string name="outflow_switch">Reflecting Boundaries</string>
     <string name="action_settings">Settings</string>
+    <string name="mode_erase">Erase mode enabled</string>
+    <string name="mode_erase_disabled">Erase mode disabled</string>
+    <string name="mode_draw">Draw mode enabled</string>
+    <string name="mode_draw_disabled">Draw mode disabled</string>
 </resources>

@@ -82,8 +82,8 @@ public class MainActivity extends AppCompatActivity {
         waveHeightSeekBar.setProgress(100);
 
 
-       // actionBar = findViewById(R.id.toolbar);
-       // setSupportActionBar(actionBar);
+        actionBar = findViewById(R.id.toolbar);
+        setSupportActionBar(actionBar);
 
 
         if(simulationRunner == null) simulationRunner = new SimulationRunner(this);

@@ -31,25 +31,26 @@ public class WaveViewTouchListener implements View.OnTouchListener,GestureDetect
                 float cellsizex = waveView.getWidth()/CPPSimulator.cell_count;
                 float cellsizey = waveView.getHeight()/CPPSimulator.cell_count;
                 int curr_X = (int)(motionEvent.getX()/cellsizex);
-                int curr_Y = (int)(motionEvent.getY()/cellsizey); //cal
-                if(last_drawingX == -1 || last_drawingY == -1){
+                int curr_Y = (int)(motionEvent.getY()/cellsizey); //calculate the current finger position in the domain
+                if(last_drawingX == -1 || last_drawingY == -1){ //if there is no last fingerpoint position, initialize with the currentposition
                     last_drawingX = curr_X;
                     last_drawingY = curr_Y;
                 }
                 float vector_x = curr_X-last_drawingX;
-                float vector_y =  curr_Y -last_drawingY;
+                float vector_y =  curr_Y -last_drawingY; //calculate the vector between last and current position
                 float vectorlength =(float)Math.sqrt(vector_x*vector_x+vector_y*vector_y);
                 vector_x = vector_x/vectorlength;
                 vector_y = vector_y/vectorlength;//calculate unit vector
-                int steps = (int)vectorlength/(thickness_line/2);
+                int steps = (int)vectorlength/(thickness_line/2); //calculate the steps
                 for(int i = 0; i < steps ; i++)
                 {
                     CPPSimulator.sim.placeCircle(last_drawingX+(int) ((thickness_line/2)*vector_x*i),last_drawingY+(int) ((thickness_line/2)*vector_y*i),thickness_line/2);
+                    //place a circle at every step
                 }
                 CPPSimulator.sim.placeCircle(curr_X,curr_Y,thickness_line/2);
                 last_drawingX = curr_X;
                 last_drawingY = curr_Y;
-                waveView.invalidate();
+                waveView.invalidate();//redraw view
             }
             else
             {
@@ -80,7 +81,7 @@ public class WaveViewTouchListener implements View.OnTouchListener,GestureDetect
         WaveView waveView = context.findViewById(R.id.waveView);
         float cellsizex = waveView.getWidth()/CPPSimulator.cell_count;
         float cellsizey = waveView.getHeight()/CPPSimulator.cell_count;
-        CPPSimulator.sim.placeCircle((int)(motionEvent.getX()/cellsizex),(int)(motionEvent.getY()/cellsizey),10);
+        CPPSimulator.sim.placeCircle((int)(motionEvent.getX()/cellsizex),(int)(motionEvent.getY()/cellsizey),10); //set a large circle at finger position
         waveView.invalidate();
         return true;
     }
@@ -92,7 +93,6 @@ public class WaveViewTouchListener implements View.OnTouchListener,GestureDetect
 
     @Override
     public void onShowPress(MotionEvent motionEvent) {
-        Log.i("Gest","on Down");
     }
 
     @Override
@@ -111,7 +111,7 @@ public class WaveViewTouchListener implements View.OnTouchListener,GestureDetect
 
     @Override
     public void onLongPress(MotionEvent motionEvent) {
-        if(context.getSimulationRunner().isStarted())
+        if(context.getSimulationRunner().isStarted())//starts or stops the simulation
         {
             context.getSimulationRunner().stop();
         }

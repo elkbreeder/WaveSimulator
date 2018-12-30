@@ -13,6 +13,7 @@ import Solver.CPPSimulator;
 import Solver.Helper;
 
 public class WaveView extends View {
+    private static final float pause_sensitivity = (float)0.01;
     private static Rect[][] drawing_rects;
     private Paint paint;
 
@@ -51,7 +52,9 @@ public class WaveView extends View {
 
     @Override
     public void onDraw(Canvas canvas) {
-        //Todo: Implement proper visualization*/
+        boolean nomoremovement = true;
+        float last_height = -1;
+
         for (int i = 0; i < CPPSimulator.cell_count; i++) {
             for (int j = 0; j < CPPSimulator.cell_count; j++) {
                 if ((int) CPPSimulator.sim.getBathymetry(i, j) != 0) { //Check if there is an obstacle
@@ -59,6 +62,7 @@ public class WaveView extends View {
                     canvas.drawRect(drawing_rects[i][j], paint);
                 } else { //if not draw the water
                     float current_height = CPPSimulator.sim.getHeight(i, j);
+                    if(last_height == -1) last_height = current_height;
                     float[] hsl = {220,1,0};
                     if(current_height< 4)//10%
                     {
@@ -79,10 +83,15 @@ public class WaveView extends View {
                     paint.setColor(ColorUtils.HSLToColor(hsl));
                     canvas.drawRect(drawing_rects[i][j], paint);
 
+                    if(nomoremovement)nomoremovement = (Math.abs(last_height-current_height)< pause_sensitivity);
+                    last_height = current_height;
 
 
                 }
             }
+        }
+        if(nomoremovement){
+            MainActivity.getSimulationRunner().stop();
         }
     }
 

@@ -147,5 +147,5 @@ public class MainActivity extends AppCompatActivity {
     {
         return waveView;
     }
-    public SimulationRunner getSimulationRunner() { return simulationRunner;}
+    public static SimulationRunner getSimulationRunner() { return simulationRunner;}
 }

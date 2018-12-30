@@ -8,29 +8,56 @@ import android.view.View;
 import Solver.CPPSimulator;
 
 public class WaveViewTouchListener implements View.OnTouchListener,GestureDetector.OnGestureListener,GestureDetector.OnDoubleTapListener {
+    public final int thickness_line = 8;
     public boolean drawingmode;
     private GestureDetector gestureDetector;
     private MainActivity context;
+    private int last_drawingX;
+    private int last_drawingY;
     WaveViewTouchListener(MainActivity context)
     {
         gestureDetector = new GestureDetector(context,this);
         this.context = context;
         drawingmode =false;
+        last_drawingX = last_drawingY = -1;
     }
     @Override
     public boolean onTouch(View view, MotionEvent motionEvent) {
         if(drawingmode)
         {
-            if( motionEvent.getAction() == MotionEvent.ACTION_MOVE)
+            if( motionEvent.getAction() == MotionEvent.ACTION_MOVE)//If a Moveevent is detected
             {
                 WaveView waveView = context.findViewById(R.id.waveView);
                 float cellsizex = waveView.getWidth()/CPPSimulator.cell_count;
                 float cellsizey = waveView.getHeight()/CPPSimulator.cell_count;
-                CPPSimulator.sim.placeCircle((int)(motionEvent.getX()/cellsizex),(int)(motionEvent.getY()/cellsizey),4);
+                int curr_X = (int)(motionEvent.getX()/cellsizex);
+                int curr_Y = (int)(motionEvent.getY()/cellsizey);
+                if(last_drawingX == -1 || last_drawingY == -1){
+                    last_drawingX = curr_X;
+                    last_drawingY = curr_Y;
+                }
+                float vector_x = curr_X-last_drawingX;
+                float vector_y =  curr_Y -last_drawingY;
+                float vectorlength =(float)Math.sqrt(vector_x*vector_x+vector_y*vector_y);
+                vector_x = vector_x/vectorlength;
+                vector_y = vector_y/vectorlength;//calculate unit vector
+                int steps = (int)vectorlength/(thickness_line/2);
+                for(int i = 0; i < steps ; i++)
+                {
+                    CPPSimulator.sim.placeCircle(last_drawingX+(int) ((thickness_line/2)*vector_x*i),last_drawingY+(int) ((thickness_line/2)*vector_y*i),thickness_line/2);
+                }
+                CPPSimulator.sim.placeCircle(curr_X,curr_Y,thickness_line/2);
+                last_drawingX = curr_X;
+                last_drawingY = curr_Y;
                 waveView.invalidate();
+            }
+            else
+            {
+                last_drawingX = last_drawingY = -1;
             }
         }
         else {
+            last_drawingX = last_drawingY = -1;
             gestureDetector.onTouchEvent(motionEvent);
         }
         return true;

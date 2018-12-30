@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.SeekBar;
 import android.widget.Switch;
@@ -23,7 +21,6 @@ import Solver.SimulationRunner;
 public class MainActivity extends AppCompatActivity {
     /*
     TodoList
-    Todo: Make drawing better(high priority)
     Todo: Implement removal of obstacles (high priority)
     Todo: add a 1d Simulationmode
     Todo: Add a Tutorial
@@ -132,7 +129,9 @@ public class MainActivity extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     public void WaveHeightSeekBarChanged(int progress)
-    {      DecimalFormat df = new DecimalFormat("0.0");
+    {
+        DecimalFormat df;
+        df = new DecimalFormat("0.0");
         waveHeightLabel.setText("Wave height: " + ((getWaveHeightValue()==10)?"9.9":df.format(getWaveHeightValue())));
     }
     public float getWaveHeightValue()

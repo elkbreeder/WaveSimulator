@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         waveHeightSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-                WaveHeightSeekBarChanged(i);
+                WaveHeightSeekBarChanged();
             }
 
             @Override
@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @SuppressLint("SetTextI18n")
-    public void WaveHeightSeekBarChanged(int progress)
+    public void WaveHeightSeekBarChanged()
     {
         DecimalFormat df;
         df = new DecimalFormat("0.0");

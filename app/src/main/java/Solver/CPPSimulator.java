@@ -51,6 +51,10 @@ public class CPPSimulator {
     {
         return getBathymetry(x,y,SWE_Pointer);
     }
+    public void delete(int x, int y,int r)
+    {
+        delete(x,y,r,SWE_Pointer);
+    }
     public synchronized void simulatetimestep()
     {
 
@@ -75,5 +79,5 @@ public class CPPSimulator {
     private static native void placeCircle(int x, int y, int r, long ptr);
     private static native void placeRect(int left, int right, int top, int bottom, long ptr);
     private static native void resetWaveHeights(float h, long ptr);
-    private static native void delete(int x, int y,long ptr);
+    private static native void delete(int x, int y,int r,long ptr);
 }

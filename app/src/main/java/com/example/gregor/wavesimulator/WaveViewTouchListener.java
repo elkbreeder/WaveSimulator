@@ -8,22 +8,26 @@ import android.view.View;
 import Solver.CPPSimulator;
 
 public class WaveViewTouchListener implements View.OnTouchListener,GestureDetector.OnGestureListener,GestureDetector.OnDoubleTapListener {
+    public static final int MODE_SIMULATE = 0;
+    public static final int MODE_DRAW = 1;
+    public static final int MODE_EREASE = 2;
     private final int thickness_line = 8;
-    public boolean drawingmode;
+    public int drawingmode;
     private GestureDetector gestureDetector;
     private MainActivity context;
     private int last_drawingX;
     private int last_drawingY;
+
     WaveViewTouchListener(MainActivity context)
     {
         gestureDetector = new GestureDetector(context,this);
         this.context = context;
-        drawingmode =false;
+        drawingmode = MODE_SIMULATE;
         last_drawingX = last_drawingY = -1;
     }
     @Override
     public boolean onTouch(View view, MotionEvent motionEvent) {
-        if(drawingmode)
+        if(drawingmode == MODE_DRAW)
         {
             if( motionEvent.getAction() == MotionEvent.ACTION_MOVE)//If a Moveevent is detected
             {
@@ -48,6 +52,40 @@ public class WaveViewTouchListener implements View.OnTouchListener,GestureDetect
                     //place a circle at every step
                 }
                 CPPSimulator.sim.placeCircle(curr_X,curr_Y,thickness_line/2);
+                last_drawingX = curr_X;
+                last_drawingY = curr_Y;
+                waveView.invalidate();//redraw view
+            }
+            else
+            {
+                last_drawingX = last_drawingY = -1;
+            }
+        }
+        else if(drawingmode == MODE_EREASE)
+        {
+            if( motionEvent.getAction() == MotionEvent.ACTION_MOVE)//If a Moveevent is detected
+            {
+                WaveView waveView = context.findViewById(R.id.waveView);
+                float cellsizex = waveView.getWidth()/CPPSimulator.cell_count;
+                float cellsizey = waveView.getHeight()/CPPSimulator.cell_count;
+                int curr_X = (int)(motionEvent.getX()/cellsizex);
+                int curr_Y = (int)(motionEvent.getY()/cellsizey); //calculate the current finger position in the domain
+                if(last_drawingX == -1 || last_drawingY == -1){ //if there is no last fingerpoint position, initialize with the currentposition
+                    last_drawingX = curr_X;
+                    last_drawingY = curr_Y;
+                }
+                float vector_x = curr_X-last_drawingX;
+                float vector_y =  curr_Y -last_drawingY; //calculate the vector between last and current position
+                float vectorlength =(float)Math.sqrt(vector_x*vector_x+vector_y*vector_y);
+                vector_x = vector_x/vectorlength;
+                vector_y = vector_y/vectorlength;//calculate unit vector
+                int steps = (int)vectorlength/(thickness_line/2); //calculate the steps
+                for(int i = 0; i < steps ; i++)
+                {
+                    CPPSimulator.sim.delete(last_drawingX+(int) ((thickness_line/2)*vector_x*i),last_drawingY+(int) ((thickness_line/2)*vector_y*i),thickness_line/2);
+                    //place a circle at every step
+                }
+                CPPSimulator.sim.delete(curr_X,curr_Y,thickness_line/2);
                 last_drawingX = curr_X;
                 last_drawingY = curr_Y;
                 waveView.invalidate();//redraw view

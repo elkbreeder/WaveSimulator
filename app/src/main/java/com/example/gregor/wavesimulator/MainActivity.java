@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
     /*
     TodoList
 
-    Todo: Implement removal of obstacles (high priority)
     Todo: add a 1d Simulationmode
     Todo: Add a Tutorial
     Todo: remove dependencies from hardcoded domainsize
@@ -112,15 +111,29 @@ public class MainActivity extends AppCompatActivity {
                 waveView.invalidate();
                 break;
             case R.id.action_brush:
-                if(waveViewTouchListener.drawingmode)
+                if(waveViewTouchListener.drawingmode == WaveViewTouchListener.MODE_DRAW)
                 {
-                    menu.getItem(0).setIcon(R.drawable.ic_brush_stroke_24dp);
-                    waveViewTouchListener.drawingmode = false;
+                    menu.getItem(1).setIcon(R.drawable.ic_brush_stroke_24dp);
+                    waveViewTouchListener.drawingmode = WaveViewTouchListener.MODE_SIMULATE;
                 }
                 else
                 {
-                    menu.getItem(0).setIcon(R.drawable.ic_brush_black_24dp);
-                    waveViewTouchListener.drawingmode = true;
+                    menu.getItem(1).setIcon(R.drawable.ic_brush_black_24dp);
+                    menu.getItem(0).setIcon(R.drawable.ic_remove_circle_outline_24dp);
+                    waveViewTouchListener.drawingmode =  WaveViewTouchListener.MODE_DRAW;
+                }
+                break;
+            case R.id.action_eraser:
+                if(waveViewTouchListener.drawingmode == WaveViewTouchListener.MODE_EREASE)
+                {
+                    menu.getItem(0).setIcon(R.drawable.ic_remove_circle_outline_24dp);
+                    waveViewTouchListener.drawingmode = WaveViewTouchListener.MODE_SIMULATE;
+                }
+                else
+                {
+                    menu.getItem(1).setIcon(R.drawable.ic_brush_stroke_24dp);
+                    menu.getItem(0).setIcon(R.drawable.ic_remove_circle_24dp);
+                    waveViewTouchListener.drawingmode = WaveViewTouchListener.MODE_EREASE;
                 }
                 break;
             default:

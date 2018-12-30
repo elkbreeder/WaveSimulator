@@ -112,9 +112,21 @@ JNIEXPORT void JNICALL Java_Solver_CPPSimulator_resetWaveHeights(JNIEnv *, jclas
         }
     }
 }
-JNIEXPORT void JNICALL Java_Solver_CPPSimulator_delete__IIJ(JNIEnv *, jclass, jint, jint, jlong ptr){
+JNIEXPORT void JNICALL Java_Solver_CPPSimulator_delete__IIIJ(JNIEnv *, jclass, jint x, jint y, jint r, jlong ptr){
     SWE_WavePropagationBlock *block = (SWE_WavePropagationBlock *)ptr;
-
+    int l_nX = block->getNx();
+    int l_nY = block->getNy();
+    for (int i = 0; i < l_nX; i++)
+    {
+        for (int j = 0; j < l_nY; j++)
+        {
+            if(std::sqrt(((float)i-(float)x)*((float)i-(float)x) + ((float)j-(float)y)*((float)j-(float)y)) < (float)r)
+            {
+                block->setBathymetryXY(i+1,j+1,0);
+                block->setWaterHeightXY(i+1,j+1,5);
+            }
+        }
+    }
 }
 
 

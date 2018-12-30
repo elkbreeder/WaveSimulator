@@ -7,6 +7,8 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
+#undef Solver_CPPSimulator_waterlevel
+#define Solver_CPPSimulator_waterlevel 5.0f
 #undef Solver_CPPSimulator_cell_count
 #define Solver_CPPSimulator_cell_count 100L
 /*
@@ -92,10 +94,10 @@ JNIEXPORT void JNICALL Java_Solver_CPPSimulator_resetWaveHeights
 /*
  * Class:     Solver_CPPSimulator
  * Method:    delete
- * Signature: (IIJ)V
+ * Signature: (IIIJ)V
  */
-JNIEXPORT void JNICALL Java_Solver_CPPSimulator_delete__IIJ
-  (JNIEnv *, jclass, jint, jint, jlong);
+JNIEXPORT void JNICALL Java_Solver_CPPSimulator_delete__IIIJ
+  (JNIEnv *, jclass, jint, jint, jint, jlong);
 
 #ifdef __cplusplus
 }

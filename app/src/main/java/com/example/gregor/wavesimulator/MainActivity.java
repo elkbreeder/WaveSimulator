@@ -21,9 +21,11 @@ import Solver.SimulationRunner;
 public class MainActivity extends AppCompatActivity {
     /*
     TodoList
+
     Todo: Implement removal of obstacles (high priority)
     Todo: add a 1d Simulationmode
     Todo: Add a Tutorial
+    Todo: remove dependencies from hardcoded domainsize
 
      */
     private Menu menu;

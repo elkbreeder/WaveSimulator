@@ -31,7 +31,7 @@ public class WaveViewTouchListener implements View.OnTouchListener,GestureDetect
                 float cellsizex = waveView.getWidth()/CPPSimulator.cell_count;
                 float cellsizey = waveView.getHeight()/CPPSimulator.cell_count;
                 int curr_X = (int)(motionEvent.getX()/cellsizex);
-                int curr_Y = (int)(motionEvent.getY()/cellsizey);
+                int curr_Y = (int)(motionEvent.getY()/cellsizey); //cal
                 if(last_drawingX == -1 || last_drawingY == -1){
                     last_drawingX = curr_X;
                     last_drawingY = curr_Y;

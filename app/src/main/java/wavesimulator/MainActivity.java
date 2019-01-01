@@ -1,4 +1,4 @@
-package com.example.gregor.wavesimulator;
+package wavesimulator;
 
 import android.annotation.SuppressLint;
 import android.support.design.widget.Snackbar;
@@ -18,6 +18,7 @@ import java.text.DecimalFormat;
 import Solver.CPPSimulator;
 import Solver.Helper;
 import Solver.SimulationRunner;
+import gregor.wavesimulator.R;
 
 public class MainActivity extends AppCompatActivity {
     /*

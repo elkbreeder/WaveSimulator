@@ -1,6 +1,6 @@
 package Solver;
 
-import com.example.gregor.wavesimulator.MainActivity;
+import wavesimulator.MainActivity;
 
 //Class which handles the Threading of a Simulation
 public class SimulationRunner {

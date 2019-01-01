@@ -1,4 +1,4 @@
-package com.example.gregor.wavesimulator;
+package wavesimulator;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -10,6 +10,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import Solver.CPPSimulator;
 import Solver.Helper;
+import wavesimulator.MainActivity;
 
 public class WaveView extends View {
     private static final float pause_sensitivity = (float)0.01;

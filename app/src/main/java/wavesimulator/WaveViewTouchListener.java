@@ -1,11 +1,11 @@
-package com.example.gregor.wavesimulator;
-
+package wavesimulator;
+import gregor.wavesimulator.R;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
-
 import Solver.CPPSimulator;
+
 
 public class WaveViewTouchListener implements View.OnTouchListener,GestureDetector.OnGestureListener,GestureDetector.OnDoubleTapListener {
     public static final int MODE_SIMULATE = 0;

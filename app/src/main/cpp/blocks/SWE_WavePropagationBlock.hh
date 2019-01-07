@@ -39,7 +39,7 @@
 //  0: Hybrid
 //  1: f-Wave
 //  2: Approximate Augmented Riemann solver
-#include "../Fwave.hpp"
+#include "../FWave.hpp"
 
 /**
  * SWE_WavePropagationBlock is an implementation of the SWE_Block abstract class.

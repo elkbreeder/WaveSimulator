@@ -8,17 +8,19 @@ import java.time.Instant;
 
 //all CPPSimulator Objects uses the Same Native Object!
 public class CPPSimulator {
+    //this class is used as an interface to the SWE c++ code
     public static final  float waterlevel = 5;
-    public static final int cell_count = 100; /*Todo: implement cell_count everywhere (eg in native code)
-
-    known dependencies:
+    public static final int cell_count = 100;
+    /*Todo: implement cell_count everywhere (eg in native code)
+    known dependencies from static 100:
     Wrapper.cpp  Java_Solver_CPPSimulator_setWave    */
+
     public static CPPSimulator sim; //have to be static to allow screen rotation
 
-    private static long SWE_Pointer = 0;
+    private static long SWE_Pointer = 0;//Pointer to the SWE Wave Propagationblock
     public CPPSimulator(){
-        System.loadLibrary("SWELib");
-        if(SWE_Pointer == 0) {
+        System.loadLibrary("SWELib");//load libary
+        if(SWE_Pointer == 0) { //if its the first initialization reset the simulation
             reset();
         }
         //sim.placeCircle(20,20,10);
@@ -40,6 +42,7 @@ public class CPPSimulator {
     }
     public static void reset()
     {
+        //resets the simulation
         SWE_Pointer = init();//creates a new SWE_Block Object
         resetWaves();
     }

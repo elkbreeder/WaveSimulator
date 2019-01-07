@@ -27,6 +27,7 @@ public class WaveViewTouchListener implements View.OnTouchListener,GestureDetect
     }
     @Override
     public boolean onTouch(View view, MotionEvent motionEvent) {
+        //gets called if the waveview is touched
         if(drawingmode == MODE_DRAW)
         {
             if( motionEvent.getAction() == MotionEvent.ACTION_MOVE)//If a Moveevent is detected
@@ -117,11 +118,14 @@ public class WaveViewTouchListener implements View.OnTouchListener,GestureDetect
 
     @Override
     public boolean onDoubleTap(MotionEvent motionEvent) {
-        WaveView waveView = context.findViewById(R.id.waveView);
-        float cellsizex = waveView.getWidth()/CPPSimulator.cell_count;
-        float cellsizey = waveView.getHeight()/CPPSimulator.cell_count;
-        CPPSimulator.sim.placeCircle((int)(motionEvent.getX()/cellsizex),(int)(motionEvent.getY()/cellsizey),10); //set a large circle at finger position
-        waveView.invalidate();
+        if(context.getSimulationRunner().isStarted())//starts or stops the simulation
+        {
+            context.getSimulationRunner().stop();
+        }
+        else
+        {
+            context.getSimulationRunner().start();
+        }
         return true;
     }
     @Override
@@ -150,20 +154,18 @@ public class WaveViewTouchListener implements View.OnTouchListener,GestureDetect
 
     @Override
     public void onLongPress(MotionEvent motionEvent) {
-        if(context.getSimulationRunner().isStarted())//starts or stops the simulation
-        {
-            context.getSimulationRunner().stop();
-        }
-        else
-        {
-            context.getSimulationRunner().start();
-        }
+        //places a circle at the pressed location
+        WaveView waveView = context.findViewById(R.id.waveView);
+        float cellsizex = waveView.getWidth()/CPPSimulator.cell_count;
+        float cellsizey = waveView.getHeight()/CPPSimulator.cell_count;
+        CPPSimulator.sim.placeCircle((int)(motionEvent.getX()/cellsizex),(int)(motionEvent.getY()/cellsizey),10); //set a large circle at finger position
+        waveView.invalidate();
+
 
     }
 
     @Override
     public boolean onFling(MotionEvent motionEvent, MotionEvent motionEvent1, float v, float v1) {
-        Log.i("Gest","on Fling");
         return false;
     }
 }

@@ -2,7 +2,7 @@ package Solver;
 
 import wavesimulator.MainActivity;
 
-//Class which handles the Threading of a Simulation
+//! \class SimulationRunner \brief a This class handles the Threading of the Simulation
 public class SimulationRunner {
     private Thread simulation_thread;
     private boolean started;
@@ -13,9 +13,8 @@ public class SimulationRunner {
         started = false;
 
     }
-
+    //! starts the simulation
     public void start() {
-        //starts the simulation
         if (!started) {
             started = true;
             simulation_thread = new Thread(new Runnable() {
@@ -24,23 +23,24 @@ public class SimulationRunner {
                     long duration;
                     long sleeptime = 20;
                     while (started) {
-                        start_time = java.lang.System.currentTimeMillis();//get the currenttime
-                        CPPSimulator.sim.simulatetimestep();//simulate a single timestep
+                        start_time = java.lang.System.currentTimeMillis();//!< get the current time
+                        CPPSimulator.sim.simulatetimestep();//!< simulate a single timestep
                         currentActivity.runOnUiThread(new Runnable() {
+                            //!< redraw view
                             public void run() {
-                                currentActivity.getWaveView().invalidate();//redraw view
+                                currentActivity.getWaveView().invalidate();
                             }
                         });
-                        duration = java.lang.System.currentTimeMillis() - start_time;//calculate the duration of the timestepsimulation
+                        duration = java.lang.System.currentTimeMillis() - start_time;//!< calculate the duration of the timestepsimulation
                         try {
-                            Thread.sleep((sleeptime-duration>0)?sleeptime-duration:0);//sleep if took less time then sleeptime
+                            Thread.sleep((sleeptime-duration>0)?sleeptime-duration:0);//!< sleep if took less time then sleeptime
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
                     }
                 }
             });
-            simulation_thread.start();//starts the created thread
+            simulation_thread.start();//!< starts the created thread
         }
     }
 

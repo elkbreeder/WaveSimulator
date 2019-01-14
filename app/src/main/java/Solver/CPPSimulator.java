@@ -1,4 +1,4 @@
-package Solver;
+package Solver;//! \namespace Solver \brief a The Solver entails all classes dedicated to the mathematical backend of our implementation
 
 
 import android.util.Log;
@@ -7,6 +7,7 @@ import java.time.Duration;
 import java.time.Instant;
 
 //all CPPSimulator Objects uses the Same Native Object!
+//! \class CPPSimulator \brief a This class interfaces with the SWE-Code(c++);
 public class CPPSimulator {
     //this class is used as an interface to the SWE c++ code
     public static final  float waterlevel = 5;
@@ -15,12 +16,12 @@ public class CPPSimulator {
     known dependencies from static 100:
     Wrapper.cpp  Java_Solver_CPPSimulator_setWave    */
 
-    public static CPPSimulator sim; //have to be static to allow screen rotation
+    public static CPPSimulator sim; //!< have to be static to allow screen rotation
 
-    private static long SWE_Pointer = 0;//Pointer to the SWE Wave Propagationblock
+    private static long SWE_Pointer = 0;//!< Pointer to the SWE Wave Propagationblock
     public CPPSimulator(){
-        System.loadLibrary("SWELib");//load libary
-        if(SWE_Pointer == 0) { //if its the first initialization reset the simulation
+        System.loadLibrary("SWELib");//!< load libary
+        if(SWE_Pointer == 0) { //!< if its the first initialization reset the simulation
             reset();
         }
         //sim.placeCircle(20,20,10);
@@ -28,22 +29,23 @@ public class CPPSimulator {
     }
     public synchronized void setWave(int x, int y, int r, float h)
     {
-        setWave(x,y,r,h,SWE_Pointer);
-
-        //SWE_Pointer = setWave(x,y,r,h,SWE_Pointer);
+        setWave(x,y,r,h,SWE_Pointer);//!< SWE_Pointer = setWave(x,y,r,h,SWE_Pointer);
     }
+    //! Positions the Bathymetry-Circle where needed
     public synchronized void placeCircle(int x, int y, int r)
     {
         placeCircle(x,y,r,SWE_Pointer);
     }
+    //! Adjust boudary-type
     public void setBoundaryType(boolean isWall)
     {
         setBoundaryType(isWall,SWE_Pointer);
     }
+    //! resets the simulation
     public static void reset()
     {
-        //resets the simulation
-        SWE_Pointer = init();//creates a new SWE_Block Object
+        
+        SWE_Pointer = init();//!< creates a new SWE_Block Object
         resetWaves();
     }
     public float getHeight(int x, int y)
@@ -68,9 +70,10 @@ public class CPPSimulator {
     {
         resetWaveHeights(waterlevel,SWE_Pointer);
     }
+    //! free up Memory
     protected void finalize()
     {
-        delete(SWE_Pointer);//free up Memory
+        delete(SWE_Pointer);
     }
     private static native long init();
     private static native void setWave(int x, int y, int r, float h,long ptr);

@@ -51,6 +51,7 @@ typedef enum BoundaryEdge {
  * to provide derived classes that implement the SWE_Scenario interface
  * for more interesting scenarios.
  */
+//! \class SWE_Scenario \brief a This class sets the standart layout for all simulateable scenarios
 class SWE_Scenario {
 
 public:

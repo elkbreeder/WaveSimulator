@@ -1,0 +1,161 @@
+\hypertarget{Wrapper_8cpp}{}\section{app/src/main/cpp/\+Wrapper.cpp File Reference}
+\label{Wrapper_8cpp}\index{app/src/main/cpp/\+Wrapper.\+cpp@{app/src/main/cpp/\+Wrapper.\+cpp}}
+{\ttfamily \#include \char`\"{}Solver\+\_\+\+C\+P\+P\+Simulator.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}scenarios/\+S\+W\+E\+\_\+simple\+\_\+scenarios.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}scenarios/\+S\+W\+E\+\_\+\+Scenario.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}blocks/\+S\+W\+E\+\_\+\+Wave\+Propagation\+Block.\+hh\char`\"{}}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include \char`\"{}tools/help.\+hh\char`\"{}}\\*
+Include dependency graph for Wrapper.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Wrapper_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+J\+N\+I\+E\+X\+P\+O\+RT jlong J\+N\+I\+C\+A\+LL \hyperlink{Wrapper_8cpp_a40ef3ecb46a3981d9a4e535e0e25dacc}{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+init} (J\+N\+I\+Env $\ast$, jclass)
+\item 
+J\+N\+I\+E\+X\+P\+O\+RT void J\+N\+I\+C\+A\+LL \hyperlink{Wrapper_8cpp_a0a59dc4d689624e5162cbc852b2b47f3}{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+set\+Wave} (J\+N\+I\+Env $\ast$, jclass, jint x, jint y, jint r, jfloat h\+\_\+wave, jlong ptr)
+\item 
+J\+N\+I\+E\+X\+P\+O\+RT void J\+N\+I\+C\+A\+LL \hyperlink{Wrapper_8cpp_ae1fd3b6bfe81c319bb4104867a463741}{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+set\+Boundary\+Type} (J\+N\+I\+Env $\ast$, jclass, jboolean is\+Wall, jlong ptr)
+\item 
+J\+N\+I\+E\+X\+P\+O\+RT void J\+N\+I\+C\+A\+LL \hyperlink{Wrapper_8cpp_a28ebe3221b005ebbfa0eaa7af0b9ff0d}{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+place\+Circle} (J\+N\+I\+Env $\ast$, jclass, jint x, jint y, jint r, jlong ptr)
+\item 
+J\+N\+I\+E\+X\+P\+O\+RT void J\+N\+I\+C\+A\+LL \hyperlink{Wrapper_8cpp_a9031e8e94cbc9bb80dbab0de8ddf4955}{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+place\+Rect} (J\+N\+I\+Env $\ast$, jclass, jint, jint, jint, jint, jlong)
+\item 
+J\+N\+I\+E\+X\+P\+O\+RT jfloat J\+N\+I\+C\+A\+LL \hyperlink{Wrapper_8cpp_afb17c8d054ca954c551f3984b88b2a3b}{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+get\+Height} (J\+N\+I\+Env $\ast$, jclass, jint x, jint y, jlong ptr)
+\item 
+J\+N\+I\+E\+X\+P\+O\+RT jfloat J\+N\+I\+C\+A\+LL \hyperlink{Wrapper_8cpp_a3d39508314fe5eaa7e6d42428c036544}{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+get\+Bathymetry} (J\+N\+I\+Env $\ast$, jclass, jint x, jint y, jlong ptr)
+\item 
+J\+N\+I\+E\+X\+P\+O\+RT void J\+N\+I\+C\+A\+LL \hyperlink{Wrapper_8cpp_a84cfaf861d0fc237bdefd754c487b90d}{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+simulatetimestep} (J\+N\+I\+Env $\ast$, jclass, jlong ptr)
+\item 
+J\+N\+I\+E\+X\+P\+O\+RT void J\+N\+I\+C\+A\+LL \hyperlink{Wrapper_8cpp_a95e7b6600a4b09b16f1e7906b5836c45}{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+delete} (J\+N\+I\+Env $\ast$, jclass, jlong ptr)
+\item 
+J\+N\+I\+E\+X\+P\+O\+RT void J\+N\+I\+C\+A\+LL \hyperlink{Wrapper_8cpp_a2933506a0cdb317f80a0b5183cc2301e}{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+reset\+Wave\+Heights} (J\+N\+I\+Env $\ast$, jclass, jfloat height, jlong ptr)
+\item 
+J\+N\+I\+E\+X\+P\+O\+RT void J\+N\+I\+C\+A\+LL \hyperlink{Wrapper_8cpp_a67a4cf57301cbeb761f2f52f28147098}{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+delete\+\_\+\+\_\+\+I\+I\+IJ} (J\+N\+I\+Env $\ast$, jclass, jint x, jint y, jint r, jlong ptr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Wrapper.\+cpp@{Wrapper.\+cpp}!Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+delete@{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+delete}}
+\index{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+delete@{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+delete}!Wrapper.\+cpp@{Wrapper.\+cpp}}
+\subsubsection[{\texorpdfstring{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+delete(\+J\+N\+I\+Env $\ast$, jclass, jlong ptr)}{Java_Solver_CPPSimulator_delete(JNIEnv *, jclass, jlong ptr)}}]{\setlength{\rightskip}{0pt plus 5cm}J\+N\+I\+E\+X\+P\+O\+RT void J\+N\+I\+C\+A\+LL Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{J\+N\+I\+Env $\ast$}]{, }
+\item[{jclass}]{, }
+\item[{jlong}]{ptr}
+\end{DoxyParamCaption}
+)}\hypertarget{Wrapper_8cpp_a95e7b6600a4b09b16f1e7906b5836c45}{}\label{Wrapper_8cpp_a95e7b6600a4b09b16f1e7906b5836c45}
+\index{Wrapper.\+cpp@{Wrapper.\+cpp}!Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+delete\+\_\+\+\_\+\+I\+I\+IJ@{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+delete\+\_\+\+\_\+\+I\+I\+IJ}}
+\index{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+delete\+\_\+\+\_\+\+I\+I\+IJ@{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+delete\+\_\+\+\_\+\+I\+I\+IJ}!Wrapper.\+cpp@{Wrapper.\+cpp}}
+\subsubsection[{\texorpdfstring{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+delete\+\_\+\+\_\+\+I\+I\+I\+J(\+J\+N\+I\+Env $\ast$, jclass, jint x, jint y, jint r, jlong ptr)}{Java_Solver_CPPSimulator_delete__IIIJ(JNIEnv *, jclass, jint x, jint y, jint r, jlong ptr)}}]{\setlength{\rightskip}{0pt plus 5cm}J\+N\+I\+E\+X\+P\+O\+RT void J\+N\+I\+C\+A\+LL Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+delete\+\_\+\+\_\+\+I\+I\+IJ (
+\begin{DoxyParamCaption}
+\item[{J\+N\+I\+Env $\ast$}]{, }
+\item[{jclass}]{, }
+\item[{jint}]{x, }
+\item[{jint}]{y, }
+\item[{jint}]{r, }
+\item[{jlong}]{ptr}
+\end{DoxyParamCaption}
+)}\hypertarget{Wrapper_8cpp_a67a4cf57301cbeb761f2f52f28147098}{}\label{Wrapper_8cpp_a67a4cf57301cbeb761f2f52f28147098}
+\index{Wrapper.\+cpp@{Wrapper.\+cpp}!Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+get\+Bathymetry@{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+get\+Bathymetry}}
+\index{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+get\+Bathymetry@{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+get\+Bathymetry}!Wrapper.\+cpp@{Wrapper.\+cpp}}
+\subsubsection[{\texorpdfstring{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+get\+Bathymetry(\+J\+N\+I\+Env $\ast$, jclass, jint x, jint y, jlong ptr)}{Java_Solver_CPPSimulator_getBathymetry(JNIEnv *, jclass, jint x, jint y, jlong ptr)}}]{\setlength{\rightskip}{0pt plus 5cm}J\+N\+I\+E\+X\+P\+O\+RT jfloat J\+N\+I\+C\+A\+LL Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+get\+Bathymetry (
+\begin{DoxyParamCaption}
+\item[{J\+N\+I\+Env $\ast$}]{, }
+\item[{jclass}]{, }
+\item[{jint}]{x, }
+\item[{jint}]{y, }
+\item[{jlong}]{ptr}
+\end{DoxyParamCaption}
+)}\hypertarget{Wrapper_8cpp_a3d39508314fe5eaa7e6d42428c036544}{}\label{Wrapper_8cpp_a3d39508314fe5eaa7e6d42428c036544}
+\index{Wrapper.\+cpp@{Wrapper.\+cpp}!Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+get\+Height@{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+get\+Height}}
+\index{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+get\+Height@{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+get\+Height}!Wrapper.\+cpp@{Wrapper.\+cpp}}
+\subsubsection[{\texorpdfstring{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+get\+Height(\+J\+N\+I\+Env $\ast$, jclass, jint x, jint y, jlong ptr)}{Java_Solver_CPPSimulator_getHeight(JNIEnv *, jclass, jint x, jint y, jlong ptr)}}]{\setlength{\rightskip}{0pt plus 5cm}J\+N\+I\+E\+X\+P\+O\+RT jfloat J\+N\+I\+C\+A\+LL Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+get\+Height (
+\begin{DoxyParamCaption}
+\item[{J\+N\+I\+Env $\ast$}]{, }
+\item[{jclass}]{, }
+\item[{jint}]{x, }
+\item[{jint}]{y, }
+\item[{jlong}]{ptr}
+\end{DoxyParamCaption}
+)}\hypertarget{Wrapper_8cpp_afb17c8d054ca954c551f3984b88b2a3b}{}\label{Wrapper_8cpp_afb17c8d054ca954c551f3984b88b2a3b}
+\index{Wrapper.\+cpp@{Wrapper.\+cpp}!Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+init@{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+init}}
+\index{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+init@{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+init}!Wrapper.\+cpp@{Wrapper.\+cpp}}
+\subsubsection[{\texorpdfstring{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+init(\+J\+N\+I\+Env $\ast$, jclass)}{Java_Solver_CPPSimulator_init(JNIEnv *, jclass)}}]{\setlength{\rightskip}{0pt plus 5cm}J\+N\+I\+E\+X\+P\+O\+RT jlong J\+N\+I\+C\+A\+LL Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{J\+N\+I\+Env $\ast$}]{, }
+\item[{jclass}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{Wrapper_8cpp_a40ef3ecb46a3981d9a4e535e0e25dacc}{}\label{Wrapper_8cpp_a40ef3ecb46a3981d9a4e535e0e25dacc}
+\index{Wrapper.\+cpp@{Wrapper.\+cpp}!Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+place\+Circle@{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+place\+Circle}}
+\index{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+place\+Circle@{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+place\+Circle}!Wrapper.\+cpp@{Wrapper.\+cpp}}
+\subsubsection[{\texorpdfstring{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+place\+Circle(\+J\+N\+I\+Env $\ast$, jclass, jint x, jint y, jint r, jlong ptr)}{Java_Solver_CPPSimulator_placeCircle(JNIEnv *, jclass, jint x, jint y, jint r, jlong ptr)}}]{\setlength{\rightskip}{0pt plus 5cm}J\+N\+I\+E\+X\+P\+O\+RT void J\+N\+I\+C\+A\+LL Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+place\+Circle (
+\begin{DoxyParamCaption}
+\item[{J\+N\+I\+Env $\ast$}]{, }
+\item[{jclass}]{, }
+\item[{jint}]{x, }
+\item[{jint}]{y, }
+\item[{jint}]{r, }
+\item[{jlong}]{ptr}
+\end{DoxyParamCaption}
+)}\hypertarget{Wrapper_8cpp_a28ebe3221b005ebbfa0eaa7af0b9ff0d}{}\label{Wrapper_8cpp_a28ebe3221b005ebbfa0eaa7af0b9ff0d}
+\index{Wrapper.\+cpp@{Wrapper.\+cpp}!Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+place\+Rect@{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+place\+Rect}}
+\index{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+place\+Rect@{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+place\+Rect}!Wrapper.\+cpp@{Wrapper.\+cpp}}
+\subsubsection[{\texorpdfstring{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+place\+Rect(\+J\+N\+I\+Env $\ast$, jclass, jint, jint, jint, jint, jlong)}{Java_Solver_CPPSimulator_placeRect(JNIEnv *, jclass, jint, jint, jint, jint, jlong)}}]{\setlength{\rightskip}{0pt plus 5cm}J\+N\+I\+E\+X\+P\+O\+RT void J\+N\+I\+C\+A\+LL Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+place\+Rect (
+\begin{DoxyParamCaption}
+\item[{J\+N\+I\+Env $\ast$}]{, }
+\item[{jclass}]{, }
+\item[{jint}]{, }
+\item[{jint}]{, }
+\item[{jint}]{, }
+\item[{jint}]{, }
+\item[{jlong}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{Wrapper_8cpp_a9031e8e94cbc9bb80dbab0de8ddf4955}{}\label{Wrapper_8cpp_a9031e8e94cbc9bb80dbab0de8ddf4955}
+\index{Wrapper.\+cpp@{Wrapper.\+cpp}!Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+reset\+Wave\+Heights@{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+reset\+Wave\+Heights}}
+\index{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+reset\+Wave\+Heights@{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+reset\+Wave\+Heights}!Wrapper.\+cpp@{Wrapper.\+cpp}}
+\subsubsection[{\texorpdfstring{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+reset\+Wave\+Heights(\+J\+N\+I\+Env $\ast$, jclass, jfloat height, jlong ptr)}{Java_Solver_CPPSimulator_resetWaveHeights(JNIEnv *, jclass, jfloat height, jlong ptr)}}]{\setlength{\rightskip}{0pt plus 5cm}J\+N\+I\+E\+X\+P\+O\+RT void J\+N\+I\+C\+A\+LL Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+reset\+Wave\+Heights (
+\begin{DoxyParamCaption}
+\item[{J\+N\+I\+Env $\ast$}]{, }
+\item[{jclass}]{, }
+\item[{jfloat}]{height, }
+\item[{jlong}]{ptr}
+\end{DoxyParamCaption}
+)}\hypertarget{Wrapper_8cpp_a2933506a0cdb317f80a0b5183cc2301e}{}\label{Wrapper_8cpp_a2933506a0cdb317f80a0b5183cc2301e}
+\index{Wrapper.\+cpp@{Wrapper.\+cpp}!Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+set\+Boundary\+Type@{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+set\+Boundary\+Type}}
+\index{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+set\+Boundary\+Type@{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+set\+Boundary\+Type}!Wrapper.\+cpp@{Wrapper.\+cpp}}
+\subsubsection[{\texorpdfstring{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+set\+Boundary\+Type(\+J\+N\+I\+Env $\ast$, jclass, jboolean is\+Wall, jlong ptr)}{Java_Solver_CPPSimulator_setBoundaryType(JNIEnv *, jclass, jboolean isWall, jlong ptr)}}]{\setlength{\rightskip}{0pt plus 5cm}J\+N\+I\+E\+X\+P\+O\+RT void J\+N\+I\+C\+A\+LL Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+set\+Boundary\+Type (
+\begin{DoxyParamCaption}
+\item[{J\+N\+I\+Env $\ast$}]{, }
+\item[{jclass}]{, }
+\item[{jboolean}]{is\+Wall, }
+\item[{jlong}]{ptr}
+\end{DoxyParamCaption}
+)}\hypertarget{Wrapper_8cpp_ae1fd3b6bfe81c319bb4104867a463741}{}\label{Wrapper_8cpp_ae1fd3b6bfe81c319bb4104867a463741}
+\index{Wrapper.\+cpp@{Wrapper.\+cpp}!Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+set\+Wave@{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+set\+Wave}}
+\index{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+set\+Wave@{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+set\+Wave}!Wrapper.\+cpp@{Wrapper.\+cpp}}
+\subsubsection[{\texorpdfstring{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+set\+Wave(\+J\+N\+I\+Env $\ast$, jclass, jint x, jint y, jint r, jfloat h\+\_\+wave, jlong ptr)}{Java_Solver_CPPSimulator_setWave(JNIEnv *, jclass, jint x, jint y, jint r, jfloat h_wave, jlong ptr)}}]{\setlength{\rightskip}{0pt plus 5cm}J\+N\+I\+E\+X\+P\+O\+RT void J\+N\+I\+C\+A\+LL Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+set\+Wave (
+\begin{DoxyParamCaption}
+\item[{J\+N\+I\+Env $\ast$}]{, }
+\item[{jclass}]{, }
+\item[{jint}]{x, }
+\item[{jint}]{y, }
+\item[{jint}]{r, }
+\item[{jfloat}]{h\+\_\+wave, }
+\item[{jlong}]{ptr}
+\end{DoxyParamCaption}
+)}\hypertarget{Wrapper_8cpp_a0a59dc4d689624e5162cbc852b2b47f3}{}\label{Wrapper_8cpp_a0a59dc4d689624e5162cbc852b2b47f3}
+\index{Wrapper.\+cpp@{Wrapper.\+cpp}!Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+simulatetimestep@{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+simulatetimestep}}
+\index{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+simulatetimestep@{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+simulatetimestep}!Wrapper.\+cpp@{Wrapper.\+cpp}}
+\subsubsection[{\texorpdfstring{Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+simulatetimestep(\+J\+N\+I\+Env $\ast$, jclass, jlong ptr)}{Java_Solver_CPPSimulator_simulatetimestep(JNIEnv *, jclass, jlong ptr)}}]{\setlength{\rightskip}{0pt plus 5cm}J\+N\+I\+E\+X\+P\+O\+RT void J\+N\+I\+C\+A\+LL Java\+\_\+\+Solver\+\_\+\+C\+P\+P\+Simulator\+\_\+simulatetimestep (
+\begin{DoxyParamCaption}
+\item[{J\+N\+I\+Env $\ast$}]{, }
+\item[{jclass}]{, }
+\item[{jlong}]{ptr}
+\end{DoxyParamCaption}
+)}\hypertarget{Wrapper_8cpp_a84cfaf861d0fc237bdefd754c487b90d}{}\label{Wrapper_8cpp_a84cfaf861d0fc237bdefd754c487b90d}

@@ -12,11 +12,12 @@ import Solver.CPPSimulator;
 import Solver.Helper;
 import wavesimulator.MainActivity;
 
+//! \class WaveView \brief a This class is responsible for the Wave visualization
 public class WaveView extends View {
-    //Java Class which is responsible for the Wave visualization
-    private static final float pause_sensitivity = (float)0.01;//minimum change which is required to not pause the simulation
-    private static Rect[][] drawing_rects;//rects which visualize the waveheights
-    private Paint paint;//paint which visualizes the waveheights
+    
+    private static final float pause_sensitivity = (float)0.01;//!< minimum change which is required to not pause the simulation
+    private static Rect[][] drawing_rects;//!< rects which visualize the waveheights
+    private Paint paint;//!< paint which visualizes the waveheights
 
     public WaveView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -24,11 +25,11 @@ public class WaveView extends View {
 
         if (CPPSimulator.sim == null) {
             CPPSimulator.sim = new CPPSimulator();
-        }//if there is no Simulator running, instantiate a new one
-        drawing_rects = new Rect[CPPSimulator.cell_count][CPPSimulator.cell_count];//init the rects
+        }//!> if there is no Simulator running, instantiate a new one
+        drawing_rects = new Rect[CPPSimulator.cell_count][CPPSimulator.cell_count];//!> initiate the rectangles
 
-        //calculate the position and size of the drawingrects
-        int size_x = getWidth() / CPPSimulator.cell_count;
+        
+        int size_x = getWidth() / CPPSimulator.cell_count;//!<  calculate the position and size of the drawingrects
         int offset_x = (getWidth() - size_x * CPPSimulator.cell_count) / 2;
         int size_y = getHeight() / CPPSimulator.cell_count;
         int offset_y = (getHeight() - size_y * CPPSimulator.cell_count) / 2;
@@ -41,11 +42,10 @@ public class WaveView extends View {
     }
 
     @Override
+    //! called when the viewsize gets changed
     protected void onSizeChanged(int w, int h, int old_w, int old_h) {
-        //called when the viewsize gets changed
 
-        //calculate the position and size of the drawingrects
-        drawing_rects = new Rect[CPPSimulator.cell_count][CPPSimulator.cell_count];
+        drawing_rects = new Rect[CPPSimulator.cell_count][CPPSimulator.cell_count];//!< calculate the position and size of the drawingrects
         int size_x = w / CPPSimulator.cell_count;
         int offset_x = (w - size_x * CPPSimulator.cell_count) / 2;
         int size_y = h / CPPSimulator.cell_count;
@@ -59,21 +59,22 @@ public class WaveView extends View {
     }
 
     @Override
+    //! called when something changes in the domain
     public void onDraw(Canvas canvas) {
-        //get called when something changes in the domain
+        
         boolean nomoremovement = true;
         float last_height = -1;
 
         for (int i = 0; i < CPPSimulator.cell_count; i++) {
             for (int j = 0; j < CPPSimulator.cell_count; j++) {
-                if ((int) CPPSimulator.sim.getBathymetry(i, j) != 0) { //Check if there is an obstacle
+                if ((int) CPPSimulator.sim.getBathymetry(i, j) != 0) { //!<  Check if there is an obstacle
                     paint.setColor(Color.rgb(0, 151, 0));
                     canvas.drawRect(drawing_rects[i][j], paint);
-                } else { //if not draw the water
+                } else { //!> if not draw the water
                     float current_height = CPPSimulator.sim.getHeight(i, j);
                     if(last_height == -1) last_height = current_height;
                     float[] hsl = {220,1,0};
-                    //determine new color
+                    //!> determine new color
                     if(current_height< 4)//10%
                     {
                         hsl[2] = Helper.linear_map((float)4,(float)0.1,0,0,current_height);
@@ -94,15 +95,15 @@ public class WaveView extends View {
                     paint.setColor(ColorUtils.HSLToColor(hsl));
                     canvas.drawRect(drawing_rects[i][j], paint);
 
-                    if(nomoremovement)nomoremovement = (Math.abs(last_height-current_height)< pause_sensitivity);//update nomoremovement
-                    last_height = current_height;//set lasheight to currentheight
+                    if(nomoremovement)nomoremovement = (Math.abs(last_height-current_height)< pause_sensitivity);//!< update nomoremovement
+                    last_height = current_height;//!< set lasheight to currentheight
 
 
                 }
             }
         }
         if(nomoremovement){
-            MainActivity.getSimulationRunner().stop();//stops the simualtion  if there is no more movement
+            MainActivity.getSimulationRunner().stop();//!> stops the simualtion  if there is no more movement
         }
     }
 

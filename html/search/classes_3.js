@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['simulationrunner',['SimulationRunner',['../classSolver_1_1SimulationRunner.html',1,'Solver']]]
+  ['mainactivity',['MainActivity',['../classwavesimulator_1_1MainActivity.html',1,'wavesimulator']]]
 ];

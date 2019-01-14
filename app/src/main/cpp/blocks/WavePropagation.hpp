@@ -18,15 +18,12 @@
 #ifndef WAVEPROPAGATIONSOLVER_HPP_
 #define WAVEPROPAGATIONSOLVER_HPP_
 
+//! \namespace solver \brief This namespace defines code that defines the SWE framework
 namespace solver {
   template <typename T> class WavePropagation;
 }
 
-/**
- * Abstract wave propagation solver for the Shallow Water Equations.
- *
- * T should be double or float.
- */
+//! \class WavePropagation \brief a Abstract wave propagation solver for the Shallow Water Equations; T should be double or float;
 template <typename T> class solver::WavePropagation {
   protected:
     //global variables

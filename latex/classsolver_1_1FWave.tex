@@ -1,0 +1,192 @@
+\hypertarget{classsolver_1_1FWave}{}\section{solver\+:\+:F\+Wave$<$ T $>$ Class Template Reference}
+\label{classsolver_1_1FWave}\index{solver\+::\+F\+Wave$<$ T $>$@{solver\+::\+F\+Wave$<$ T $>$}}
+
+
+{\ttfamily \#include $<$F\+Wave.\+hpp$>$}
+
+
+
+Inheritance diagram for solver\+:\+:F\+Wave$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{classsolver_1_1FWave__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for solver\+:\+:F\+Wave$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{classsolver_1_1FWave__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsolver_1_1FWave_a7cd616d6b271714e7897ab00c89cc346}{F\+Wave} (T i\+\_\+dry\+Tolerance=(T) 0.\+01, T i\+\_\+gravity=(T) 9.\+81, T i\+\_\+zero\+Tolerance=(T) 0.\+000000001)
+\item 
+void \hyperlink{classsolver_1_1FWave_a28446b13c979263d5c06ac1e633840bf}{compute\+Net\+Updates} (const T \&i\+\_\+h\+Left, const T \&i\+\_\+h\+Right, const T \&i\+\_\+hu\+Left, const T \&i\+\_\+hu\+Right, const T \&i\+\_\+b\+Left, const T \&i\+\_\+b\+Right, T \&o\+\_\+h\+Update\+Left, T \&o\+\_\+h\+Update\+Right, T \&o\+\_\+hu\+Update\+Left, T \&o\+\_\+hu\+Update\+Right, T \&o\+\_\+max\+Wave\+Speed)
+\item 
+void \hyperlink{classsolver_1_1FWave_a84199b85cf0ea72f1d7419cabc0fe7c2}{compute\+Net\+Updates\+Hybrid} (const T \&i\+\_\+h\+Left, const T \&i\+\_\+h\+Right, const T \&i\+\_\+hu\+Left, const T \&i\+\_\+hu\+Right, const T \&i\+\_\+b\+Left, const T \&i\+\_\+b\+Right, const T \&i\+\_\+u\+Left, const T \&i\+\_\+u\+Right, const T i\+\_\+wave\+Speeds\mbox{[}2\mbox{]}, T \&o\+\_\+h\+Update\+Left, T \&o\+\_\+h\+Update\+Right, T \&o\+\_\+hu\+Update\+Left, T \&o\+\_\+hu\+Update\+Right, T \&o\+\_\+max\+Wave\+Speed)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\\*
+class solver\+::\+F\+Wave$<$ T $>$}
+
+
+
+Definition at line 62 of file F\+Wave.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{solver\+::\+F\+Wave@{solver\+::\+F\+Wave}!F\+Wave@{F\+Wave}}
+\index{F\+Wave@{F\+Wave}!solver\+::\+F\+Wave@{solver\+::\+F\+Wave}}
+\subsubsection[{\texorpdfstring{F\+Wave(\+T i\+\_\+dry\+Tolerance=(\+T) 0.\+01, T i\+\_\+gravity=(\+T) 9.\+81, T i\+\_\+zero\+Tolerance=(\+T) 0.\+000000001)}{FWave(T i_dryTolerance=(T) 0.01, T i_gravity=(T) 9.81, T i_zeroTolerance=(T) 0.000000001)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf solver\+::\+F\+Wave}$<$ T $>$\+::{\bf F\+Wave} (
+\begin{DoxyParamCaption}
+\item[{T}]{i\+\_\+dry\+Tolerance = {\ttfamily (T)~0.01}, }
+\item[{T}]{i\+\_\+gravity = {\ttfamily (T)~9.81}, }
+\item[{T}]{i\+\_\+zero\+Tolerance = {\ttfamily (T)~0.000000001}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classsolver_1_1FWave_a7cd616d6b271714e7897ab00c89cc346}{}\label{classsolver_1_1FWave_a7cd616d6b271714e7897ab00c89cc346}
+Constructor of the f-\/wave solver with optional parameters.
+
+
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+dry\+Tolerance} & numerical definition of \char`\"{}dry\char`\"{}. \\
+\hline
+{\em i\+\_\+gravity} & gravity constant. \\
+\hline
+{\em i\+\_\+zero\+Tolerance} & numerical definition of zero. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 103 of file F\+Wave.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{solver\+::\+F\+Wave@{solver\+::\+F\+Wave}!compute\+Net\+Updates@{compute\+Net\+Updates}}
+\index{compute\+Net\+Updates@{compute\+Net\+Updates}!solver\+::\+F\+Wave@{solver\+::\+F\+Wave}}
+\subsubsection[{\texorpdfstring{compute\+Net\+Updates(const T \&i\+\_\+h\+Left, const T \&i\+\_\+h\+Right, const T \&i\+\_\+hu\+Left, const T \&i\+\_\+hu\+Right, const T \&i\+\_\+b\+Left, const T \&i\+\_\+b\+Right, T \&o\+\_\+h\+Update\+Left, T \&o\+\_\+h\+Update\+Right, T \&o\+\_\+hu\+Update\+Left, T \&o\+\_\+hu\+Update\+Right, T \&o\+\_\+max\+Wave\+Speed)}{computeNetUpdates(const T &i_hLeft, const T &i_hRight, const T &i_huLeft, const T &i_huRight, const T &i_bLeft, const T &i_bRight, T &o_hUpdateLeft, T &o_hUpdateRight, T &o_huUpdateLeft, T &o_huUpdateRight, T &o_maxWaveSpeed)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf solver\+::\+F\+Wave}$<$ T $>$\+::compute\+Net\+Updates (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{i\+\_\+h\+Left, }
+\item[{const T \&}]{i\+\_\+h\+Right, }
+\item[{const T \&}]{i\+\_\+hu\+Left, }
+\item[{const T \&}]{i\+\_\+hu\+Right, }
+\item[{const T \&}]{i\+\_\+b\+Left, }
+\item[{const T \&}]{i\+\_\+b\+Right, }
+\item[{T \&}]{o\+\_\+h\+Update\+Left, }
+\item[{T \&}]{o\+\_\+h\+Update\+Right, }
+\item[{T \&}]{o\+\_\+hu\+Update\+Left, }
+\item[{T \&}]{o\+\_\+hu\+Update\+Right, }
+\item[{T \&}]{o\+\_\+max\+Wave\+Speed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classsolver_1_1FWave_a28446b13c979263d5c06ac1e633840bf}{}\label{classsolver_1_1FWave_a28446b13c979263d5c06ac1e633840bf}
+Compute net updates for the cell on the left/right side of the edge. This is the default method of a standalone f-\/\+Wave solver.
+
+Please note\+: In the case of a Dry/\+Wet-\/ or Wet/\+Dry-\/boundary, wall boundary conditions will be set. The f-\/\+Wave solver is not positivity preserving. -\/$>$ You as the programmer have to take care about \char`\"{}negative water heights\char`\"{}!
+
+
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+h\+Left} & height on the left side of the edge. \\
+\hline
+{\em i\+\_\+h\+Right} & height on the right side of the edge. \\
+\hline
+{\em i\+\_\+hu\+Left} & momentum on the left side of the edge. \\
+\hline
+{\em i\+\_\+hu\+Right} & momentum on the right side of the edge. \\
+\hline
+{\em i\+\_\+b\+Left} & bathymetry on the left side of the edge. \\
+\hline
+{\em i\+\_\+b\+Right} & bathymetry on the right side of the edge.\\
+\hline
+{\em o\+\_\+h\+Update\+Left} & will be set to\+: Net-\/update for the height of the cell on the left side of the edge. \\
+\hline
+{\em o\+\_\+h\+Update\+Right} & will be set to\+: Net-\/update for the height of the cell on the right side of the edge. \\
+\hline
+{\em o\+\_\+hu\+Update\+Left} & will be set to\+: Net-\/update for the momentum of the cell on the left side of the edge. \\
+\hline
+{\em o\+\_\+hu\+Update\+Right} & will be set to\+: Net-\/update for the momentum of the cell on the right side of the edge. \\
+\hline
+{\em o\+\_\+max\+Wave\+Speed} & will be set to\+: Maximum (linearized) wave speed -\/$>$ Should be used in the C\+F\+L-\/condition. \\
+\hline
+\end{DoxyParams}
+wave speeds of the f-\/waves 
+
+Implements \hyperlink{classsolver_1_1WavePropagation_ace4a0a41b9003d0d7005226b81b982a4}{solver\+::\+Wave\+Propagation$<$ T $>$}.
+
+
+
+Definition at line 142 of file F\+Wave.\+hpp.
+
+\index{solver\+::\+F\+Wave@{solver\+::\+F\+Wave}!compute\+Net\+Updates\+Hybrid@{compute\+Net\+Updates\+Hybrid}}
+\index{compute\+Net\+Updates\+Hybrid@{compute\+Net\+Updates\+Hybrid}!solver\+::\+F\+Wave@{solver\+::\+F\+Wave}}
+\subsubsection[{\texorpdfstring{compute\+Net\+Updates\+Hybrid(const T \&i\+\_\+h\+Left, const T \&i\+\_\+h\+Right, const T \&i\+\_\+hu\+Left, const T \&i\+\_\+hu\+Right, const T \&i\+\_\+b\+Left, const T \&i\+\_\+b\+Right, const T \&i\+\_\+u\+Left, const T \&i\+\_\+u\+Right, const T i\+\_\+wave\+Speeds[2], T \&o\+\_\+h\+Update\+Left, T \&o\+\_\+h\+Update\+Right, T \&o\+\_\+hu\+Update\+Left, T \&o\+\_\+hu\+Update\+Right, T \&o\+\_\+max\+Wave\+Speed)}{computeNetUpdatesHybrid(const T &i_hLeft, const T &i_hRight, const T &i_huLeft, const T &i_huRight, const T &i_bLeft, const T &i_bRight, const T &i_uLeft, const T &i_uRight, const T i_waveSpeeds[2], T &o_hUpdateLeft, T &o_hUpdateRight, T &o_huUpdateLeft, T &o_huUpdateRight, T &o_maxWaveSpeed)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf solver\+::\+F\+Wave}$<$ T $>$\+::compute\+Net\+Updates\+Hybrid (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{i\+\_\+h\+Left, }
+\item[{const T \&}]{i\+\_\+h\+Right, }
+\item[{const T \&}]{i\+\_\+hu\+Left, }
+\item[{const T \&}]{i\+\_\+hu\+Right, }
+\item[{const T \&}]{i\+\_\+b\+Left, }
+\item[{const T \&}]{i\+\_\+b\+Right, }
+\item[{const T \&}]{i\+\_\+u\+Left, }
+\item[{const T \&}]{i\+\_\+u\+Right, }
+\item[{const T}]{i\+\_\+wave\+Speeds\mbox{[}2\mbox{]}, }
+\item[{T \&}]{o\+\_\+h\+Update\+Left, }
+\item[{T \&}]{o\+\_\+h\+Update\+Right, }
+\item[{T \&}]{o\+\_\+hu\+Update\+Left, }
+\item[{T \&}]{o\+\_\+hu\+Update\+Right, }
+\item[{T \&}]{o\+\_\+max\+Wave\+Speed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classsolver_1_1FWave_a84199b85cf0ea72f1d7419cabc0fe7c2}{}\label{classsolver_1_1FWave_a84199b85cf0ea72f1d7419cabc0fe7c2}
+Compute net updates for the cell on the left/right side of the edge. This is an expert method, because a lot of (numerical-\/)knowledge about the problem is assumed/has to be provided. It is the f-\/\+Wave entry point for the hybrid solver, which combines the \char`\"{}simple\char`\"{} F-\/\+Wave approach with the more complex Augmented Riemann \hyperlink{namespaceSolver}{Solver}.
+
+wet\+Dry\+State is assumed to be Wet\+Wet.
+
+
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+h\+Left} & height on the left side of the edge. \\
+\hline
+{\em i\+\_\+h\+Right} & height on the right side of the edge. \\
+\hline
+{\em i\+\_\+hu\+Left} & momentum on the left side of the edge. \\
+\hline
+{\em i\+\_\+hu\+Right} & momentum on the right side of the edge. \\
+\hline
+{\em i\+\_\+b\+Left} & bathymetry on the left side of the edge. \\
+\hline
+{\em i\+\_\+b\+Right} & bathymetry on the right side of the edge. \\
+\hline
+{\em i\+\_\+u\+Left} & velocity on the left side of the edge. \\
+\hline
+{\em i\+\_\+u\+Right} & velocity on the right side of the edge. \\
+\hline
+{\em wave\+Speeds} & speeds of the linearized waves (eigenvalues). A hybrid solver will typically provide its own values.\\
+\hline
+{\em o\+\_\+h\+Update\+Left} & will be set to\+: Net-\/update for the height of the cell on the left side of the edge. \\
+\hline
+{\em o\+\_\+h\+Update\+Right} & will be set to\+: Net-\/update for the height of the cell on the right side of the edge. \\
+\hline
+{\em o\+\_\+hu\+Update\+Left} & will be set to\+: Net-\/update for the momentum of the cell on the left side of the edge. \\
+\hline
+{\em o\+\_\+hu\+Update\+Right} & will be set to\+: Net-\/update for the momentum of the cell on the right side of the edge. \\
+\hline
+{\em o\+\_\+max\+Wave\+Speed} & will be set to\+: Maximum (linearized) wave speed -\/$>$ Should be used in the C\+F\+L-\/condition. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 220 of file F\+Wave.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+app/src/main/cpp/\hyperlink{FWave_8hpp}{F\+Wave.\+hpp}\end{DoxyCompactItemize}

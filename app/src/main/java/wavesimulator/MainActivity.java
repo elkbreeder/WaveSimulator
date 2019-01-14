@@ -1,4 +1,4 @@
-package wavesimulator;
+package wavesimulator;//! \namespace wavesimulator \brief a The wavesimulator entails all classes dedicated to the visual representation and user interaction
 
 import android.annotation.SuppressLint;
 import android.support.design.widget.Snackbar;
@@ -20,6 +20,7 @@ import Solver.Helper;
 import Solver.SimulationRunner;
 import gregor.wavesimulator.R;
 
+//! \class MainActivity \brief a This class handles the main-Activities
 public class MainActivity extends AppCompatActivity {
     /*
     TodoList
@@ -52,10 +53,10 @@ public class MainActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 onCheckedSwitch(buttonView,isChecked);
             }
-        });//Defines the onClick  Listener for the switch
+        });//!< Defines the onClick  Listener for the switch
         waveView = findViewById(R.id.waveView);
         waveViewTouchListener = new WaveViewTouchListener(this);
-        waveView.setOnTouchListener(waveViewTouchListener);//Defines Touchlistener of the Waveview
+        waveView.setOnTouchListener(waveViewTouchListener);//!< Defines Touchlistener of the Waveview
 
 
 
@@ -77,15 +78,15 @@ public class MainActivity extends AppCompatActivity {
             public void onStopTrackingTouch(SeekBar seekBar) {
 
             }
-        });//set Listener of the waveheight seekbar
+        });//!< set Listener of the waveheight seekbar
         waveHeightSeekBar.setProgress(100);
 
 
         actionBar = findViewById(R.id.toolbar);
-        setSupportActionBar(actionBar);//set the our toolbar to the main activity
+        setSupportActionBar(actionBar);//!< add the toolbar to the main activity
 
 
-        if(simulationRunner == null) simulationRunner = new SimulationRunner(this); //create a new simulation runner or set the current activity in the existing one
+        if(simulationRunner == null) simulationRunner = new SimulationRunner(this); //!< create a new simulation runner or set the current activity in the existing one
         else simulationRunner.changeActivity(this);
 
     }
@@ -93,56 +94,56 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         this.menu = menu;
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.toolbar_menu,menu);//sets the custom menu to the actionbar
+        inflater.inflate(R.menu.toolbar_menu,menu);//!< sets the custom menu to the actionbar
         return true;
     }
     @Override
+    //!gets  called if a menu item is selected
     public boolean onOptionsItemSelected(MenuItem item) {
-    //gets  called if a menu item is selected
         switch (item.getItemId()) {
-            case R.id.action_settings_reset: //reset is selected
+            case R.id.action_settings_reset: //!< reset is selected
                 simulationRunner.stop();
-                CPPSimulator.reset();//reloads the Simulation;
-                CPPSimulator.sim.setBoundaryType(boundarySwitch.isChecked());//resetboundary Switch
+                CPPSimulator.reset();//!< reloads the Simulation;
+                CPPSimulator.sim.setBoundaryType(boundarySwitch.isChecked());//!< resetboundary Switch
                 waveView.invalidate();//redraw
                 break;
-            case R.id.action_settings_reset_wave://reset wave is selected
+            case R.id.action_settings_reset_wave://!< reset wave is selected
                 CPPSimulator.resetWaves();
                 simulationRunner.stop();
                 waveView.invalidate();//redraw
                 break;
-            case R.id.action_brush://brush mode is selected
+            case R.id.action_brush://!< brush mode is selected
                 if(waveViewTouchListener.drawingmode == WaveViewTouchListener.MODE_DRAW)
                 {
-                    //if its already in the draw mode, disable draw mode
+                    //!> if its already in the draw mode, disable draw mode
                     menu.getItem(1).setIcon(R.drawable.ic_brush_stroke_24dp);
                     waveViewTouchListener.drawingmode = WaveViewTouchListener.MODE_SIMULATE;
                     Snackbar.make(findViewById(R.id.masterView), R.string.mode_draw_disabled ,Snackbar.LENGTH_SHORT).show();//show snackbar which explains current action
                 }
                 else
                 {
-                    //if not, disable erease mode and enable drawmode
+                    //!> if not, disable erase mode and enable drawmode
                     menu.getItem(1).setIcon(R.drawable.ic_brush_black_24dp);
                     menu.getItem(0).setIcon(R.drawable.ic_remove_circle_outline_24dp);
                     waveViewTouchListener.drawingmode =  WaveViewTouchListener.MODE_DRAW;
                     Snackbar.make(findViewById(R.id.masterView), R.string.mode_draw ,Snackbar.LENGTH_SHORT).show();//show snackbar which explains current action
                 }
                 break;
-            case R.id.action_eraser://erease mode is selected
+            case R.id.action_eraser://!< erase mode is selected
                 if(waveViewTouchListener.drawingmode == WaveViewTouchListener.MODE_EREASE)
                 {
-                    //if its already in the erease mode, disable erease mode
+                    //!> if its already in the erase mode, disable erase mode
                     menu.getItem(0).setIcon(R.drawable.ic_remove_circle_outline_24dp);
                     waveViewTouchListener.drawingmode = WaveViewTouchListener.MODE_SIMULATE;
                     Snackbar.make(findViewById(R.id.masterView), R.string.mode_erase_disabled ,Snackbar.LENGTH_SHORT).show();//show snackbar which explains current action
                 }
                 else
                 {
-                    //if not, disable draw mode and enable erease mode
+                    //!> if not, disable draw mode and enable erase mode
                     menu.getItem(1).setIcon(R.drawable.ic_brush_stroke_24dp);
                     menu.getItem(0).setIcon(R.drawable.ic_remove_circle_24dp);
                     waveViewTouchListener.drawingmode = WaveViewTouchListener.MODE_EREASE;
-                    Snackbar.make(findViewById(R.id.masterView), R.string.mode_erase ,Snackbar.LENGTH_SHORT).show();//show snackbar which explains current action
+                    Snackbar.make(findViewById(R.id.masterView), R.string.mode_erase ,Snackbar.LENGTH_SHORT).show();//!> show snackbar which explains current action
                 }
                 break;
             default:
@@ -152,19 +153,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @SuppressLint("SetTextI18n")
+    //! gets called when the user uses the waveheight seekbar
     public void WaveHeightSeekBarChanged()
     {
-        //gets called when the user uses the waveheight seekbar
+        
         DecimalFormat df;
         df = new DecimalFormat("0.0");
-        waveHeightLabel.setText("Wave height: " + ((getWaveHeightValue()==10)?"9.9":df.format(getWaveHeightValue())));//inform user about current waveheight
+        waveHeightLabel.setText("Wave height: " + ((getWaveHeightValue()==10)?"9.9":df.format(getWaveHeightValue())));//!< inform user about current waveheight
     }
     public float getWaveHeightValue()
     {
-        return Helper.linear_map(0,5,100,10,waveHeightSeekBar.getProgress());//maps the seekbarvalue(0,100) to the waveheight(5,15)
+        return Helper.linear_map(0,5,100,10,waveHeightSeekBar.getProgress());//!< maps the seekbarvalue(0,100) to the waveheight(5,15)
     }
+    //! gets called when the user uses the wall boundary switch
     public void onCheckedSwitch(CompoundButton buttonView, boolean isChecked) {
-        //gets called when the user uses the wall boundary switch
+        
         CPPSimulator.sim.setBoundaryType(isChecked);
     }
     public WaveView getWaveView()

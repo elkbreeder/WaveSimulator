@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['waveview',['WaveView',['../classwavesimulator_1_1WaveView.html',1,'wavesimulator']]],
-  ['waveviewtouchlistener',['WaveViewTouchListener',['../classwavesimulator_1_1WaveViewTouchListener.html',1,'wavesimulator']]]
+  ['simulationrunner',['SimulationRunner',['../classSolver_1_1SimulationRunner.html',1,'Solver']]],
+  ['swe_5fblock',['SWE_Block',['../classSWE__Block.html',1,'']]],
+  ['swe_5fblock1d',['SWE_Block1D',['../structSWE__Block1D.html',1,'']]],
+  ['swe_5fradialdambreakscenario',['SWE_RadialDamBreakScenario',['../classSWE__RadialDamBreakScenario.html',1,'']]],
+  ['swe_5fscenario',['SWE_Scenario',['../classSWE__Scenario.html',1,'']]],
+  ['swe_5fwavepropagationblock',['SWE_WavePropagationBlock',['../classSWE__WavePropagationBlock.html',1,'']]]
 ];

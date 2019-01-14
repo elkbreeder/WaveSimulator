@@ -38,6 +38,7 @@
 using namespace std;
 
 // forward declaration
+//! \class SWE_Block1D \brief a This file is part SWE
 class SWE_Block1D;
 
 /**
@@ -110,6 +111,7 @@ class SWE_Block1D;
  * Please refer to the documentation of these classes for more details on the 
  * model and on the parallelisation approach.
  */
+//! \class SWE_Block \brief a This file is part of SWE
 class SWE_Block {
 
   public:

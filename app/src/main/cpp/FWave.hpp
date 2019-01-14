@@ -62,11 +62,7 @@ namespace solver {
   template <typename T> class FWave;
 }
 
-/**
- * FWave Riemann Solver for the Shallow Water Equations.
- *
- * T should be double or float.
- */
+//! \class FWave \brief a FWave is a Riemann Solver for the Shallow Water Equations. This is the cpp version; T should be double or float;
 template <typename T> class solver::FWave: public WavePropagation<T> {
   private: //explicit for unit tests
     //use nondependent names (template base class)

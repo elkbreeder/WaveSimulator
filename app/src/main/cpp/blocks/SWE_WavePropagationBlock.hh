@@ -49,6 +49,7 @@
  *  F-Wave, Apprximate Augmented Riemann, Hybrid (f-wave + augmented).
  *  (details can be found in the corresponding source files)
  */
+//! \class SWE_WavePropagationBlock \brief This file is part of SWE
 class SWE_WavePropagationBlock: public SWE_Block {
 
 private:

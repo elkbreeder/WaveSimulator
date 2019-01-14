@@ -45,6 +45,7 @@
  * but point to the interior data structure of Float2D (or other "host"
  * data structures).
  */
+//! \class Float1D \brief a This class is part of SWE; It gives our representation of a one dimensional datatype for update calculations
 class Float1D
 {
 public:
@@ -85,6 +86,7 @@ private:
  * Besides constructor/deconstructor, the class provides overloading of
  * the []-operator, such that elements can be accessed as a[i][j].
  */
+//! \class Float2D \brief a This class is part of SWE; It gives our representation of atwo dimensional datatype for update calculations
 class Float2D {
 public:
     /**

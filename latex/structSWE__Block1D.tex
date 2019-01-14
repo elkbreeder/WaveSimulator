@@ -1,0 +1,105 @@
+\hypertarget{structSWE__Block1D}{}\section{S\+W\+E\+\_\+\+Block1D Class Reference}
+\label{structSWE__Block1D}\index{S\+W\+E\+\_\+\+Block1D@{S\+W\+E\+\_\+\+Block1D}}
+
+
+This file is part S\+WE.  
+
+
+
+
+{\ttfamily \#include $<$S\+W\+E\+\_\+\+Block.\+hh$>$}
+
+
+
+Collaboration diagram for S\+W\+E\+\_\+\+Block1D\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{structSWE__Block1D__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structSWE__Block1D_a29516674bf63c42f9fd99995c09f4d55}{S\+W\+E\+\_\+\+Block1D} (const \hyperlink{classFloat1D}{Float1D} \&\+\_\+h, const \hyperlink{classFloat1D}{Float1D} \&\+\_\+hu, const \hyperlink{classFloat1D}{Float1D} \&\+\_\+hv)
+\item 
+\hyperlink{structSWE__Block1D_a9b23e09458246ba4212a1fbfc52206cc}{S\+W\+E\+\_\+\+Block1D} (float $\ast$\+\_\+h, float $\ast$\+\_\+hu, float $\ast$\+\_\+hv, int \+\_\+size, int \+\_\+stride=1)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFloat1D}{Float1D} \hyperlink{structSWE__Block1D_a7bea1da024ec63e77753fe32880fc5d2}{h}
+\item 
+\hyperlink{classFloat1D}{Float1D} \hyperlink{structSWE__Block1D_a8662233fe9b86ead9ef2a419103271e5}{hu}
+\item 
+\hyperlink{classFloat1D}{Float1D} \hyperlink{structSWE__Block1D_aa261d9fcdb400d7da349f41dfa6d5b4f}{hv}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file is part S\+WE. 
+
+\hyperlink{structSWE__Block1D}{S\+W\+E\+\_\+\+Block1D} is a simple struct that can represent a single line or row of \hyperlink{classSWE__Block}{S\+W\+E\+\_\+\+Block} unknowns (using the \hyperlink{classFloat1D}{Float1D} proxy class). It is intended to unify the implementation of inflow and periodic boundary conditions, as well as the ghost/copy-\/layer connection between several \hyperlink{classSWE__Block}{S\+W\+E\+\_\+\+Block} grids. 
+
+Definition at line 271 of file S\+W\+E\+\_\+\+Block.\+hh.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{S\+W\+E\+\_\+\+Block1D@{S\+W\+E\+\_\+\+Block1D}!S\+W\+E\+\_\+\+Block1D@{S\+W\+E\+\_\+\+Block1D}}
+\index{S\+W\+E\+\_\+\+Block1D@{S\+W\+E\+\_\+\+Block1D}!S\+W\+E\+\_\+\+Block1D@{S\+W\+E\+\_\+\+Block1D}}
+\subsubsection[{\texorpdfstring{S\+W\+E\+\_\+\+Block1\+D(const Float1\+D \&\+\_\+h, const Float1\+D \&\+\_\+hu, const Float1\+D \&\+\_\+hv)}{SWE_Block1D(const Float1D &_h, const Float1D &_hu, const Float1D &_hv)}}]{\setlength{\rightskip}{0pt plus 5cm}S\+W\+E\+\_\+\+Block1\+D\+::\+S\+W\+E\+\_\+\+Block1D (
+\begin{DoxyParamCaption}
+\item[{const {\bf Float1D} \&}]{\+\_\+h, }
+\item[{const {\bf Float1D} \&}]{\+\_\+hu, }
+\item[{const {\bf Float1D} \&}]{\+\_\+hv}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structSWE__Block1D_a29516674bf63c42f9fd99995c09f4d55}{}\label{structSWE__Block1D_a29516674bf63c42f9fd99995c09f4d55}
+
+
+Definition at line 272 of file S\+W\+E\+\_\+\+Block.\+hh.
+
+\index{S\+W\+E\+\_\+\+Block1D@{S\+W\+E\+\_\+\+Block1D}!S\+W\+E\+\_\+\+Block1D@{S\+W\+E\+\_\+\+Block1D}}
+\index{S\+W\+E\+\_\+\+Block1D@{S\+W\+E\+\_\+\+Block1D}!S\+W\+E\+\_\+\+Block1D@{S\+W\+E\+\_\+\+Block1D}}
+\subsubsection[{\texorpdfstring{S\+W\+E\+\_\+\+Block1\+D(float $\ast$\+\_\+h, float $\ast$\+\_\+hu, float $\ast$\+\_\+hv, int \+\_\+size, int \+\_\+stride=1)}{SWE_Block1D(float *_h, float *_hu, float *_hv, int _size, int _stride=1)}}]{\setlength{\rightskip}{0pt plus 5cm}S\+W\+E\+\_\+\+Block1\+D\+::\+S\+W\+E\+\_\+\+Block1D (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{\+\_\+h, }
+\item[{float $\ast$}]{\+\_\+hu, }
+\item[{float $\ast$}]{\+\_\+hv, }
+\item[{int}]{\+\_\+size, }
+\item[{int}]{\+\_\+stride = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structSWE__Block1D_a9b23e09458246ba4212a1fbfc52206cc}{}\label{structSWE__Block1D_a9b23e09458246ba4212a1fbfc52206cc}
+
+
+Definition at line 274 of file S\+W\+E\+\_\+\+Block.\+hh.
+
+
+
+\subsection{Member Data Documentation}
+\index{S\+W\+E\+\_\+\+Block1D@{S\+W\+E\+\_\+\+Block1D}!h@{h}}
+\index{h@{h}!S\+W\+E\+\_\+\+Block1D@{S\+W\+E\+\_\+\+Block1D}}
+\subsubsection[{\texorpdfstring{h}{h}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Float1D} S\+W\+E\+\_\+\+Block1\+D\+::h}\hypertarget{structSWE__Block1D_a7bea1da024ec63e77753fe32880fc5d2}{}\label{structSWE__Block1D_a7bea1da024ec63e77753fe32880fc5d2}
+
+
+Definition at line 275 of file S\+W\+E\+\_\+\+Block.\+hh.
+
+\index{S\+W\+E\+\_\+\+Block1D@{S\+W\+E\+\_\+\+Block1D}!hu@{hu}}
+\index{hu@{hu}!S\+W\+E\+\_\+\+Block1D@{S\+W\+E\+\_\+\+Block1D}}
+\subsubsection[{\texorpdfstring{hu}{hu}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Float1D} S\+W\+E\+\_\+\+Block1\+D\+::hu}\hypertarget{structSWE__Block1D_a8662233fe9b86ead9ef2a419103271e5}{}\label{structSWE__Block1D_a8662233fe9b86ead9ef2a419103271e5}
+
+
+Definition at line 278 of file S\+W\+E\+\_\+\+Block.\+hh.
+
+\index{S\+W\+E\+\_\+\+Block1D@{S\+W\+E\+\_\+\+Block1D}!hv@{hv}}
+\index{hv@{hv}!S\+W\+E\+\_\+\+Block1D@{S\+W\+E\+\_\+\+Block1D}}
+\subsubsection[{\texorpdfstring{hv}{hv}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Float1D} S\+W\+E\+\_\+\+Block1\+D\+::hv}\hypertarget{structSWE__Block1D_aa261d9fcdb400d7da349f41dfa6d5b4f}{}\label{structSWE__Block1D_aa261d9fcdb400d7da349f41dfa6d5b4f}
+
+
+Definition at line 279 of file S\+W\+E\+\_\+\+Block.\+hh.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+app/src/main/cpp/blocks/\hyperlink{SWE__Block_8hh}{S\+W\+E\+\_\+\+Block.\+hh}\end{DoxyCompactItemize}

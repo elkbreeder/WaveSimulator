@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.22)  27 JAN 2019 19:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.22)  27 JAN 2019 19:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1026,9 +1026,6 @@ Package caption Info: longtable package is loaded.
 Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 )) (./refman.aux
 
-LaTeX Warning: Label `namespaceSolver' multiply defined.
-
-
 LaTeX Warning: Label `classSWE__Scenario_a5e20e1061abfa36d814e0650a12a2e69' mul
 tiply defined.
 
@@ -1340,17 +1337,19 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
  [3
 
 ] [4] [5] [6] [7]
-[8] [9] [10]
-Underfull \hbox (badness 927) in paragraph at lines 263--263
+[8] [9] [10] [11] [12]
+Underfull \hbox (badness 927) in paragraph at lines 301--301
  [][] [][][]\T1/phv/m/n/10 generate[]File[]Name(std[]::string i[]_[]base[]Name,
  int i[]_[]block[]Position[]X, int i[]_[]block[] 
  []
 
-[11])
+)
 \tf@toc=\write5
 \openout5 = `refman.toc'.
 
- [12]
+ [13] [14
+
+]
 Package hyperref Info: Option `pageanchor' set `true' on input line 137.
 
 Chapter 1.
@@ -1386,7 +1385,6 @@ LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
 (Font)              scaled to size 10.79993pt on input line 6.
 ) [1
 
-
 ] [2
 
 ]
@@ -1410,12 +1408,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--12
 
 ]
 Chapter 3.
-(./namespaces.tex
-
-LaTeX Warning: Reference `namespacesolver' on page 5 undefined on input line 3.
-
-
-) [5] [6
+(./namespaces.tex) [5] [6
 
 ]
 Chapter 4.
@@ -1431,7 +1424,7 @@ Chapter 6.
 
 ]
 Chapter 7.
-(./namespacesolver.tex
+(./namespaceInterface.tex
 LaTeX Font Info:    Try loading font information for TS1+phv on input line 11.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
@@ -1450,30 +1443,23 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 6.29996pt on input line 12.
 )
-(./namespaceSolver.tex) [13pdfTeX warning (ext4): destination with the same ide
-ntifier (name{namespaceSolver}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.157 \chapter
-              {Class Documentation}] [14
-
-]
+(./namespacesolver.tex
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 24.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)) (./namespaceSolver.tex [13]) [14]
 Chapter 8.
 (./classSolver_1_1CPPSimulator.tex
-<classSolver_1_1CPPSimulator__coll__graph.pdf, id=1615, 227.85126pt x 100.375pt
+<classSolver_1_1CPPSimulator__coll__graph.pdf, id=1861, 227.85126pt x 100.375pt
 >
 File: classSolver_1_1CPPSimulator__coll__graph.pdf Graphic file (type pdf)
  <use classSolver_1_1CPPSimulator__coll__graph.pdf>
 Package pdftex.def Info: classSolver_1_1CPPSimulator__coll__graph.pdf used on i
 nput line 14.
 (pdftex.def)             Requested size: 227.0pt x 100.00255pt.
- [15 <./classSolver_1_1CPPSimulator__coll__graph.pdf>]
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 73.
+ [15
 
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
+ <./classSolver_1_1CPPSimulator__coll__graph.pdf>]
 
 LaTeX Font Warning: Font shape `T1/pcr/bc/n' undefined
 (Font)              using `T1/pcr/m/n' instead on input line 73.
@@ -1551,28 +1537,44 @@ Overfull \vbox (9.88033pt too high) has occurred while \output is active []
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 33.
 
-) (./classSolver_1_1SimulationRunner.tex [22]) (./classSWE__Block.tex
-<classSWE__Block__inherit__graph.pdf, id=1763, 227.85126pt x 156.585pt>
+) (./classInterface_1_1MainActivity.tex
+<classInterface_1_1MainActivity__inherit__graph.pdf, id=1991, 192.72pt x 156.58
+5pt>
+File: classInterface_1_1MainActivity__inherit__graph.pdf Graphic file (type pdf
+)
+ <use classInterface_1_1MainActivity__inherit__graph.pdf>
+Package pdftex.def Info: classInterface_1_1MainActivity__inherit__graph.pdf use
+d on input line 15.
+(pdftex.def)             Requested size: 192.0pt x 155.99922pt.
+
+<classInterface_1_1MainActivity__coll__graph.pdf, id=1992, 192.72pt x 156.585pt
+>
+File: classInterface_1_1MainActivity__coll__graph.pdf Graphic file (type pdf)
+ <use classInterface_1_1MainActivity__coll__graph.pdf>
+Package pdftex.def Info: classInterface_1_1MainActivity__coll__graph.pdf used o
+n input line 25.
+(pdftex.def)             Requested size: 192.0pt x 155.99922pt.
+ [22 <./classInterface_1_1MainActivity__inherit__graph.pdf>] [23 <./classInterf
+ace_1_1MainActivity__coll__graph.pdf>] [24]) (./classSolver_1_1SimulationRunner
+.tex [25])
+(./classSWE__Block.tex
+<classSWE__Block__inherit__graph.pdf, id=2063, 227.85126pt x 156.585pt>
 File: classSWE__Block__inherit__graph.pdf Graphic file (type pdf)
 
 <use classSWE__Block__inherit__graph.pdf>
 Package pdftex.def Info: classSWE__Block__inherit__graph.pdf used on input line
  18.
 (pdftex.def)             Requested size: 227.0pt x 156.004pt.
- [23]
-<classSWE__Block__coll__graph.pdf, id=1769, 232.87pt x 290.08376pt>
+
+<classSWE__Block__coll__graph.pdf, id=2064, 232.87pt x 290.08376pt>
 File: classSWE__Block__coll__graph.pdf Graphic file (type pdf)
 
 <use classSWE__Block__coll__graph.pdf>
 Package pdftex.def Info: classSWE__Block__coll__graph.pdf used on input line 27
 .
 (pdftex.def)             Requested size: 232.0pt x 289.01186pt.
- [24 <./classSWE__Block__inherit__graph.pdf> <./classSWE__Block__coll__graph.pd
-f
-
-pdfTeX warning: pdflatex (file ./classSWE__Block__coll__graph.pdf): PDF inclusi
-on: multiple pdfs with page group included in a single page
->] [25] [26] [27]
+ [26 <./classSWE__Block__inherit__graph.pdf>] [27 <./classSWE__Block__coll__gra
+ph.pdf>] [28] [29]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 208.
@@ -1597,6 +1599,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 223.
 
+[30]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 238.
@@ -1605,7 +1608,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 238.
 
-[28]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 288.
@@ -1614,7 +1616,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 303.
 
-
+[31]
 Underfull \hbox (badness 10000) detected at line 323
 [][][]
  []
@@ -1624,7 +1626,7 @@ Overfull \hbox (3.9776pt too wide) in paragraph at lines 375--375
 \T1/phv/m/sl/10 _[] 
  []
 
-[29]
+[32]
 Underfull \hbox (badness 10000) detected at line 396
 [][][]
  []
@@ -1653,7 +1655,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 412.
 
-[30]
+
 Underfull \hbox (badness 10000) detected at line 443
 [][][]
  []
@@ -1666,6 +1668,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 471.
 
+[33]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 488.
@@ -1674,7 +1677,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 531.
 
-[31]
+[34]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 558.
@@ -1699,13 +1702,13 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 631.
 
-[32]
+[35]
 Underfull \hbox (badness 10000) detected at line 657
 [][][]
  []
 
-[33] [34] [35]) (./structSWE__Block1D.tex [36]
-<structSWE__Block1D__coll__graph.pdf, id=2064, 163.61125pt x 189.70876pt>
+[36] [37] [38]) (./structSWE__Block1D.tex [39]
+<structSWE__Block1D__coll__graph.pdf, id=2364, 163.61125pt x 189.70876pt>
 File: structSWE__Block1D__coll__graph.pdf Graphic file (type pdf)
 
 <use structSWE__Block1D__coll__graph.pdf>
@@ -1741,7 +1744,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 57.
 
-[37 <./structSWE__Block1D__coll__graph.pdf>]
+[40 <./structSWE__Block1D__coll__graph.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 72.
@@ -1767,22 +1770,22 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 72.
 
 ) (./classSWE__FlatScenario.tex
-<classSWE__FlatScenario__inherit__graph.pdf, id=2100, 180.675pt x 156.585pt>
+<classSWE__FlatScenario__inherit__graph.pdf, id=2399, 180.675pt x 156.585pt>
 File: classSWE__FlatScenario__inherit__graph.pdf Graphic file (type pdf)
 
 <use classSWE__FlatScenario__inherit__graph.pdf>
 Package pdftex.def Info: classSWE__FlatScenario__inherit__graph.pdf used on inp
 ut line 18.
 (pdftex.def)             Requested size: 180.0pt x 156.00162pt.
- [38]
-<classSWE__FlatScenario__coll__graph.pdf, id=2105, 180.675pt x 156.585pt>
+ [41]
+<classSWE__FlatScenario__coll__graph.pdf, id=2405, 180.675pt x 156.585pt>
 File: classSWE__FlatScenario__coll__graph.pdf Graphic file (type pdf)
 
 <use classSWE__FlatScenario__coll__graph.pdf>
 Package pdftex.def Info: classSWE__FlatScenario__coll__graph.pdf used on input 
 line 27.
 (pdftex.def)             Requested size: 180.0pt x 156.00162pt.
- [39 <./classSWE__FlatScenario__inherit__graph.pdf> <./classSWE__FlatScenario__
+ [42 <./classSWE__FlatScenario__inherit__graph.pdf> <./classSWE__FlatScenario__
 coll__graph.pdf
 
 pdfTeX warning: pdflatex (file ./classSWE__FlatScenario__coll__graph.pdf): PDF 
@@ -1798,48 +1801,45 @@ Underfull \hbox (badness 10000) detected at line 100
  []
 
 ) (./classSWE__Scenario.tex
-<classSWE__Scenario__inherit__graph.pdf, id=2144, 180.675pt x 156.585pt>
+<classSWE__Scenario__inherit__graph.pdf, id=2444, 180.675pt x 156.585pt>
 File: classSWE__Scenario__inherit__graph.pdf Graphic file (type pdf)
 
 <use classSWE__Scenario__inherit__graph.pdf>
 Package pdftex.def Info: classSWE__Scenario__inherit__graph.pdf used on input l
 ine 18.
 (pdftex.def)             Requested size: 180.0pt x 156.00162pt.
- [40]
+ [43]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 78.
 
-[41 <./classSWE__Scenario__inherit__graph.pdf>]
+[44 <./classSWE__Scenario__inherit__graph.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 89.
 
-[42pdfTeX warning (ext4): destination with the same identifier (name{classSWE__
+[45pdfTeX warning (ext4): destination with the same identifier (name{classSWE__
 Scenario_a5e20e1061abfa36d814e0650a12a2e69}) has been already used, duplicate i
 gnored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.226 ...tfamily [inline]}, {\ttfamily [virtual]}}
-                                                  \hypertarget{classSWE__Sce...
-pdfTeX warning (ext4): destination with the same identifier (name{classSWE__Sce
-nario_ae7ed72f584069e9885c33c4ca83f3ff5}) has been already used, duplicate igno
-red
+l.217 D
+       efinition at line 68 of file S\+W\+E\+\_\+\+Scenario.\+hh.pdfTeX warning
+ (ext4): destination with the same identifier (name{classSWE__Scenario_ae7ed72f
+584069e9885c33c4ca83f3ff5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.226 ...tfamily [inline]}, {\ttfamily [virtual]}}
-                                                  \hypertarget{classSWE__Sce...
-pdfTeX warning (ext4): destination with the same identifier (name{classSWE__Sce
-nario_afe09a1ba63304800651f25873570a348}) has been already used, duplicate igno
-red
+l.217 D
+       efinition at line 68 of file S\+W\+E\+\_\+\+Scenario.\+hh.pdfTeX warning
+ (ext4): destination with the same identifier (name{classSWE__Scenario_afe09a1b
+a63304800651f25873570a348}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.226 ...tfamily [inline]}, {\ttfamily [virtual]}}
-                                                  \hypertarget{classSWE__Sce...
-]
+l.217 D
+       efinition at line 68 of file S\+W\+E\+\_\+\+Scenario.\+hh.]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 226.
@@ -1856,43 +1856,37 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 262.
 
-) (./classSWE__WavePropagationBlock.tex [43pdfTeX warning (ext4): destination w
-ith the same identifier (name{classSWE__Scenario_a1b01e953c2079b64f527c9bc5a0c8
-6d7}) has been already used, duplicate ignored
+[46pdfTeX warning (ext4): destination with the same identifier (name{classSWE__
+Scenario_a1b01e953c2079b64f527c9bc5a0c86d7}) has been already used, duplicate i
+gnored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1 ...\+Wave\+Propagation\+Block Class Reference}
+l.325 ...+\+Scenario.\+hh}\end{DoxyCompactItemize}
                                                   pdfTeX warning (ext4): destin
 ation with the same identifier (name{classSWE__Scenario_ab8fe7ce15d7758fb0c4e0e
 3887b34a5d}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1 ...\+Wave\+Propagation\+Block Class Reference}
+l.325 ...+\+Scenario.\+hh}\end{DoxyCompactItemize}
                                                   pdfTeX warning (ext4): destin
 ation with the same identifier (name{classSWE__Scenario_ab1d5e360c861df3c8c0ccd
 919bd7f495}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1 ...\+Wave\+Propagation\+Block Class Reference}
+l.325 ...+\+Scenario.\+hh}\end{DoxyCompactItemize}
                                                   pdfTeX warning (ext4): destin
 ation with the same identifier (name{classSWE__Scenario_afeaf75872a1678ea64e6f7
 accd1e49c6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1 ...\+Wave\+Propagation\+Block Class Reference}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{classSWE__Scenario_ade6f356d60b1402c034611
-266462b88b}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1 ...\+Wave\+Propagation\+Block Class Reference}
-                                                  ]
-<classSWE__WavePropagationBlock__inherit__graph.pdf, id=2219, 227.85126pt x 156
+l.325 ...+\+Scenario.\+hh}\end{DoxyCompactItemize}
+                                                  ])
+(./classSWE__WavePropagationBlock.tex
+<classSWE__WavePropagationBlock__inherit__graph.pdf, id=2518, 227.85126pt x 156
 .585pt>
 File: classSWE__WavePropagationBlock__inherit__graph.pdf Graphic file (type pdf
 )
@@ -1901,19 +1895,23 @@ Package pdftex.def Info: classSWE__WavePropagationBlock__inherit__graph.pdf use
 d on input line 18.
 (pdftex.def)             Requested size: 227.0pt x 156.004pt.
 
-<classSWE__WavePropagationBlock__coll__graph.pdf, id=2220, 245.91875pt x 347.29
+<classSWE__WavePropagationBlock__coll__graph.pdf, id=2519, 245.91875pt x 347.29
 75pt>
 File: classSWE__WavePropagationBlock__coll__graph.pdf Graphic file (type pdf)
  <use classSWE__WavePropagationBlock__coll__graph.pdf>
 Package pdftex.def Info: classSWE__WavePropagationBlock__coll__graph.pdf used o
 n input line 27.
 (pdftex.def)             Requested size: 245.0pt x 346.0142pt.
-
-Underfull \vbox (badness 1237) has occurred while \output is active []
-
- [44pdfTeX warning (ext4): destination with the same identifier (name{classSWE_
-_Scenario_a9de0f0f9fcc34dfe00c522b10c343d91}) has been already used, duplicate 
+ [47pdfTeX warning (ext4): destination with the same identifier (name{classSWE_
+_Scenario_ade6f356d60b1402c034611266462b88b}) has been already used, duplicate 
 ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.30 \subsection
+                *{Public Member Functions}pdfTeX warning (ext4): destination wi
+th the same identifier (name{classSWE__Scenario_a9de0f0f9fcc34dfe00c522b10c343d
+91}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -1940,12 +1938,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 67.
 
-[45 <./classSWE__WavePropagationBlock__coll__graph.pdf>]
+[48 <./classSWE__WavePropagationBlock__coll__graph.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 121.
 
-[46]) (./classsolver_1_1WavePropagation.tex
+[49]) (./classWavePropagation.tex) (./classsolver_1_1WavePropagation.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -1962,7 +1960,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[47]
+[50] [51]
 Underfull \hbox (badness 10000) detected at line 86
 [][][]
  []
@@ -1979,7 +1977,6 @@ LaTeX Font Info:    Font shape `T1/phv/b/it' in size <7> not available
 (Font)              Font shape `T1/phv/b/sl' tried instead on input line 90.
 LaTeX Font Info:    Font shape `T1/phv/b/sl' will be
 (Font)              scaled to size 6.29996pt on input line 90.
-[48]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 121.
@@ -1992,6 +1989,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 121.
 
+[52]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `alignment tab' on input line 167.
@@ -2080,7 +2078,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 167.
 
-[49]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 212.
@@ -2133,7 +2130,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 235.
 
-[50]
+[53]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `alignment tab' on input line 270.
@@ -2198,12 +2195,80 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 270.
 
-[51]) (./classWavePropagation.tex [52]) [53] [54
+[54] [55]) (./classInterface_1_1WaveView.tex
+<classInterface_1_1WaveView__inherit__graph.pdf, id=2666, 185.69376pt x 156.585
+pt>
+File: classInterface_1_1WaveView__inherit__graph.pdf Graphic file (type pdf)
+ <use classInterface_1_1WaveView__inherit__graph.pdf>
+Package pdftex.def Info: classInterface_1_1WaveView__inherit__graph.pdf used on
+ input line 15.
+(pdftex.def)             Requested size: 185.0pt x 156.004pt.
+
+<classInterface_1_1WaveView__coll__graph.pdf, id=2667, 185.69376pt x 156.585pt>
+File: classInterface_1_1WaveView__coll__graph.pdf Graphic file (type pdf)
+<use classInterface_1_1WaveView__coll__graph.pdf>
+Package pdftex.def Info: classInterface_1_1WaveView__coll__graph.pdf used on in
+put line 25.
+(pdftex.def)             Requested size: 185.0pt x 156.004pt.
+ [56 <./classInterface_1_1WaveView__inherit__graph.pdf> <./classInterface_1_1Wa
+veView__coll__graph.pdf
+
+pdfTeX warning: pdflatex (file ./classInterface_1_1WaveView__coll__graph.pdf): 
+PDF inclusion: multiple pdfs with page group included in a single page
+>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 113.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 113.
+
+) (./classInterface_1_1WaveViewTouchListener.tex [57]
+<classInterface_1_1WaveViewTouchListener__inherit__graph.pdf, id=2699, 426.5937
+5pt x 199.74625pt>
+File: classInterface_1_1WaveViewTouchListener__inherit__graph.pdf Graphic file 
+(type pdf)
+
+<use classInterface_1_1WaveViewTouchListener__inherit__graph.pdf>
+Package pdftex.def Info: classInterface_1_1WaveViewTouchListener__inherit__grap
+h.pdf used on input line 15.
+(pdftex.def)             Requested size: 350.0pt x 163.89355pt.
+
+<classInterface_1_1WaveViewTouchListener__coll__graph.pdf, id=2700, 426.59375pt
+ x 199.74625pt>
+File: classInterface_1_1WaveViewTouchListener__coll__graph.pdf Graphic file (ty
+pe pdf)
+ <use classInterface_1_1WaveViewTouchListener__coll__graph.pdf>
+Package pdftex.def Info: classInterface_1_1WaveViewTouchListener__coll__graph.p
+df used on input line 25.
+(pdftex.def)             Requested size: 350.0pt x 163.89355pt.
+
+[58 <./classInterface_1_1WaveViewTouchListener__inherit__graph.pdf> <./classInt
+erface_1_1WaveViewTouchListener__coll__graph.pdf
+
+pdfTeX warning: pdflatex (file ./classInterface_1_1WaveViewTouchListener__coll_
+_graph.pdf): PDF inclusion: multiple pdfs with page group included in a single 
+page
+>] [59] [60]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 278.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 285.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 292.
+
+) [61] [62
 
 ]
 Chapter 9.
 (./SWE__Block_8cpp.tex
-<SWE__Block_8cpp__incl.pdf, id=2374, 515.9275pt x 280.04625pt>
+<SWE__Block_8cpp__incl.pdf, id=2768, 515.9275pt x 280.04625pt>
 File: SWE__Block_8cpp__incl.pdf Graphic file (type pdf)
 
 <use SWE__Block_8cpp__incl.pdf>
@@ -2214,21 +2279,21 @@ Underfull \hbox (badness 10000) detected at line 21
 [][][]
  []
 
-[55 <./SWE__Block_8cpp__incl.pdf>]) (./SWE__Block_8hh.tex
-<SWE__Block_8hh__incl.pdf, id=2392, 453.695pt x 223.83624pt>
+[63 <./SWE__Block_8cpp__incl.pdf>]) (./SWE__Block_8hh.tex
+<SWE__Block_8hh__incl.pdf, id=2784, 453.695pt x 223.83624pt>
 File: SWE__Block_8hh__incl.pdf Graphic file (type pdf)
 
 <use SWE__Block_8hh__incl.pdf>
 Package pdftex.def Info: SWE__Block_8hh__incl.pdf used on input line 11.
 (pdftex.def)             Requested size: 350.0pt x 172.6789pt.
 
-<SWE__Block_8hh__dep__incl.pdf, id=2393, 389.455pt x 245.91875pt>
+<SWE__Block_8hh__dep__incl.pdf, id=2785, 389.455pt x 245.91875pt>
 File: SWE__Block_8hh__dep__incl.pdf Graphic file (type pdf)
 
 <use SWE__Block_8hh__dep__incl.pdf>
 Package pdftex.def Info: SWE__Block_8hh__dep__incl.pdf used on input line 18.
 (pdftex.def)             Requested size: 350.0pt x 221.01337pt.
- [56 <./SWE__Block_8hh__incl.pdf>]
+ [64 <./SWE__Block_8hh__incl.pdf>]
 Underfull \hbox (badness 10000) detected at line 33
 [][][]
  []
@@ -2246,15 +2311,15 @@ RIPTION}) has been already used, duplicate ignored
 l.43 ...ses/}.\hypertarget{help_8hh_DESCRIPTION}{}
                                                   \subsection{D\+E\+S\+C\+R\...
 ) (./SWE__WavePropagationBlock_8cpp.tex
-<SWE__WavePropagationBlock_8cpp__incl.pdf, id=2411, 918.43124pt x 358.33875pt>
+<SWE__WavePropagationBlock_8cpp__incl.pdf, id=2803, 844.15375pt x 369.38pt>
 File: SWE__WavePropagationBlock_8cpp__incl.pdf Graphic file (type pdf)
 
 <use SWE__WavePropagationBlock_8cpp__incl.pdf>
 Package pdftex.def Info: SWE__WavePropagationBlock_8cpp__incl.pdf used on input
- line 10.
-(pdftex.def)             Requested size: 350.0pt x 136.55835pt.
- [57 <./SWE__Block_8hh__dep__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 18
+ line 11.
+(pdftex.def)             Requested size: 350.0pt x 153.15456pt.
+ [65 <./SWE__Block_8hh__dep__incl.pdf>]
+Underfull \hbox (badness 10000) detected at line 19
 [][][]
  []
 
@@ -2262,31 +2327,31 @@ pdfTeX warning (ext4): destination with the same identifier (name{help_8hh_LICE
 NSE}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.25 \hypertarget{help_8hh_LICENSE}{}
+l.26 \hypertarget{help_8hh_LICENSE}{}
                                      \subsection{L\+I\+C\+E\+N\+SE}\label{he...
 pdfTeX warning (ext4): destination with the same identifier (name{help_8hh_DESC
 RIPTION}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.30 ...ses/}.\hypertarget{help_8hh_DESCRIPTION}{}
+l.31 ...ses/}.\hypertarget{help_8hh_DESCRIPTION}{}
                                                   \subsection{D\+E\+S\+C\+R\...
 ) (./SWE__WavePropagationBlock_8hh.tex
-<SWE__WavePropagationBlock_8hh__incl.pdf, id=2431, 454.69875pt x 280.04625pt>
+<SWE__WavePropagationBlock_8hh__incl.pdf, id=2824, 454.69875pt x 280.04625pt>
 File: SWE__WavePropagationBlock_8hh__incl.pdf Graphic file (type pdf)
 
 <use SWE__WavePropagationBlock_8hh__incl.pdf>
 Package pdftex.def Info: SWE__WavePropagationBlock_8hh__incl.pdf used on input 
 line 11.
 (pdftex.def)             Requested size: 350.0pt x 215.56361pt.
- [58 <./SWE__WavePropagationBlock_8cpp__incl.pdf>]
-<SWE__WavePropagationBlock_8hh__dep__incl.pdf, id=2447, 249.93375pt x 178.6675p
+ [66 <./SWE__WavePropagationBlock_8cpp__incl.pdf>]
+<SWE__WavePropagationBlock_8hh__dep__incl.pdf, id=2840, 249.93375pt x 178.6675p
 t>
 File: SWE__WavePropagationBlock_8hh__dep__incl.pdf Graphic file (type pdf)
  <use SWE__WavePropagationBlock_8hh__dep__incl.pdf>
 Package pdftex.def Info: SWE__WavePropagationBlock_8hh__dep__incl.pdf used on i
 nput line 18.
 (pdftex.def)             Requested size: 249.0pt x 178.0073pt.
- [59 <./SWE__WavePropagationBlock_8hh__incl.pdf> <./SWE__WavePropagationBlock_8
+ [67 <./SWE__WavePropagationBlock_8hh__incl.pdf> <./SWE__WavePropagationBlock_8
 hh__dep__incl.pdf
 
 pdfTeX warning: pdflatex (file ./SWE__WavePropagationBlock_8hh__dep__incl.pdf):
@@ -2309,29 +2374,29 @@ RIPTION}) has been already used, duplicate ignored
 l.43 ...ses/}.\hypertarget{help_8hh_DESCRIPTION}{}
                                                   \subsection{D\+E\+S\+C\+R\...
 ) (./WavePropagation_8cpp.tex
-<WavePropagation_8cpp__incl.pdf, id=2472, 203.76125pt x 167.62625pt>
+<WavePropagation_8cpp__incl.pdf, id=2866, 203.76125pt x 167.62625pt>
 File: WavePropagation_8cpp__incl.pdf Graphic file (type pdf)
 
 <use WavePropagation_8cpp__incl.pdf>
 Package pdftex.def Info: WavePropagation_8cpp__incl.pdf used on input line 8.
 (pdftex.def)             Requested size: 203.0pt x 167.00684pt.
 ) (./WavePropagation_8hpp.tex
-<WavePropagation_8hpp__dep__incl.pdf, id=2473, 203.76125pt x 178.6675pt>
+<WavePropagation_8hpp__dep__incl.pdf, id=2867, 203.76125pt x 178.6675pt>
 File: WavePropagation_8hpp__dep__incl.pdf Graphic file (type pdf)
 
 <use WavePropagation_8hpp__dep__incl.pdf>
 Package pdftex.def Info: WavePropagation_8hpp__dep__incl.pdf used on input line
  7.
 (pdftex.def)             Requested size: 203.0pt x 178.0073pt.
- [60 <./WavePropagation_8cpp__incl.pdf>]) (./scenarios_2SWE__Scenario_8hh.tex
-<scenarios_2SWE__Scenario_8hh__dep__incl.pdf, id=2493, 217.81375pt x 178.6675pt
+ [68 <./WavePropagation_8cpp__incl.pdf>]) (./scenarios_2SWE__Scenario_8hh.tex
+<scenarios_2SWE__Scenario_8hh__dep__incl.pdf, id=2886, 217.81375pt x 178.6675pt
 >
 File: scenarios_2SWE__Scenario_8hh__dep__incl.pdf Graphic file (type pdf)
  <use scenarios_2SWE__Scenario_8hh__dep__incl.pdf>
 Package pdftex.def Info: scenarios_2SWE__Scenario_8hh__dep__incl.pdf used on in
 put line 7.
 (pdftex.def)             Requested size: 217.0pt x 177.99911pt.
- [61 <./WavePropagation_8hpp__dep__incl.pdf> <./scenarios_2SWE__Scenario_8hh__d
+ [69 <./WavePropagation_8hpp__dep__incl.pdf> <./scenarios_2SWE__Scenario_8hh__d
 ep__incl.pdf
 
 pdfTeX warning: pdflatex (file ./scenarios_2SWE__Scenario_8hh__dep__incl.pdf): 
@@ -2353,7 +2418,7 @@ RIPTION}) has been already used, duplicate ignored
                    \relax 
 l.65 ...ses/}.\hypertarget{help_8hh_DESCRIPTION}{}
                                                   \subsection{D\+E\+S\+C\+R\...
-[62]
+[70]
 Underfull \hbox (badness 10000) detected at line 82
 [][][]
  []
@@ -2364,14 +2429,14 @@ Underfull \hbox (badness 10000) detected at line 110
  []
 
 ) (./tools_2SWE__Scenario_8hh.tex
-<tools_2SWE__Scenario_8hh__dep__incl.pdf, id=2568, 389.455pt x 313.17pt>
+<tools_2SWE__Scenario_8hh__dep__incl.pdf, id=2960, 389.455pt x 313.17pt>
 File: tools_2SWE__Scenario_8hh__dep__incl.pdf Graphic file (type pdf)
 
 <use tools_2SWE__Scenario_8hh__dep__incl.pdf>
 Package pdftex.def Info: tools_2SWE__Scenario_8hh__dep__incl.pdf used on input 
 line 7.
 (pdftex.def)             Requested size: 350.0pt x 281.45375pt.
- [63pdfTeX warning (ext4): destination with the same identifier (name{scenarios
+ [71pdfTeX warning (ext4): destination with the same identifier (name{scenarios
 _2SWE__Scenario_8hh_aa5e01e3f7df312f7b9b0d02521141fcca34eeb3\ETC.}) has been al
 ready used, duplicate ignored
 
@@ -2434,7 +2499,7 @@ e35\ETC.}) has been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.10 \subsection
-                *{Classes}] [64 <./tools_2SWE__Scenario_8hh__dep__incl.pdf>]
+                *{Classes}] [72 <./tools_2SWE__Scenario_8hh__dep__incl.pdf>]
 Underfull \hbox (badness 10000) detected at line 68
 [][][]
  []
@@ -2445,14 +2510,14 @@ Underfull \hbox (badness 10000) detected at line 96
  []
 
 ) (./SWE__simple__scenarios_8hh.tex
-<SWE__simple__scenarios_8hh__incl.pdf, id=2617, 363.3575pt x 223.83624pt>
+<SWE__simple__scenarios_8hh__incl.pdf, id=3010, 363.3575pt x 223.83624pt>
 File: SWE__simple__scenarios_8hh__incl.pdf Graphic file (type pdf)
 
 <use SWE__simple__scenarios_8hh__incl.pdf>
 Package pdftex.def Info: SWE__simple__scenarios_8hh__incl.pdf used on input lin
 e 10.
 (pdftex.def)             Requested size: 350.0pt x 215.61467pt.
- [65pdfTeX warning (ext4): destination with the same identifier (name{tools_2SW
+ [73pdfTeX warning (ext4): destination with the same identifier (name{tools_2SW
 E__Scenario_8hh_aa5e01e3f7df312f7b9b0d02521141fcca34eeb3a076\ETC.}) has been al
 ready used, duplicate ignored
 
@@ -2532,20 +2597,20 @@ RIPTION}) has been already used, duplicate ignored
                    \relax 
 l.33 ...ses/}.\hypertarget{help_8hh_DESCRIPTION}{}
                                                   \subsection{D\+E\+S\+C\+R\...
-) (./help_8hh.tex <help_8hh__incl.pdf, id=2625, 337.26pt x 167.62625pt>
+) (./help_8hh.tex <help_8hh__incl.pdf, id=3018, 337.26pt x 167.62625pt>
 File: help_8hh__incl.pdf Graphic file (type pdf)
 
 <use help_8hh__incl.pdf>
 Package pdftex.def Info: help_8hh__incl.pdf used on input line 11.
 (pdftex.def)             Requested size: 336.0pt x 167.00427pt.
- [66 <./SWE__simple__scenarios_8hh__incl.pdf>]
-<help_8hh__dep__incl.pdf, id=2640, 484.81125pt x 313.17pt>
+ [74 <./SWE__simple__scenarios_8hh__incl.pdf>]
+<help_8hh__dep__incl.pdf, id=3033, 484.81125pt x 313.17pt>
 File: help_8hh__dep__incl.pdf Graphic file (type pdf)
 
 <use help_8hh__dep__incl.pdf>
 Package pdftex.def Info: help_8hh__dep__incl.pdf used on input line 18.
 (pdftex.def)             Requested size: 350.0pt x 226.09865pt.
- [67 <./help_8hh__incl.pdf> <./help_8hh__dep__incl.pdf
+ [75 <./help_8hh__incl.pdf> <./help_8hh__dep__incl.pdf
 
 pdfTeX warning: pdflatex (file ./help_8hh__dep__incl.pdf): PDF inclusion: multi
 ple pdfs with page group included in a single page
@@ -2582,7 +2647,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 68.
 
-[68]
+[76]
 Underfull \hbox (badness 10000) detected at line 80
 [][][]
  []
@@ -2620,8 +2685,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 157.
 
-) (./DocMain_8cpp.tex [69]) (./CPPSimulator_8java.tex) (./Helper_8java.tex)
-(./SimulationRunner_8java.tex) [70] (./refman.ind
+) (./DocMain_8cpp.tex [77]) (./MainActivity_8java.tex) (./WaveView_8java.tex)
+(./WaveViewTouchListener_8java.tex) (./CPPSimulator_8java.tex [78])
+(./Helper_8java.tex) (./SimulationRunner_8java.tex) [79] [80
+
+] (./refman.ind
 Underfull \hbox (badness 10000) in paragraph at lines 23--25
 []\T1/phv/m/n/10 app/src/main/cpp/blocks/[]S[]W[]E[]_[][]Wave[]Propagation[]
  []
@@ -2637,60 +2705,59 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--35
 []hh,
  []
 
-[71
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--44
+[]\T1/phv/m/n/10 app/src/main/java/[]Interface/[]Wave[]View[]Touch[]Listener.[]
+
+ []
+
+[81
 
 
-
-] [72] [73] [74] [75
+] [82] [83] [84] [85] [86
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 195.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 195.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 202.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 202.
  (./refman.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 195.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 195.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 202.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 202.
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 9021758369ACCEE8CEF63138399A9D89;66708.
+(rerunfilecheck)             Checksum: 13CD7A5B4D4F9F896CC58A353CC3BF01;78814.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 195.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 202.
  ) 
 Here is how much of TeX's memory you used:
- 16139 strings out of 494953
- 249795 string characters out of 6180976
- 348000 words of memory out of 5000000
- 18422 multiletter control sequences out of 15000+600000
+ 16361 strings out of 494953
+ 257684 string characters out of 6180976
+ 352707 words of memory out of 5000000
+ 18519 multiletter control sequences out of 15000+600000
  73741 words of font info for 93 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 53i,16n,92p,4899b,644s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{namespacesolver} has been referenced but does not
- exist, replaced by a fixed one
-
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr
-8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/urw/helvetic/uhvbo8ac.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/he
-lvetic/uhvro8a.pfb>
-Output written on refman.pdf (87 pages, 387186 bytes).
+ 53i,16n,92p,4899b,632s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/uc
+rr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/urw/helvetic/uhvbo8ac.pfb></usr/share/texlive/texmf-dist/font
+s/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
+helvetic/uhvro8a.pfb>
+Output written on refman.pdf (100 pages, 425467 bytes).
 PDF statistics:
- 3285 PDF objects out of 3580 (max. 8388607)
- 3095 compressed objects within 31 object streams
- 655 named destinations out of 1000 (max. 500000)
- 2279 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3783 PDF objects out of 4296 (max. 8388607)
+ 3563 compressed objects within 36 object streams
+ 760 named destinations out of 1000 (max. 500000)
+ 2637 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wavesimulator',['wavesimulator',['../namespacewavesimulator.html',1,'']]]
+  ['solver',['solver',['../namespacesolver.html',1,'solver'],['../namespaceSolver.html',1,'Solver']]]
 ];

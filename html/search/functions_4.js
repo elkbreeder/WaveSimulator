@@ -16,9 +16,12 @@ var searchData=
   ['getny',['getNy',['../classSWE__Block.html#a4b65557b6f73ffb6454dad3dbf86e9ad',1,'SWE_Block']]],
   ['getrowproxy',['getRowProxy',['../classFloat2D.html#a6c3329adba1854ea3e9589fd7271765b',1,'Float2D']]],
   ['getrows',['getRows',['../classFloat2D.html#a9f523397af4e14fb2006ad4484f95380',1,'Float2D']]],
+  ['getsimulationrunner',['getSimulationRunner',['../classInterface_1_1MainActivity.html#a99ed0382ab6104e40d058f21c2af4765',1,'Interface::MainActivity']]],
   ['getsize',['getSize',['../classFloat1D.html#a247a2e783f7300467c55fa2e7b19aa43',1,'Float1D']]],
   ['getveloc_5fu',['getVeloc_u',['../classSWE__Scenario.html#ab1d5e360c861df3c8c0ccd919bd7f495',1,'SWE_Scenario::getVeloc_u(float x, float y)'],['../classSWE__Scenario.html#ab1d5e360c861df3c8c0ccd919bd7f495',1,'SWE_Scenario::getVeloc_u(float x, float y)']]],
   ['getveloc_5fv',['getVeloc_v',['../classSWE__Scenario.html#afeaf75872a1678ea64e6f7accd1e49c6',1,'SWE_Scenario::getVeloc_v(float x, float y)'],['../classSWE__Scenario.html#afeaf75872a1678ea64e6f7accd1e49c6',1,'SWE_Scenario::getVeloc_v(float x, float y)']]],
   ['getwaterheight',['getWaterHeight',['../classSWE__Block.html#ab1aea4294403c194180c3dc107339fd7',1,'SWE_Block::getWaterHeight()'],['../classSWE__Scenario.html#ade6f356d60b1402c034611266462b88b',1,'SWE_Scenario::getWaterHeight()'],['../classSWE__FlatScenario.html#a8391be8368aa74a4439977328f42f1db',1,'SWE_FlatScenario::getWaterHeight()'],['../classSWE__Scenario.html#ade6f356d60b1402c034611266462b88b',1,'SWE_Scenario::getWaterHeight()']]],
+  ['getwaveheightvalue',['getWaveHeightValue',['../classInterface_1_1MainActivity.html#ab06ac12c0f0ab10dda64940f5d1fe03b',1,'Interface::MainActivity']]],
+  ['getwaveview',['getWaveView',['../classInterface_1_1MainActivity.html#ac0cf85cfda9c84fee2508c9cf77026cc',1,'Interface::MainActivity']]],
   ['grabghostlayer',['grabGhostLayer',['../classSWE__Block.html#a9a96c59444645e237d098803009158a3',1,'SWE_Block']]]
 ];

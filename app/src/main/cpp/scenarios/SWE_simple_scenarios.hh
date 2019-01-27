@@ -37,7 +37,7 @@
  * Scenario "Radial Dam Break":
  * elevated water in the center of the domain
  */
-//! \class SWE_RadialDamBreakScenario \brief This scenario is a test environment for the apps later wave-positioninig and its influence on the surrounding sea
+//! \class SWE_FlatScenario \brief This scenario is a test environment that simulates a flat water-surface
 class SWE_FlatScenario : public SWE_Scenario {
 
 public:

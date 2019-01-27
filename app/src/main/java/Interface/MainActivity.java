@@ -1,4 +1,5 @@
-package Interface;//! \namespace wavesimulator \brief a The wavesimulator entails all classes dedicated to the visual representation and user interaction
+//! \namespace Interface \brief a The Interface entails all classes dedicated to the visual representation and user interaction
+package Interface;
 
 import android.annotation.SuppressLint;
 import android.support.design.widget.Snackbar;

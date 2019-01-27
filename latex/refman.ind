@@ -5,123 +5,114 @@
   \item {$\sim$\+Float2D}
     \subitem {Float2D}, \hyperpage{21}
   \item {$\sim$\+S\+W\+E\+\_\+\+Block}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{30}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{28}
   \item {$\sim$\+S\+W\+E\+\_\+\+Scenario}
-    \subitem {S\+W\+E\+\_\+\+Scenario}, \hyperpage{45}
+    \subitem {S\+W\+E\+\_\+\+Scenario}, \hyperpage{42}
   \item {$\sim$\+S\+W\+E\+\_\+\+Wave\+Propagation\+Block}
-    \subitem {S\+W\+E\+\_\+\+Wave\+Propagation\+Block}, \hyperpage{49}
+    \subitem {S\+W\+E\+\_\+\+Wave\+Propagation\+Block}, \hyperpage{46}
   \item {$\sim$\+Wave\+Propagation}
-    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{52}
+    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{49}
 
   \indexspace
 
-  \item {app/src/main/\+Doc\+Main.\+cpp}, \hyperpage{78}
+  \item {app/src/main/\+Doc\+Main.\+cpp}, \hyperpage{70}
   \item {app/src/main/cpp/blocks/\+S\+W\+E\+\_\+\+Block.\+cpp}, 
-		\hyperpage{63}
+		\hyperpage{55}
   \item {app/src/main/cpp/blocks/\+S\+W\+E\+\_\+\+Block.\+hh}, 
-		\hyperpage{64}
+		\hyperpage{56}
   \item {app/src/main/cpp/blocks/\+S\+W\+E\+\_\+\+Wave\+Propagation\+Block.\+cpp}, 
-		\hyperpage{66}
+		\hyperpage{58}
   \item {app/src/main/cpp/blocks/\+S\+W\+E\+\_\+\+Wave\+Propagation\+Block.\+hh}, 
-		\hyperpage{67}
+		\hyperpage{59}
   \item {app/src/main/cpp/blocks/\+Wave\+Propagation.\+cpp}, 
-		\hyperpage{68}
+		\hyperpage{60}
   \item {app/src/main/cpp/blocks/\+Wave\+Propagation.\+hpp}, 
-		\hyperpage{69}
+		\hyperpage{61}
   \item {app/src/main/cpp/scenarios/\+S\+W\+E\+\_\+\+Scenario.\+hh}, 
-		\hyperpage{69}
+		\hyperpage{61}
   \item {app/src/main/cpp/scenarios/\+S\+W\+E\+\_\+simple\+\_\+scenarios.\+hh}, 
-		\hyperpage{74}
+		\hyperpage{66}
   \item {app/src/main/cpp/tools/\+S\+W\+E\+\_\+\+Scenario.\+hh}, 
-		\hyperpage{72}
-  \item {app/src/main/cpp/tools/help.\+hh}, \hyperpage{75}
+		\hyperpage{64}
+  \item {app/src/main/cpp/tools/help.\+hh}, \hyperpage{67}
   \item {app/src/main/java/\+Solver/\+C\+P\+P\+Simulator.\+java}, 
-		\hyperpage{78}
-  \item {app/src/main/java/\+Solver/\+Helper.\+java}, \hyperpage{78}
+		\hyperpage{70}
+  \item {app/src/main/java/\+Solver/\+Helper.\+java}, \hyperpage{70}
   \item {app/src/main/java/\+Solver/\+Simulation\+Runner.\+java}, 
-		\hyperpage{78}
-  \item {app/src/main/java/wavesimulator/\+Main\+Activity.\+java}, 
-		\hyperpage{79}
-  \item {app/src/main/java/wavesimulator/\+Wave\+View.\+java}, 
-		\hyperpage{79}
-  \item {app/src/main/java/wavesimulator/\+Wave\+View\+Touch\+Listener.\+java}, 
-		\hyperpage{79}
+		\hyperpage{70}
 
   \indexspace
 
   \item {b}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{38}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{35}
   \item {b\+Left}
-    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{54}
+    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{51}
   \item {B\+N\+D\+\_\+\+B\+O\+T\+T\+OM}
-    \subitem {scenarios/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{71}
-    \subitem {tools/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{73}
+    \subitem {scenarios/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{63}
+    \subitem {tools/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{65}
   \item {B\+N\+D\+\_\+\+L\+E\+FT}
-    \subitem {scenarios/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{71}
-    \subitem {tools/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{73}
+    \subitem {scenarios/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{63}
+    \subitem {tools/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{65}
   \item {B\+N\+D\+\_\+\+R\+I\+G\+HT}
-    \subitem {scenarios/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{71}
-    \subitem {tools/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{73}
+    \subitem {scenarios/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{63}
+    \subitem {tools/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{65}
   \item {B\+N\+D\+\_\+\+T\+OP}
-    \subitem {scenarios/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{71}
-    \subitem {tools/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{73}
+    \subitem {scenarios/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{63}
+    \subitem {tools/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{65}
   \item {b\+Right}
-    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{54}
+    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{51}
   \item {boundary}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{38}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{35}
   \item {Boundary\+Edge}
     \subitem {scenarios/\+S\+W\+E\+\_\+\+Scenario.\+hh}, 
-		\hyperpage{70, 71}
-    \subitem {tools/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{73}
+		\hyperpage{62, 63}
+    \subitem {tools/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{65}
   \item {Boundary\+Type}
     \subitem {scenarios/\+S\+W\+E\+\_\+\+Scenario.\+hh}, 
-		\hyperpage{70, 71}
-    \subitem {tools/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{73}
+		\hyperpage{62, 63}
+    \subitem {tools/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{65}
 
   \indexspace
 
   \item {C\+O\+N\+N\+E\+CT}
-    \subitem {scenarios/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{71}
-    \subitem {tools/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{73}
+    \subitem {scenarios/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{63}
+    \subitem {tools/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{65}
   \item {C\+P\+P\+Simulator}
     \subitem {Solver\+::\+C\+P\+P\+Simulator}, \hyperpage{16}
   \item {cell\+\_\+count}
     \subitem {Solver\+::\+C\+P\+P\+Simulator}, \hyperpage{17}
   \item {change\+Activity}
-    \subitem {Solver\+::\+Simulation\+Runner}, \hyperpage{25}
+    \subitem {Solver\+::\+Simulation\+Runner}, \hyperpage{23}
   \item {compute\+Max\+Timestep}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{31}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{28}
   \item {compute\+Net\+Updates}
-    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{53}
+    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{49}
   \item {compute\+Numerical\+Fluxes}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{31}
-    \subitem {S\+W\+E\+\_\+\+Wave\+Propagation\+Block}, \hyperpage{50}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{28}
+    \subitem {S\+W\+E\+\_\+\+Wave\+Propagation\+Block}, \hyperpage{47}
 
   \indexspace
 
   \item {delete}
     \subitem {Solver\+::\+C\+P\+P\+Simulator}, \hyperpage{16}
   \item {determine\+Wet\+Dry\+State}
-    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{53}
+    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{50}
   \item {Doc\+Main.\+cpp}
-    \subitem {main}, \hyperpage{78}
-  \item {drawingmode}
-    \subitem {wavesimulator\+::\+Wave\+View\+Touch\+Listener}, 
-		\hyperpage{61}
+    \subitem {main}, \hyperpage{70}
   \item {Dry\+Dry}
-    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{52}
+    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{49}
   \item {dry\+Tol}
-    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{54}
+    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{51}
   \item {Dry\+Wet\+Inundation}
-    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{52}
+    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{49}
   \item {Dry\+Wet\+Wall}
-    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{52}
+    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{49}
   \item {Dry\+Wet\+Wall\+Inundation}
-    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{52}
+    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{49}
   \item {dx}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{38}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{35}
   \item {dy}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{38}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{35}
 
   \indexspace
 
@@ -129,9 +120,8 @@
     \subitem {Float1D}, \hyperpage{19}
     \subitem {Float2D}, \hyperpage{21}
   \item {end\+Simulation}
-    \subitem {S\+W\+E\+\_\+\+Radial\+Dam\+Break\+Scenario}, 
-		\hyperpage{43}
-    \subitem {S\+W\+E\+\_\+\+Scenario}, \hyperpage{45}
+    \subitem {S\+W\+E\+\_\+\+Flat\+Scenario}, \hyperpage{40}
+    \subitem {S\+W\+E\+\_\+\+Scenario}, \hyperpage{42}
 
   \indexspace
 
@@ -156,101 +146,91 @@
   \indexspace
 
   \item {g}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{38}
-    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{55}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{35}
+    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{51}
   \item {generate\+Base\+File\+Name}
-    \subitem {help.\+hh}, \hyperpage{76}
+    \subitem {help.\+hh}, \hyperpage{68}
   \item {generate\+Container\+File\+Name}
-    \subitem {help.\+hh}, \hyperpage{77}
+    \subitem {help.\+hh}, \hyperpage{69}
   \item {generate\+File\+Name}
-    \subitem {help.\+hh}, \hyperpage{77}
+    \subitem {help.\+hh}, \hyperpage{69}
   \item {get\+Bathymetry}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{31}
-    \subitem {S\+W\+E\+\_\+\+Radial\+Dam\+Break\+Scenario}, 
-		\hyperpage{43}
-    \subitem {S\+W\+E\+\_\+\+Scenario}, \hyperpage{45}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{29}
+    \subitem {S\+W\+E\+\_\+\+Flat\+Scenario}, \hyperpage{40}
+    \subitem {S\+W\+E\+\_\+\+Scenario}, \hyperpage{42}
     \subitem {Solver\+::\+C\+P\+P\+Simulator}, \hyperpage{16}
   \item {get\+Boundary\+Pos}
-    \subitem {S\+W\+E\+\_\+\+Radial\+Dam\+Break\+Scenario}, 
-		\hyperpage{43}
-    \subitem {S\+W\+E\+\_\+\+Scenario}, \hyperpage{45}
+    \subitem {S\+W\+E\+\_\+\+Flat\+Scenario}, \hyperpage{40}
+    \subitem {S\+W\+E\+\_\+\+Scenario}, \hyperpage{42}
   \item {get\+Boundary\+Type}
-    \subitem {S\+W\+E\+\_\+\+Radial\+Dam\+Break\+Scenario}, 
-		\hyperpage{43}
-    \subitem {S\+W\+E\+\_\+\+Scenario}, \hyperpage{46}
+    \subitem {S\+W\+E\+\_\+\+Flat\+Scenario}, \hyperpage{40}
+    \subitem {S\+W\+E\+\_\+\+Scenario}, \hyperpage{43}
   \item {get\+Col\+Proxy}
     \subitem {Float2D}, \hyperpage{21}
   \item {get\+Cols}
     \subitem {Float2D}, \hyperpage{21}
   \item {get\+Discharge\+\_\+hu}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{31}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{29}
   \item {get\+Discharge\+\_\+hv}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{31}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{29}
   \item {get\+Height}
     \subitem {Solver\+::\+C\+P\+P\+Simulator}, \hyperpage{16}
   \item {get\+Max\+Timestep}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{32}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{29}
   \item {get\+Nx}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{32}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{29}
   \item {get\+Ny}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{32}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{29}
   \item {get\+Row\+Proxy}
     \subitem {Float2D}, \hyperpage{21}
   \item {get\+Rows}
     \subitem {Float2D}, \hyperpage{21}
-  \item {get\+Simulation\+Runner}
-    \subitem {wavesimulator\+::\+Main\+Activity}, \hyperpage{23}
   \item {get\+Size}
     \subitem {Float1D}, \hyperpage{19}
   \item {get\+Veloc\+\_\+u}
-    \subitem {S\+W\+E\+\_\+\+Scenario}, \hyperpage{46}
+    \subitem {S\+W\+E\+\_\+\+Scenario}, \hyperpage{43}
   \item {get\+Veloc\+\_\+v}
-    \subitem {S\+W\+E\+\_\+\+Scenario}, \hyperpage{46}
+    \subitem {S\+W\+E\+\_\+\+Scenario}, \hyperpage{43}
   \item {get\+Water\+Height}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{32}
-    \subitem {S\+W\+E\+\_\+\+Radial\+Dam\+Break\+Scenario}, 
-		\hyperpage{43}
-    \subitem {S\+W\+E\+\_\+\+Scenario}, \hyperpage{46}
-  \item {get\+Wave\+Height\+Value}
-    \subitem {wavesimulator\+::\+Main\+Activity}, \hyperpage{23}
-  \item {get\+Wave\+View}
-    \subitem {wavesimulator\+::\+Main\+Activity}, \hyperpage{24}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{29}
+    \subitem {S\+W\+E\+\_\+\+Flat\+Scenario}, \hyperpage{40}
+    \subitem {S\+W\+E\+\_\+\+Scenario}, \hyperpage{43}
   \item {grab\+Ghost\+Layer}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{32}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{30}
 
   \indexspace
 
   \item {h}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{38}
-    \subitem {S\+W\+E\+\_\+\+Block1D}, \hyperpage{41}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{35}
+    \subitem {S\+W\+E\+\_\+\+Block1D}, \hyperpage{38}
   \item {h\+Left}
-    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{55}
+    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{52}
   \item {h\+Right}
-    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{55}
+    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{52}
   \item {help.\+hh}
-    \subitem {generate\+Base\+File\+Name}, \hyperpage{76}
-    \subitem {generate\+Container\+File\+Name}, \hyperpage{77}
-    \subitem {generate\+File\+Name}, \hyperpage{77}
+    \subitem {generate\+Base\+File\+Name}, \hyperpage{68}
+    \subitem {generate\+Container\+File\+Name}, \hyperpage{69}
+    \subitem {generate\+File\+Name}, \hyperpage{69}
   \item {hu}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{38}
-    \subitem {S\+W\+E\+\_\+\+Block1D}, \hyperpage{41}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{35}
+    \subitem {S\+W\+E\+\_\+\+Block1D}, \hyperpage{38}
   \item {hu\+Left}
-    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{55}
+    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{52}
   \item {hu\+Right}
-    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{55}
+    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{52}
   \item {hv}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{39}
-    \subitem {S\+W\+E\+\_\+\+Block1D}, \hyperpage{41}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{36}
+    \subitem {S\+W\+E\+\_\+\+Block1D}, \hyperpage{38}
 
   \indexspace
 
   \item {I\+N\+F\+L\+OW}
-    \subitem {scenarios/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{71}
-    \subitem {tools/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{73}
+    \subitem {scenarios/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{63}
+    \subitem {tools/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{65}
   \item {init\+Scenario}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{33}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{30}
   \item {is\+Started}
-    \subitem {Solver\+::\+Simulation\+Runner}, \hyperpage{25}
+    \subitem {Solver\+::\+Simulation\+Runner}, \hyperpage{23}
 
   \indexspace
 
@@ -259,80 +239,29 @@
 
   \indexspace
 
-  \item {M\+O\+D\+E\+\_\+\+D\+R\+AW}
-    \subitem {wavesimulator\+::\+Wave\+View\+Touch\+Listener}, 
-		\hyperpage{61}
-  \item {M\+O\+D\+E\+\_\+\+E\+R\+E\+A\+SE}
-    \subitem {wavesimulator\+::\+Wave\+View\+Touch\+Listener}, 
-		\hyperpage{61}
-  \item {M\+O\+D\+E\+\_\+\+S\+I\+M\+U\+L\+A\+TE}
-    \subitem {wavesimulator\+::\+Wave\+View\+Touch\+Listener}, 
-		\hyperpage{61}
   \item {main}
-    \subitem {Doc\+Main.\+cpp}, \hyperpage{78}
+    \subitem {Doc\+Main.\+cpp}, \hyperpage{70}
   \item {max\+Timestep}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{39}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{36}
 
   \indexspace
 
   \item {neighbour}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{39}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{36}
   \item {nx}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{39}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{36}
   \item {ny}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{39}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{36}
 
   \indexspace
 
   \item {O\+U\+T\+F\+L\+OW}
-    \subitem {scenarios/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{71}
-    \subitem {tools/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{73}
+    \subitem {scenarios/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{63}
+    \subitem {tools/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{65}
   \item {offsetX}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{39}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{36}
   \item {offsetY}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{39}
-  \item {on\+Checked\+Switch}
-    \subitem {wavesimulator\+::\+Main\+Activity}, \hyperpage{24}
-  \item {on\+Create}
-    \subitem {wavesimulator\+::\+Main\+Activity}, \hyperpage{24}
-  \item {on\+Create\+Options\+Menu}
-    \subitem {wavesimulator\+::\+Main\+Activity}, \hyperpage{24}
-  \item {on\+Double\+Tap}
-    \subitem {wavesimulator\+::\+Wave\+View\+Touch\+Listener}, 
-		\hyperpage{59}
-  \item {on\+Double\+Tap\+Event}
-    \subitem {wavesimulator\+::\+Wave\+View\+Touch\+Listener}, 
-		\hyperpage{59}
-  \item {on\+Down}
-    \subitem {wavesimulator\+::\+Wave\+View\+Touch\+Listener}, 
-		\hyperpage{59}
-  \item {on\+Draw}
-    \subitem {wavesimulator\+::\+Wave\+View}, \hyperpage{57}
-  \item {on\+Fling}
-    \subitem {wavesimulator\+::\+Wave\+View\+Touch\+Listener}, 
-		\hyperpage{60}
-  \item {on\+Long\+Press}
-    \subitem {wavesimulator\+::\+Wave\+View\+Touch\+Listener}, 
-		\hyperpage{60}
-  \item {on\+Options\+Item\+Selected}
-    \subitem {wavesimulator\+::\+Main\+Activity}, \hyperpage{24}
-  \item {on\+Scroll}
-    \subitem {wavesimulator\+::\+Wave\+View\+Touch\+Listener}, 
-		\hyperpage{60}
-  \item {on\+Show\+Press}
-    \subitem {wavesimulator\+::\+Wave\+View\+Touch\+Listener}, 
-		\hyperpage{60}
-  \item {on\+Single\+Tap\+Confirmed}
-    \subitem {wavesimulator\+::\+Wave\+View\+Touch\+Listener}, 
-		\hyperpage{60}
-  \item {on\+Single\+Tap\+Up}
-    \subitem {wavesimulator\+::\+Wave\+View\+Touch\+Listener}, 
-		\hyperpage{60}
-  \item {on\+Size\+Changed}
-    \subitem {wavesimulator\+::\+Wave\+View}, \hyperpage{57}
-  \item {on\+Touch}
-    \subitem {wavesimulator\+::\+Wave\+View\+Touch\+Listener}, 
-		\hyperpage{60}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{36}
   \item {operator[]}
     \subitem {Float1D}, \hyperpage{19}
     \subitem {Float2D}, \hyperpage{21}
@@ -340,15 +269,15 @@
   \indexspace
 
   \item {P\+A\+S\+S\+I\+VE}
-    \subitem {scenarios/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{71}
-    \subitem {tools/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{73}
+    \subitem {scenarios/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{63}
+    \subitem {tools/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{65}
   \item {place\+Circle}
     \subitem {Solver\+::\+C\+P\+P\+Simulator}, \hyperpage{17}
 
   \indexspace
 
   \item {register\+Copy\+Layer}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{33}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{30}
   \item {reset}
     \subitem {Solver\+::\+C\+P\+P\+Simulator}, \hyperpage{17}
   \item {reset\+Waves}
@@ -356,140 +285,140 @@
 
   \indexspace
 
-  \item {S\+W\+E\+\_\+\+Block}, \hyperpage{26}
-    \subitem {$\sim$\+S\+W\+E\+\_\+\+Block}, \hyperpage{30}
-    \subitem {b}, \hyperpage{38}
-    \subitem {boundary}, \hyperpage{38}
-    \subitem {compute\+Max\+Timestep}, \hyperpage{31}
-    \subitem {compute\+Numerical\+Fluxes}, \hyperpage{31}
-    \subitem {dx}, \hyperpage{38}
-    \subitem {dy}, \hyperpage{38}
-    \subitem {g}, \hyperpage{38}
-    \subitem {get\+Bathymetry}, \hyperpage{31}
-    \subitem {get\+Discharge\+\_\+hu}, \hyperpage{31}
-    \subitem {get\+Discharge\+\_\+hv}, \hyperpage{31}
-    \subitem {get\+Max\+Timestep}, \hyperpage{32}
-    \subitem {get\+Nx}, \hyperpage{32}
-    \subitem {get\+Ny}, \hyperpage{32}
-    \subitem {get\+Water\+Height}, \hyperpage{32}
-    \subitem {grab\+Ghost\+Layer}, \hyperpage{32}
+  \item {S\+W\+E\+\_\+\+Block}, \hyperpage{24}
+    \subitem {$\sim$\+S\+W\+E\+\_\+\+Block}, \hyperpage{28}
+    \subitem {b}, \hyperpage{35}
+    \subitem {boundary}, \hyperpage{35}
+    \subitem {compute\+Max\+Timestep}, \hyperpage{28}
+    \subitem {compute\+Numerical\+Fluxes}, \hyperpage{28}
+    \subitem {dx}, \hyperpage{35}
+    \subitem {dy}, \hyperpage{35}
+    \subitem {g}, \hyperpage{35}
+    \subitem {get\+Bathymetry}, \hyperpage{29}
+    \subitem {get\+Discharge\+\_\+hu}, \hyperpage{29}
+    \subitem {get\+Discharge\+\_\+hv}, \hyperpage{29}
+    \subitem {get\+Max\+Timestep}, \hyperpage{29}
+    \subitem {get\+Nx}, \hyperpage{29}
+    \subitem {get\+Ny}, \hyperpage{29}
+    \subitem {get\+Water\+Height}, \hyperpage{29}
+    \subitem {grab\+Ghost\+Layer}, \hyperpage{30}
+    \subitem {h}, \hyperpage{35}
+    \subitem {hu}, \hyperpage{35}
+    \subitem {hv}, \hyperpage{36}
+    \subitem {init\+Scenario}, \hyperpage{30}
+    \subitem {max\+Timestep}, \hyperpage{36}
+    \subitem {neighbour}, \hyperpage{36}
+    \subitem {nx}, \hyperpage{36}
+    \subitem {ny}, \hyperpage{36}
+    \subitem {offsetX}, \hyperpage{36}
+    \subitem {offsetY}, \hyperpage{36}
+    \subitem {register\+Copy\+Layer}, \hyperpage{30}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{28}
+    \subitem {set\+Bathymetry}, \hyperpage{31}
+    \subitem {set\+Bathymetry\+XY}, \hyperpage{31}
+    \subitem {set\+Boundary\+Bathymetry}, \hyperpage{31}
+    \subitem {set\+Boundary\+Conditions}, \hyperpage{31}
+    \subitem {set\+Boundary\+Type}, \hyperpage{31}
+    \subitem {set\+Discharge}, \hyperpage{32}
+    \subitem {set\+Ghost\+Layer}, \hyperpage{32}
+    \subitem {set\+Hu\+XY}, \hyperpage{32}
+    \subitem {set\+Hv\+XY}, \hyperpage{32}
+    \subitem {set\+Water\+Height}, \hyperpage{32}
+    \subitem {set\+Water\+Height\+XY}, \hyperpage{32}
+    \subitem {simulate}, \hyperpage{32}
+    \subitem {simulate\+Timestep}, \hyperpage{33}
+    \subitem {synch\+After\+Write}, \hyperpage{33}
+    \subitem {synch\+Bathymetry\+After\+Write}, \hyperpage{33}
+    \subitem {synch\+Bathymetry\+Before\+Read}, \hyperpage{33}
+    \subitem {synch\+Before\+Read}, \hyperpage{33}
+    \subitem {synch\+Copy\+Layer\+Before\+Read}, \hyperpage{34}
+    \subitem {synch\+Discharge\+After\+Write}, \hyperpage{34}
+    \subitem {synch\+Discharge\+Before\+Read}, \hyperpage{34}
+    \subitem {synch\+Ghost\+Layer\+After\+Write}, \hyperpage{34}
+    \subitem {synch\+Water\+Height\+After\+Write}, \hyperpage{34}
+    \subitem {synch\+Water\+Height\+Before\+Read}, \hyperpage{34}
+    \subitem {update\+Unknowns}, \hyperpage{34}
+  \item {S\+W\+E\+\_\+\+Block1D}, \hyperpage{37}
     \subitem {h}, \hyperpage{38}
     \subitem {hu}, \hyperpage{38}
-    \subitem {hv}, \hyperpage{39}
-    \subitem {init\+Scenario}, \hyperpage{33}
-    \subitem {max\+Timestep}, \hyperpage{39}
-    \subitem {neighbour}, \hyperpage{39}
-    \subitem {nx}, \hyperpage{39}
-    \subitem {ny}, \hyperpage{39}
-    \subitem {offsetX}, \hyperpage{39}
-    \subitem {offsetY}, \hyperpage{39}
-    \subitem {register\+Copy\+Layer}, \hyperpage{33}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{30}
-    \subitem {set\+Bathymetry}, \hyperpage{33}
-    \subitem {set\+Bathymetry\+XY}, \hyperpage{34}
-    \subitem {set\+Boundary\+Bathymetry}, \hyperpage{34}
-    \subitem {set\+Boundary\+Conditions}, \hyperpage{34}
-    \subitem {set\+Boundary\+Type}, \hyperpage{34}
-    \subitem {set\+Discharge}, \hyperpage{34}
-    \subitem {set\+Ghost\+Layer}, \hyperpage{35}
-    \subitem {set\+Hu\+XY}, \hyperpage{35}
-    \subitem {set\+Hv\+XY}, \hyperpage{35}
-    \subitem {set\+Water\+Height}, \hyperpage{35}
-    \subitem {set\+Water\+Height\+XY}, \hyperpage{35}
-    \subitem {simulate}, \hyperpage{35}
-    \subitem {simulate\+Timestep}, \hyperpage{36}
-    \subitem {synch\+After\+Write}, \hyperpage{36}
-    \subitem {synch\+Bathymetry\+After\+Write}, \hyperpage{36}
-    \subitem {synch\+Bathymetry\+Before\+Read}, \hyperpage{36}
-    \subitem {synch\+Before\+Read}, \hyperpage{36}
-    \subitem {synch\+Copy\+Layer\+Before\+Read}, \hyperpage{37}
-    \subitem {synch\+Discharge\+After\+Write}, \hyperpage{37}
-    \subitem {synch\+Discharge\+Before\+Read}, \hyperpage{37}
-    \subitem {synch\+Ghost\+Layer\+After\+Write}, \hyperpage{37}
-    \subitem {synch\+Water\+Height\+After\+Write}, \hyperpage{37}
-    \subitem {synch\+Water\+Height\+Before\+Read}, \hyperpage{37}
-    \subitem {update\+Unknowns}, \hyperpage{37}
-  \item {S\+W\+E\+\_\+\+Block1D}, \hyperpage{40}
-    \subitem {h}, \hyperpage{41}
-    \subitem {hu}, \hyperpage{41}
-    \subitem {hv}, \hyperpage{41}
-    \subitem {S\+W\+E\+\_\+\+Block1D}, \hyperpage{41}
-  \item {S\+W\+E\+\_\+\+Radial\+Dam\+Break\+Scenario}, \hyperpage{42}
-    \subitem {end\+Simulation}, \hyperpage{43}
-    \subitem {get\+Bathymetry}, \hyperpage{43}
-    \subitem {get\+Boundary\+Pos}, \hyperpage{43}
+    \subitem {hv}, \hyperpage{38}
+    \subitem {S\+W\+E\+\_\+\+Block1D}, \hyperpage{38}
+  \item {S\+W\+E\+\_\+\+Flat\+Scenario}, \hyperpage{39}
+    \subitem {end\+Simulation}, \hyperpage{40}
+    \subitem {get\+Bathymetry}, \hyperpage{40}
+    \subitem {get\+Boundary\+Pos}, \hyperpage{40}
+    \subitem {get\+Boundary\+Type}, \hyperpage{40}
+    \subitem {get\+Water\+Height}, \hyperpage{40}
+  \item {S\+W\+E\+\_\+\+Scenario}, \hyperpage{41}
+    \subitem {$\sim$\+S\+W\+E\+\_\+\+Scenario}, \hyperpage{42}
+    \subitem {end\+Simulation}, \hyperpage{42}
+    \subitem {get\+Bathymetry}, \hyperpage{42}
+    \subitem {get\+Boundary\+Pos}, \hyperpage{42}
     \subitem {get\+Boundary\+Type}, \hyperpage{43}
+    \subitem {get\+Veloc\+\_\+u}, \hyperpage{43}
+    \subitem {get\+Veloc\+\_\+v}, \hyperpage{43}
     \subitem {get\+Water\+Height}, \hyperpage{43}
-  \item {S\+W\+E\+\_\+\+Scenario}, \hyperpage{44}
-    \subitem {$\sim$\+S\+W\+E\+\_\+\+Scenario}, \hyperpage{45}
-    \subitem {end\+Simulation}, \hyperpage{45}
-    \subitem {get\+Bathymetry}, \hyperpage{45}
-    \subitem {get\+Boundary\+Pos}, \hyperpage{45}
-    \subitem {get\+Boundary\+Type}, \hyperpage{46}
-    \subitem {get\+Veloc\+\_\+u}, \hyperpage{46}
-    \subitem {get\+Veloc\+\_\+v}, \hyperpage{46}
-    \subitem {get\+Water\+Height}, \hyperpage{46}
-    \subitem {water\+Height\+At\+Rest}, \hyperpage{47}
-  \item {S\+W\+E\+\_\+\+Wave\+Propagation\+Block}, \hyperpage{47}
+    \subitem {water\+Height\+At\+Rest}, \hyperpage{43, 44}
+  \item {S\+W\+E\+\_\+\+Wave\+Propagation\+Block}, \hyperpage{44}
     \subitem {$\sim$\+S\+W\+E\+\_\+\+Wave\+Propagation\+Block}, 
-		\hyperpage{49}
-    \subitem {compute\+Numerical\+Fluxes}, \hyperpage{50}
-    \subitem {S\+W\+E\+\_\+\+Wave\+Propagation\+Block}, \hyperpage{49}
-    \subitem {update\+Unknowns}, \hyperpage{50}
-    \subitem {update\+Unknowns\+Row}, \hyperpage{50}
+		\hyperpage{46}
+    \subitem {compute\+Numerical\+Fluxes}, \hyperpage{47}
+    \subitem {S\+W\+E\+\_\+\+Wave\+Propagation\+Block}, \hyperpage{46}
+    \subitem {update\+Unknowns}, \hyperpage{47}
+    \subitem {update\+Unknowns\+Row}, \hyperpage{47}
   \item {scenarios/\+S\+W\+E\+\_\+\+Scenario.\+hh}
-    \subitem {B\+N\+D\+\_\+\+B\+O\+T\+T\+OM}, \hyperpage{71}
-    \subitem {B\+N\+D\+\_\+\+L\+E\+FT}, \hyperpage{71}
-    \subitem {B\+N\+D\+\_\+\+R\+I\+G\+HT}, \hyperpage{71}
-    \subitem {B\+N\+D\+\_\+\+T\+OP}, \hyperpage{71}
-    \subitem {Boundary\+Edge}, \hyperpage{70, 71}
-    \subitem {Boundary\+Type}, \hyperpage{70, 71}
-    \subitem {C\+O\+N\+N\+E\+CT}, \hyperpage{71}
-    \subitem {I\+N\+F\+L\+OW}, \hyperpage{71}
-    \subitem {O\+U\+T\+F\+L\+OW}, \hyperpage{71}
-    \subitem {P\+A\+S\+S\+I\+VE}, \hyperpage{71}
-    \subitem {W\+A\+LL}, \hyperpage{71}
+    \subitem {B\+N\+D\+\_\+\+B\+O\+T\+T\+OM}, \hyperpage{63}
+    \subitem {B\+N\+D\+\_\+\+L\+E\+FT}, \hyperpage{63}
+    \subitem {B\+N\+D\+\_\+\+R\+I\+G\+HT}, \hyperpage{63}
+    \subitem {B\+N\+D\+\_\+\+T\+OP}, \hyperpage{63}
+    \subitem {Boundary\+Edge}, \hyperpage{62, 63}
+    \subitem {Boundary\+Type}, \hyperpage{62, 63}
+    \subitem {C\+O\+N\+N\+E\+CT}, \hyperpage{63}
+    \subitem {I\+N\+F\+L\+OW}, \hyperpage{63}
+    \subitem {O\+U\+T\+F\+L\+OW}, \hyperpage{63}
+    \subitem {P\+A\+S\+S\+I\+VE}, \hyperpage{63}
+    \subitem {W\+A\+LL}, \hyperpage{63}
   \item {set\+Bathymetry}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{33}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{31}
   \item {set\+Bathymetry\+XY}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{34}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{31}
   \item {set\+Boundary\+Bathymetry}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{34}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{31}
   \item {set\+Boundary\+Conditions}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{34}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{31}
   \item {set\+Boundary\+Type}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{34}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{31}
     \subitem {Solver\+::\+C\+P\+P\+Simulator}, \hyperpage{17}
   \item {set\+Discharge}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{34}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{32}
   \item {set\+Dry\+Tolerance}
-    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{53}
+    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{50}
   \item {set\+Ghost\+Layer}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{35}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{32}
   \item {set\+Hu\+XY}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{35}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{32}
   \item {set\+Hv\+XY}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{35}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{32}
   \item {set\+Water\+Height}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{35}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{32}
   \item {set\+Water\+Height\+XY}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{35}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{32}
   \item {set\+Wave}
     \subitem {Solver\+::\+C\+P\+P\+Simulator}, \hyperpage{17}
   \item {sim}
     \subitem {Solver\+::\+C\+P\+P\+Simulator}, \hyperpage{17}
   \item {simulate}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{35}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{32}
   \item {simulate\+Timestep}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{36}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{33}
   \item {simulatetimestep}
     \subitem {Solver\+::\+C\+P\+P\+Simulator}, \hyperpage{17}
   \item {Simulation\+Runner}
-    \subitem {Solver\+::\+Simulation\+Runner}, \hyperpage{25}
+    \subitem {Solver\+::\+Simulation\+Runner}, \hyperpage{23}
   \item {Solver}, \hyperpage{13}
   \item {Solver.\+C\+P\+P\+Simulator}, \hyperpage{15}
   \item {Solver.\+Helper}, \hyperpage{22}
-  \item {Solver.\+Simulation\+Runner}, \hyperpage{25}
+  \item {Solver.\+Simulation\+Runner}, \hyperpage{22}
   \item {Solver\+::\+C\+P\+P\+Simulator}
     \subitem {C\+P\+P\+Simulator}, \hyperpage{16}
     \subitem {cell\+\_\+count}, \hyperpage{17}
@@ -508,157 +437,121 @@
   \item {Solver\+::\+Helper}
     \subitem {linear\+\_\+map}, \hyperpage{22}
   \item {Solver\+::\+Simulation\+Runner}
-    \subitem {change\+Activity}, \hyperpage{25}
-    \subitem {is\+Started}, \hyperpage{25}
-    \subitem {Simulation\+Runner}, \hyperpage{25}
-    \subitem {start}, \hyperpage{26}
-    \subitem {stop}, \hyperpage{26}
+    \subitem {change\+Activity}, \hyperpage{23}
+    \subitem {is\+Started}, \hyperpage{23}
+    \subitem {Simulation\+Runner}, \hyperpage{23}
+    \subitem {start}, \hyperpage{23}
+    \subitem {stop}, \hyperpage{23}
   \item {solver\+::\+Wave\+Propagation}
-    \subitem {$\sim$\+Wave\+Propagation}, \hyperpage{52}
-    \subitem {b\+Left}, \hyperpage{54}
-    \subitem {b\+Right}, \hyperpage{54}
-    \subitem {compute\+Net\+Updates}, \hyperpage{53}
-    \subitem {determine\+Wet\+Dry\+State}, \hyperpage{53}
-    \subitem {Dry\+Dry}, \hyperpage{52}
-    \subitem {dry\+Tol}, \hyperpage{54}
-    \subitem {Dry\+Wet\+Inundation}, \hyperpage{52}
-    \subitem {Dry\+Wet\+Wall}, \hyperpage{52}
-    \subitem {Dry\+Wet\+Wall\+Inundation}, \hyperpage{52}
-    \subitem {g}, \hyperpage{55}
-    \subitem {h\+Left}, \hyperpage{55}
-    \subitem {h\+Right}, \hyperpage{55}
-    \subitem {hu\+Left}, \hyperpage{55}
-    \subitem {hu\+Right}, \hyperpage{55}
-    \subitem {set\+Dry\+Tolerance}, \hyperpage{53}
-    \subitem {store\+Parameters}, \hyperpage{53, 54}
-    \subitem {u\+Left}, \hyperpage{55}
-    \subitem {u\+Right}, \hyperpage{55}
-    \subitem {Wave\+Propagation}, \hyperpage{52}
-    \subitem {Wet\+Dry\+Inundation}, \hyperpage{52}
-    \subitem {Wet\+Dry\+State}, \hyperpage{52}
-    \subitem {wet\+Dry\+State}, \hyperpage{55}
-    \subitem {Wet\+Dry\+Wall}, \hyperpage{52}
-    \subitem {Wet\+Dry\+Wall\+Inundation}, \hyperpage{52}
-    \subitem {Wet\+Wet}, \hyperpage{52}
-    \subitem {zero\+Tol}, \hyperpage{56}
-  \item {solver\+::\+Wave\+Propagation$<$ T $>$}, \hyperpage{50}
+    \subitem {$\sim$\+Wave\+Propagation}, \hyperpage{49}
+    \subitem {b\+Left}, \hyperpage{51}
+    \subitem {b\+Right}, \hyperpage{51}
+    \subitem {compute\+Net\+Updates}, \hyperpage{49}
+    \subitem {determine\+Wet\+Dry\+State}, \hyperpage{50}
+    \subitem {Dry\+Dry}, \hyperpage{49}
+    \subitem {dry\+Tol}, \hyperpage{51}
+    \subitem {Dry\+Wet\+Inundation}, \hyperpage{49}
+    \subitem {Dry\+Wet\+Wall}, \hyperpage{49}
+    \subitem {Dry\+Wet\+Wall\+Inundation}, \hyperpage{49}
+    \subitem {g}, \hyperpage{51}
+    \subitem {h\+Left}, \hyperpage{52}
+    \subitem {h\+Right}, \hyperpage{52}
+    \subitem {hu\+Left}, \hyperpage{52}
+    \subitem {hu\+Right}, \hyperpage{52}
+    \subitem {set\+Dry\+Tolerance}, \hyperpage{50}
+    \subitem {store\+Parameters}, \hyperpage{50, 51}
+    \subitem {u\+Left}, \hyperpage{52}
+    \subitem {u\+Right}, \hyperpage{52}
+    \subitem {Wave\+Propagation}, \hyperpage{49}
+    \subitem {Wet\+Dry\+Inundation}, \hyperpage{49}
+    \subitem {Wet\+Dry\+State}, \hyperpage{49}
+    \subitem {wet\+Dry\+State}, \hyperpage{52}
+    \subitem {Wet\+Dry\+Wall}, \hyperpage{49}
+    \subitem {Wet\+Dry\+Wall\+Inundation}, \hyperpage{49}
+    \subitem {Wet\+Wet}, \hyperpage{49}
+    \subitem {zero\+Tol}, \hyperpage{52}
+  \item {solver\+::\+Wave\+Propagation$<$ T $>$}, \hyperpage{47}
   \item {start}
-    \subitem {Solver\+::\+Simulation\+Runner}, \hyperpage{26}
+    \subitem {Solver\+::\+Simulation\+Runner}, \hyperpage{23}
   \item {stop}
-    \subitem {Solver\+::\+Simulation\+Runner}, \hyperpage{26}
+    \subitem {Solver\+::\+Simulation\+Runner}, \hyperpage{23}
   \item {store\+Parameters}
-    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{53, 54}
+    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{50, 51}
   \item {synch\+After\+Write}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{36}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{33}
   \item {synch\+Bathymetry\+After\+Write}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{36}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{33}
   \item {synch\+Bathymetry\+Before\+Read}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{36}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{33}
   \item {synch\+Before\+Read}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{36}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{33}
   \item {synch\+Copy\+Layer\+Before\+Read}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{37}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{34}
   \item {synch\+Discharge\+After\+Write}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{37}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{34}
   \item {synch\+Discharge\+Before\+Read}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{37}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{34}
   \item {synch\+Ghost\+Layer\+After\+Write}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{37}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{34}
   \item {synch\+Water\+Height\+After\+Write}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{37}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{34}
   \item {synch\+Water\+Height\+Before\+Read}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{37}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{34}
 
   \indexspace
 
   \item {tools/\+S\+W\+E\+\_\+\+Scenario.\+hh}
-    \subitem {B\+N\+D\+\_\+\+B\+O\+T\+T\+OM}, \hyperpage{73}
-    \subitem {B\+N\+D\+\_\+\+L\+E\+FT}, \hyperpage{73}
-    \subitem {B\+N\+D\+\_\+\+R\+I\+G\+HT}, \hyperpage{73}
-    \subitem {B\+N\+D\+\_\+\+T\+OP}, \hyperpage{73}
-    \subitem {Boundary\+Edge}, \hyperpage{73}
-    \subitem {Boundary\+Type}, \hyperpage{73}
-    \subitem {C\+O\+N\+N\+E\+CT}, \hyperpage{73}
-    \subitem {I\+N\+F\+L\+OW}, \hyperpage{73}
-    \subitem {O\+U\+T\+F\+L\+OW}, \hyperpage{73}
-    \subitem {P\+A\+S\+S\+I\+VE}, \hyperpage{73}
-    \subitem {W\+A\+LL}, \hyperpage{73}
+    \subitem {B\+N\+D\+\_\+\+B\+O\+T\+T\+OM}, \hyperpage{65}
+    \subitem {B\+N\+D\+\_\+\+L\+E\+FT}, \hyperpage{65}
+    \subitem {B\+N\+D\+\_\+\+R\+I\+G\+HT}, \hyperpage{65}
+    \subitem {B\+N\+D\+\_\+\+T\+OP}, \hyperpage{65}
+    \subitem {Boundary\+Edge}, \hyperpage{65}
+    \subitem {Boundary\+Type}, \hyperpage{65}
+    \subitem {C\+O\+N\+N\+E\+CT}, \hyperpage{65}
+    \subitem {I\+N\+F\+L\+OW}, \hyperpage{65}
+    \subitem {O\+U\+T\+F\+L\+OW}, \hyperpage{65}
+    \subitem {P\+A\+S\+S\+I\+VE}, \hyperpage{65}
+    \subitem {W\+A\+LL}, \hyperpage{65}
 
   \indexspace
 
   \item {u\+Left}
-    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{55}
+    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{52}
   \item {u\+Right}
-    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{55}
+    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{52}
   \item {update\+Unknowns}
-    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{37}
-    \subitem {S\+W\+E\+\_\+\+Wave\+Propagation\+Block}, \hyperpage{50}
+    \subitem {S\+W\+E\+\_\+\+Block}, \hyperpage{34}
+    \subitem {S\+W\+E\+\_\+\+Wave\+Propagation\+Block}, \hyperpage{47}
   \item {update\+Unknowns\+Row}
-    \subitem {S\+W\+E\+\_\+\+Wave\+Propagation\+Block}, \hyperpage{50}
+    \subitem {S\+W\+E\+\_\+\+Wave\+Propagation\+Block}, \hyperpage{47}
 
   \indexspace
 
   \item {W\+A\+LL}
-    \subitem {scenarios/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{71}
-    \subitem {tools/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{73}
+    \subitem {scenarios/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{63}
+    \subitem {tools/\+S\+W\+E\+\_\+\+Scenario.\+hh}, \hyperpage{65}
   \item {water\+Height\+At\+Rest}
-    \subitem {S\+W\+E\+\_\+\+Scenario}, \hyperpage{47}
+    \subitem {S\+W\+E\+\_\+\+Scenario}, \hyperpage{43, 44}
   \item {waterlevel}
     \subitem {Solver\+::\+C\+P\+P\+Simulator}, \hyperpage{18}
-  \item {Wave\+Height\+Seek\+Bar\+Changed}
-    \subitem {wavesimulator\+::\+Main\+Activity}, \hyperpage{24}
-  \item {Wave\+Propagation}, \hyperpage{50}
-    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{52}
-  \item {Wave\+View}
-    \subitem {wavesimulator\+::\+Wave\+View}, \hyperpage{57}
-  \item {wavesimulator}, \hyperpage{14}
-  \item {wavesimulator.\+Main\+Activity}, \hyperpage{22}
-  \item {wavesimulator.\+Wave\+View}, \hyperpage{56}
-  \item {wavesimulator.\+Wave\+View\+Touch\+Listener}, \hyperpage{58}
-  \item {wavesimulator\+::\+Main\+Activity}
-    \subitem {get\+Simulation\+Runner}, \hyperpage{23}
-    \subitem {get\+Wave\+Height\+Value}, \hyperpage{23}
-    \subitem {get\+Wave\+View}, \hyperpage{24}
-    \subitem {on\+Checked\+Switch}, \hyperpage{24}
-    \subitem {on\+Create}, \hyperpage{24}
-    \subitem {on\+Create\+Options\+Menu}, \hyperpage{24}
-    \subitem {on\+Options\+Item\+Selected}, \hyperpage{24}
-    \subitem {Wave\+Height\+Seek\+Bar\+Changed}, \hyperpage{24}
-  \item {wavesimulator\+::\+Wave\+View}
-    \subitem {on\+Draw}, \hyperpage{57}
-    \subitem {on\+Size\+Changed}, \hyperpage{57}
-    \subitem {Wave\+View}, \hyperpage{57}
-  \item {wavesimulator\+::\+Wave\+View\+Touch\+Listener}
-    \subitem {drawingmode}, \hyperpage{61}
-    \subitem {M\+O\+D\+E\+\_\+\+D\+R\+AW}, \hyperpage{61}
-    \subitem {M\+O\+D\+E\+\_\+\+E\+R\+E\+A\+SE}, \hyperpage{61}
-    \subitem {M\+O\+D\+E\+\_\+\+S\+I\+M\+U\+L\+A\+TE}, \hyperpage{61}
-    \subitem {on\+Double\+Tap}, \hyperpage{59}
-    \subitem {on\+Double\+Tap\+Event}, \hyperpage{59}
-    \subitem {on\+Down}, \hyperpage{59}
-    \subitem {on\+Fling}, \hyperpage{60}
-    \subitem {on\+Long\+Press}, \hyperpage{60}
-    \subitem {on\+Scroll}, \hyperpage{60}
-    \subitem {on\+Show\+Press}, \hyperpage{60}
-    \subitem {on\+Single\+Tap\+Confirmed}, \hyperpage{60}
-    \subitem {on\+Single\+Tap\+Up}, \hyperpage{60}
-    \subitem {on\+Touch}, \hyperpage{60}
+  \item {Wave\+Propagation}, \hyperpage{53}
+    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{49}
   \item {Wet\+Dry\+Inundation}
-    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{52}
+    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{49}
   \item {Wet\+Dry\+State}
-    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{52}
+    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{49}
   \item {wet\+Dry\+State}
-    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{55}
+    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{52}
   \item {Wet\+Dry\+Wall}
-    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{52}
+    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{49}
   \item {Wet\+Dry\+Wall\+Inundation}
-    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{52}
+    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{49}
   \item {Wet\+Wet}
-    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{52}
+    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{49}
 
   \indexspace
 
   \item {zero\+Tol}
-    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{56}
+    \subitem {solver\+::\+Wave\+Propagation}, \hyperpage{52}
 
 \end{theindex}

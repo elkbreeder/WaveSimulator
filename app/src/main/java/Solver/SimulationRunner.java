@@ -1,6 +1,6 @@
 package Solver;
 
-import wavesimulator.MainActivity;
+import Interface.MainActivity;
 
 //! \class SimulationRunner \brief a This class handles the Threading of the Simulation
 public class SimulationRunner {

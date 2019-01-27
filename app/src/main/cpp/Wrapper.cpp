@@ -6,7 +6,7 @@
 #include "tools/help.hh"
 JNIEXPORT jlong JNICALL Java_Solver_CPPSimulator_init(JNIEnv *, jclass)
 {
-    SWE_RadialDamBreakScenario l_scenario;
+    SWE_FlatScenario l_scenario;
     int l_nX = 100;
     int l_nY = 100;
     float l_dX = (l_scenario.getBoundaryPos(BND_RIGHT) - l_scenario.getBoundaryPos(BND_LEFT) )/l_nX;
